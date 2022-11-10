@@ -1,22 +1,19 @@
 <h1>Detailed Design for Camera Subsystem within Primary Data Acquisition System</h1>
 
-
 <h2>Big Picture</h2>
 
-The primary data acquisition system will utilize real-time camera sensors to collect images of sectors of parking spots in the lot behind Bell Hall, in which these images will then be transmitted via wireless communication to a server where the images will be processed by an artificial intelligence (AI) algorithm to determine the number of Red parking spots that are filled and unfilled by cars. This subsystem is a critical subsystem because these cameras will provide the primary data to the system that will determine the count of vehicles in a lot. 
-
+The primary data acquisition system will utilize real-time camera sensors to collect images of sectors of parking spots in the lot behind Bell Hall, in which these images will then be transmitted via wireless communication to a server where the images will be processed by an artificial intelligence (AI) algorithm to determine the number of Red parking spots that are filled and unfilled by cars. This subsystem is a critical subsystem because these cameras will provide the primary data to the system that will determine the count of vehicles in a lot. The images from these cameras will be sent over to the server to be processed by an artificial intelligence (AI) algorithm to determine the number of available parking spots in the Bell Hall lot. This number will then be cross-checked with that derived from the secondary acquisition system to determine its accuracy.
 
 <h2>Specifications</h2>
 
-
-
 1. Mounting
     * Attachment location
-        * Light posts located around the parking lot
+        * Light posts located around the parking lot (see Figure 2)
+        * Light posts are 25 feet tall
     * Not allowed to drill into the posts
         * Hose clamp for block (mounting surface) to top of light pole
         * More refined mount will be designed by ME Team
-    * Not allowed to add additional infrastructure
+    * Not allowed to add additional infrastructure (i.e. posts)
 2. Monitoring
     * Cameras
         * All parking spots must be seen by cameras
@@ -35,17 +32,13 @@ The primary data acquisition system will utilize real-time camera sensors to col
                 * Range
                 * Downtimes
 
-
 <h3>Analysis</h3>
-
-
 
 1. Mounting
     * In order for the camera to operate correctly it will need to be mounted securely onto the light post. However, a constraint we received from facilities is that drilling holes in the pole is not allowed. Due to this we need a mounting method that does not require drilling and is adjustable in the event that we need to relocate the camera on the pole. For this reason we plan to use a hose clamp/vertical bracket combination similar to Dahua Technology pole mount bracket (MFR# PFA150). Currently we have not received pole diameter dimensions from facilities so the correct hose clamp size has not been determined. However, this is a minor issue that can quickly be resolved by either measuring the pole or receiving the information from facilities. Hose clamps have a wide size range that should satisfy our requirements.
+    * The cameras shall be placed no less than 5 feet below the lights on the light posts to ensure that the emanating light is not obstructed at night. Although there is very little concern that the lights will affect the cameras during the system's hours of operation, the cameras shall be placed so that they do not obstruct the light at night.
 
-        	
-
-![Figure 1. Buildable PDF Schematic](https://media.discordapp.net/attachments/1031956924989714442/1040107762350293023/zumimall.PNG?width=762&height=702)]
+![Figure 1. Buildable PDF Schematic](../Images/Zummimal_Product_Diagram.png)]
 <h3>Figure 1. Buildable PDF Schematic</h3>
 <br />
 
@@ -54,10 +47,10 @@ The primary data acquisition system will utilize real-time camera sensors to col
 
 
 
-![Figure 2. Camera Arrangement](https://media.discordapp.net/attachments/1031956924989714442/1040091487133782016/Parking_Lot_Pixel_Markup_1.png)
+![Figure 2. Camera Arrangement](../Images/Bell_Hall_Lot_Sectors.png)
 <h3>Figure 2. Camera Arrangement</h3>
 
-![Figure 3. Bell Hall Lot Area](https://cdn.discordapp.com/attachments/1031956924989714442/1040091502384263238/Bell_Hall_Lot_Sectors.png)
+![Figure 3. Bell Hall Lot Area](../Images/Bell_Hall_Lot_Area.png)
 <h3>Figure 3. Bell Hall Lot Area</h3>
 
 <br />
@@ -65,16 +58,13 @@ The primary data acquisition system will utilize real-time camera sensors to col
 3. Communication
     * The camera that we have chosen has 2.4G WiFi/cloud capabilities, which will allow for wireless communication without any external devices.
 4. Field of View
-    * The camera that we have chosen has a 130 degree field of view and can pan up to 360 degrees horizontally and 120 degrees vertically. These features may not be utilized, but the camera was chosen due to the 130 degree field of view. The maximum angle needed in any one of the individual sectors is 87.96 degrees, so by choosing a camera that is able to observe much more area than that, we can accurately get readings of the desired regions. 
+    * The camera that we have chosen has a 130 degree field of view and can pan up to 360 degrees horizontally and 120 degrees vertically. These features may not be utilized, but the camera was chosen due to the 130 degree field of view. The maximum angle needed in any one of the individual sectors is 87.96 degrees, so by choosing a camera that is able to observe much more area than that, we can accurately get readings of the desired regions. In addition, the furthest point that a single camera may have to monitor is roughly 80-100 feet, which would be within a typical recognition range for the camera[4],  and placing the camera as high as 20 feet would provide a high view to see cars at this distance, especially if (in worst case) a smaller car (like a Nissan Sentra) were next to a taller truck (like a Toyota Tacoma).
 5. Maintainability
     * This camera was chosen due to it having “3-8 months of standby time only on battery power, plus the solar panel can quickly achieve 365-day non-stop protection”. This allows for minimal maintenance in respect to power. The camera is also IP66 waterproof (tested in high-pressure water conditions. 
 6. Power
     * The camera has its own power system between the battery which can solely last 3-8 months without being recharged. Then, with the solar panel, it will be able to run year round. 
 
-
 <h2>Camera Features</h2>
-
-
 
 1. 2K Resolution
     * Has night vision options
