@@ -1,10 +1,10 @@
-<h1>Detailed Design for Camera Subsystem within Primary Data Acquisition System</h1>
+# Detailed Design for Camera Subsystem within Primary Data Acquisition System
 
-<h2>Big Picture</h2>
+## Big Picture
 
 The primary data acquisition system will utilize real-time camera sensors to collect images of sectors of parking spots in the lot behind Bell Hall, in which these images will then be transmitted via wireless communication to a server where the images will be processed by an artificial intelligence (AI) algorithm to determine the number of Red parking spots that are filled and unfilled by cars. This subsystem is a critical subsystem because these cameras will provide the primary data to the system that will determine the count of vehicles in a lot. The images from these cameras will be sent over to the server to be processed by an artificial intelligence (AI) algorithm to determine the number of available parking spots in the Bell Hall lot. This number will then be cross-checked with that derived from the secondary acquisition system to determine its accuracy.
 
-<h2>Specifications</h2>
+## Specifications
 
 1. Mounting
     * Attachment location
@@ -32,7 +32,7 @@ The primary data acquisition system will utilize real-time camera sensors to col
                 * Range
                 * Downtimes
 
-<h3>Analysis</h3>
+## Analysis
 
 1. Mounting
     * In order for the camera to operate correctly it will need to be mounted securely onto the light post. However, a constraint we received from facilities is that drilling holes in the pole is not allowed. Due to this we need a mounting method that does not require drilling and is adjustable in the event that we need to relocate the camera on the pole. For this reason we plan to use a hose clamp/vertical bracket combination similar to Dahua Technology pole mount bracket (MFR# PFA150). Currently we have not received pole diameter dimensions from facilities so the correct hose clamp size has not been determined. However, this is a minor issue that can quickly be resolved by either measuring the pole or receiving the information from facilities. Hose clamps have a wide size range that should satisfy our requirements.
@@ -64,7 +64,7 @@ The primary data acquisition system will utilize real-time camera sensors to col
 6. Power
     * The camera has its own power system between the battery which can solely last 3-8 months without being recharged. Then, with the solar panel, it will be able to run year round. 
 
-<h2>Camera Features</h2>
+## Camera Features
 
 1. 2K Resolution
     * Has night vision options
@@ -114,8 +114,15 @@ The primary data acquisition system will utilize real-time camera sensors to col
         * Have camera scan QR code on phone
         * Connect camera to internet
 
+## Bill of Materials
 
-<h2>Cited Sources</h2>
+| Name of Item	| Description | Used in which subsystem(s) | Part Number	| Manufacturer	| Quantity | Unit Price	| Total |
+| ------------ | ----------- | -------------------------- | ----------- | ------------ | -------- | ---------- | ----- |
+| Zumimall GX2K Camera | 360 Degree, 2K, 3 MP, Solar Powered, 2.4G WiFi, Camera | Primary Data Acquisition | 2AZL7-ZS-GX1S | Zumimall | 8	| $121.99	| $975.92 |
+| Dahua Technology PFA150 Pole Mount Bracket	| Pole Bracket for Dahua Cameras	| Primary Data Acquisition	| DAPFA150	| Dahua Technology | 8 | $37.78 | 	$302.24 |
+| | | | | | | | **$1278.16** |
+
+## Cited Sources
 
 [1] A. Gunzi, “Vehicle Detection and Tracking using Computer Vision,” _Chatbots Life_, 7 Mar 2017. [https://chatbotslife.com/vehicle-detection-and-tracking-using-computer-vision-baea4df65906](https://chatbotslife.com/vehicle-detection-and-tracking-using-computer-vision-baea4df65906)
 
