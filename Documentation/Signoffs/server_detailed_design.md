@@ -34,7 +34,7 @@ The server can be likened to the heart of the entire parking lot monitoring syst
 
 ## Buildable PDF Schematic
 
-[Server Components] (../3D%Models/Server.pdf)
+[Server Components](https://github.com/kesternucum/ECE-Capstone-Team3/blob/kester-signoff-server/Documentation/3D%20Models/Server.pdf)
 
 ## Analysis
 1. CPU
@@ -64,7 +64,7 @@ The server can be likened to the heart of the entire parking lot monitoring syst
   * The Gigabyte B550 Motherboard meets the specifications listed above. It is compatible with the AMD 5700X CPU, is ECC compatible, has an AM4, and is able to have a Wi-Fi adapter be able to be connected. The motherboard is also ATX which also for easy fitting of the parts in the case.
 
 7. Case
-  * Selected Part: Corsair 4000D Airflow CC-9011200-WW Black Steel / Plastic / Tempered Glass ATX Mid Tower Computer Case https://www.newegg.com/black-corsair-4000d-airflow-atx-mid-tower/p/N82E16811139156
+  * Selected Part: Corsair 4000D Airflow CC-9011200-WW Black Steel / Plastic / Tempered Glass ATX Mid Tower Computer Case
   * The Corsair 4000D case meets the above specifications by having enough space to fit all components and by having two fans for airflow.
 
 8. Wi-Fi Adapter
