@@ -16,11 +16,11 @@ The primary data acquisition system will utilize camera sensors to collect image
 2. Positioning of Cameras
   * Placement in Parking Lot
     - The parking lot behind Bell Hall has 78 Red parking spots, as shown in Figure 1.
-
-![Figure 2. Bell Hall Parking Lot with Red Spots and Light Posts] (https://github.com/kesternucum/ECE-Capstone-Team3/blob/team-signoff-cameras/Documentation/Images/Bell_Hall_Red_Spaces.png)
-
     - The only approved places that the cameras could be mounted upon are the light posts shown in Figure 1, thanks to Facilities at Tennessee Tech. The City of Cookeville did not allow us to hook up cameras on the lamp posts outlining the sidewalk around the Bell Hall lot. In addition, creating additional infrastructure (i.e. inflatable posts) was also not allowed by Facilities. The light posts, which are 5” square steel and are 25 ft tall on top of a 2 ft cement block. They provide a simple flat surface for easy mounting.
     - A total of 7 cameras will need to be used in this design implementation. Please see Figure 4 for their placement.
+
+![Figure 2. Bell Hall Parking Lot with Red Spots and Light Posts](https://github.com/kesternucum/ECE-Capstone-Team3/blob/team-signoff-cameras/Documentation/Images/Bell_Hall_Red_Spaces.png)
+
   * Attachment
     - Because drilling into posts is not allowed, hose clamps will need to be used to mount the cameras.  
     - To maximize the field of range that the cameras can see, all cameras except Camera 6b will need to be placed at a height of 22 ft (2 ft cement block plus 20 ft of the post, giving some room between the cameras and the lights–the 5 ft space between the lights and the cameras give room to avoid the lights shining onto and then overheating the cameras). Camera 6b will need to be placed at 5 ft (2 ft cement block plus 3 ft of the post) since this camera is intended for detecting vehicles as they pass by (the same applies to Camera 6a), rather than tracking static parking spots.
