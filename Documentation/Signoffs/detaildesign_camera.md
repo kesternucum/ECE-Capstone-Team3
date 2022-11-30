@@ -118,4 +118,4 @@ The primary data acquisition system will utilize camera sensors to determine the
 
 11/20/2022 - Fixed broken links in markdown file
 
-11/29/2022 - Reformatted signoff so that constraints are adequately mentioned with new information. Analysis only shows how
+11/29/2022 - Reformatted signoff so that constraints are adequately mentioned with new information. Analysis only shows how the cameras meet the specifications.
