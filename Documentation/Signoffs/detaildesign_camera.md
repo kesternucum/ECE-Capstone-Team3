@@ -12,7 +12,8 @@ The primary data acquisition system will utilize camera sensors to determine the
 
 ![Figure 1. Bell Hall Parking Lot with Red Spots and Light Posts](../Images/Bell_Hall_Red_Spaces.jpg)
 <div align="center"> Figure 1. Red Parking Spots and Light Posts in Bell Hall Lot
-
+<div align="left"> 
+ 
   * Height on Light Posts
     - Although we are not concerned about the lights causing glare into the camera lens at night since these cameras are to only output valid data during the day, it can be a concern that having the cameras too close to the lights (see Figure 2 for a picture of the light posts) will cause the cameras to overheat. Thus, after consulting with Facilities, the maximum height in which cameras can be installed is 20 ft (22 ft counting the cement block) for the sake of the cameras. To maximize the field of range that the cameras can see, all cameras except Camera 6b will need to be placed at a height of 22 ft. It makes reasonable sense to have the cameras as high as possible to ensure the camera could see all cars, especially when there is some obstruction.
     - To address the worst-case scenario for the static lots, in which a tall car (e.g. a Toyota Tacoma roughly 7.67 ft) is next to a small car (e.g. a Nissan Sentra roughly 4.74 ft), with the small car in the further spot, to ensure at least 2.69 ft of the parking spot is visible, an angle of incidence from the 2.69 ft point to the camera of 22.7° (derived from the inverse tangent of 2.93 ft, the difference in height of the cars, divided by 7 ft, derived from assuming that the tall car is 1 ft from the parking spot boundary plus 6 ft of the parking spot the small car is in) is required, or a maximum angle that the camera can be pointed of 67.3°. This satisfies all static sectors except Sector 2; however, the frequency this scenario may occur (which is uncommon due to the prevalence of students driving SUVs) as well as that this may provide an error for one parking spot (compared with the acceptable margin of error with the secondary data acquisition system to be roughly 8 parking spots), shows that this risk is acceptable.
@@ -41,7 +42,8 @@ The primary data acquisition system will utilize camera sensors to determine the
 
 ![Figure 2. Bell Hall Parking Lot Sectors](../Images/Bell_Hall_Sectors.jpg)
 <div align="center"> Figure 2. Bell Hall Red Zone Divided Up into Sectors
-
+<div align="left"> 
+ 
 3. Mounting
   * The mounting will be taken care of by a separate subsystem. This will include a mount to the pole as well as the mount to the cameras. The selected mounting must be able to handle the weight of the cameras and whatever is powering the cameras.
 
@@ -58,18 +60,19 @@ The primary data acquisition system will utilize camera sensors to determine the
 
 ![Figure 3. Bell Hall Sectors Analysis](../Images/Bell_Hall_Lot_Sectors_Analysis.jpg)
 <div align="center"> Figure 3. Minimum FOV and Resolution Requirements for Each Sector in the Bell Hall Red Zone
-
+ 
 ## Buildable Schematic
 
-![Figure 4. Avigilon Cameras](../Images/Cameras_Picture.jpg)
+![Figure 4. Avigilon Cameras](../3D&#32;Models/Cameras_Picture.jpg)
 <div align="center"> Figure 4. Selected Avigilon Dome Cameras
 
-![Figure 5. Avigilon Cameras](../Images/Cameras_Dimensions.jpg)
+![Figure 5. Avigilon Cameras](../3D&#32;Models/Cameras_Dimensions.jpg)
 <div align="center"> Figure 5. Dimensions of Avigilon Dome Camera
 
-![Figure 6. Mounting of Cameras on Light Posts](../Images/Camera_on_Light_Post.jpg)
+![Figure 6. Mounting of Cameras on Light Posts](../3D&#32;Models/Camera_on_Light_Post.jpg)
 <div align="center"> Figure 6. Mounting of Cameras on Light Posts
-
+<div align="left"> 
+ 
 ## Analysis
 
 1. Selected Camera
