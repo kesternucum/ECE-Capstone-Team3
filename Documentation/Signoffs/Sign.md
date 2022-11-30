@@ -24,9 +24,10 @@ The sign that will be implemented into this project will show the current number
 
 The Seven-Segment (SS) display needs to be large enough to be seen from the entrance into the parking lot. After lots of research, not many options are available for large seven segment displays, so the idea of creating a custom made large waterproof seven segment display came to light. This will consist of seven red 12 V LED light strips [2] per display, so 14 of them total. The chosen LED strips can be cut to the desired length for whatever application, which will roughly be 6 inches per strip. This will make each segment roughly 7 inches (W) x 13 inches (H). These will be configured and controlled much like typical SS displays minus the decimal point due to that not being necessary for this application. Each LED will then be controlled either being on or off by an Arduino Mega 2560 REV3 [A000067] [1]. This specific Arduino board has 54 digital I/O ports which is necessary for this application. Previously, an Arduino Uno board was chosen for this, but the wireless module must use the serial pins (TXD and RXD) for communication on the board. These pins share the same ports as two of the digital I/O ports. This would leave only 12 I/O pins available, while 14 are needed. Each output only sends a 5 V signal with 40 mA of current. This is not enough voltage or current for the LEDs, therefore a power transistor circuit will be used for each LED consisting of a IRLZ44N [6] power transistor, a 12V DC source, a 10 KOhm resistor, and necessary grounding. Each LED strip will then be connected to each Arduino Uno digital I/O pin. The necessary programming will then be in place to control each pin on the Arduino board.
 
-![Figure 1. Arduino Circuit Diagram](../Electrical/Schematics/Sources/Arduino to LED and Wifi Module.PNG)]
+![Figure 1. Arduino Circuit Diagram](../Electrical/Schematics/Sources/Arduino_to_LED_and_Wifi_Module.PNG)]
 <div align="center"> Figure 1. Arduino Circuit Diagram
 <br />
+<div align="left">
 
   *Wireless Data Transfer Module
 
@@ -38,15 +39,15 @@ The chosen wireless data transfer module will be a part of the communications su
 
 The physical sign stand will be an A-Frame sandwich style sign that expands and has room to put each SS display. As stated above, each segment will roughly be 7 inches x 13 inches which will fit in the sign (24 inches x 36 inches). Each display will be evenly spaced with roughly a 2 inch gap in between displays. The chosen sign also has holes to fill with sand for added weight and stability[4]. A custom waterproof vinyl poster will also be attached to this sign displaying the text “Open Spots Available”. 
 
-![Figure 2. Physical Sign Schematic with LED Strip Formation](../Documentation/Images/Sign Buildable Schematic.PNG)]
+![Figure 2. Physical Sign Schematic with LED Strip Formation](../Documentation/Images/Sign_Buildable_Schematic.PNG)]
 <div align="center"> Figure 2. Physical Sign Schematic with LED Strip Formation
 <br />
 
 	*Power 
 
 The power that will be sent to the sign will be a separate subsystem sending out 12 Volts. This will be sent to each LED strip on the sign and to the Arduino. 
-
-![Figure 3. Arduio to LED Strip power circuit](../Documentation/Electrical/Schematics/Sources/Arduino to LED and Wifi Module.PNG)]
+-
+![Figure 3. Arduio to LED Strip power circuit](../Documentation/Electrical/Schematics/Sources/Arduino_to_LED_and_Wifi_Module.PNG)]
 <div align="center"> Figure 3. Arduio to LED Strip power circuit
 <br />
 
