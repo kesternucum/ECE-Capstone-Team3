@@ -12,6 +12,7 @@ The primary data acquisition system will utilize camera sensors to determine the
 
 ![Figure 1. Bell Hall Parking Lot with Red Spots and Light Posts](../Images/Bell_Hall_Red_Spaces.jpg)
 <div align="center"> Figure 1. Red Parking Spots and Light Posts in Bell Hall Lot
+<div align="left">
 
   * Height on Light Posts
     - Although we are not concerned about the lights causing glare into the camera lens at night since these cameras are to only output valid data during the day, it can be a concern that having the cameras too close to the lights (see Figure 2 for a picture of the light posts) will cause the cameras to overheat. Thus, after consulting with Facilities, the maximum height in which cameras can be installed is 20 ft (22 ft counting the cement block) for the sake of the cameras. To maximize the field of range that the cameras can see, all cameras except Camera 6b will need to be placed at a height of 22 ft. It makes reasonable sense to have the cameras as high as possible to ensure the camera could see all cars, especially when there is some obstruction.
@@ -43,6 +44,7 @@ The primary data acquisition system will utilize camera sensors to determine the
 
 ![Figure 2. Bell Hall Parking Lot Sectors](../Images/Bell_Hall_Sectors.jpg)
 <div align="center"> Figure 2. Bell Hall Red Zone Divided Up into Sectors
+<div align="left">
 
 3. Mounting
   * The mounting will be taken care of by a separate subsystem. This will include a mount to the pole as well as the mount to the cameras. The selected mounting must be able to handle the weight of the cameras and whatever is powering the cameras.
@@ -65,19 +67,21 @@ The primary data acquisition system will utilize camera sensors to determine the
   * ONVIF is a standardized method to communicate to IP surveillance cameras with servers, etc. [5]. RTSP is a protocol that allows for video and audio streaming over a network [5]. The camera should be able to support ONVIF, RTSP, or both.
   * The wireless communication from the cameras to the server and vice versa will be addressed in a later subsystem, though the camera must have some means of being connected to a wireless transmission system or have it embedded. The cameras must be able to support streaming protocols.
 
-![Figure 3. Bell Hall Sectors Analysis](../Images/Bell_Hall_Lot_Sectors_Analysis.jpg)
+![Figure 3. Bell Hall Sectors Analysis](../3D&#32;Models/Bell_Hall_Lot_Sectors_Analysis.jpg)
 <div align="center"> Figure 3. Minimum FOV and Resolution Requirements for Each Sector in the Bell Hall Red Zone
+<div align="left">
 
 ## Buildable Schematic
 
-![Figure 4. Avigilon Cameras](../Images/Cameras_Picture.jpg)
+![Figure 4. Avigilon Cameras](../3D&#32;Models/Cameras_Picture.jpg)
 <div align="center"> Figure 4. Selected Avigilon Dome Cameras
 
-![Figure 5. Avigilon Cameras](../Images/Cameras_Dimensions.jpg)
+![Figure 5. Avigilon Cameras](../3D&#32;Models/Cameras_Dimensions.jpg)
 <div align="center"> Figure 5. Dimensions of Avigilon Dome Camera
 
 ![Figure 6. Mounting of Cameras on Light Posts](../Images/Camera_on_Light_Post.jpg)
 <div align="center"> Figure 6. Mounting of Cameras on Light Posts
+<div align="left">
 
 ## Analysis
 
