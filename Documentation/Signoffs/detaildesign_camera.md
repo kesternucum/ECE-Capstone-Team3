@@ -67,7 +67,7 @@ The primary data acquisition system will utilize camera sensors to determine the
   * ONVIF is a standardized method to communicate to IP surveillance cameras with servers, etc. [5]. RTSP is a protocol that allows for video and audio streaming over a network [5]. The camera should be able to support ONVIF, RTSP, or both.
   * The wireless communication from the cameras to the server and vice versa will be addressed in a later subsystem, though the camera must have some means of being connected to a wireless transmission system or have it embedded. The cameras must be able to support streaming protocols.
 
-![Figure 3. Bell Hall Sectors Analysis](../3D&#32;Models/Bell_Hall_Lot_Sectors_Analysis.jpg)
+![Figure 3. Bell Hall Sectors Analysis](../Images/Bell_Hall_Lot_Sectors_Analysis.jpg)
 <div align="center"> Figure 3. Minimum FOV and Resolution Requirements for Each Sector in the Bell Hall Red Zone
 <div align="left">
 
@@ -79,7 +79,7 @@ The primary data acquisition system will utilize camera sensors to determine the
 ![Figure 5. Avigilon Cameras](../3D&#32;Models/Cameras_Dimensions.jpg)
 <div align="center"> Figure 5. Dimensions of Avigilon Dome Camera
 
-![Figure 6. Mounting of Cameras on Light Posts](../Images/Camera_on_Light_Post.jpg)
+![Figure 6. Mounting of Cameras on Light Posts](../3D&#32;Models/Camera_on_Light_Post.jpg)
 <div align="center"> Figure 6. Mounting of Cameras on Light Posts
 <div align="left">
 
