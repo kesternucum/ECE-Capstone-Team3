@@ -76,11 +76,11 @@ All signoffs, electrical schematics, 3D models, and bill of materials (BOM) and 
   * Images for the project, such as images of the project when built, images used for signoffs, etc.
 4. [3D Models](/Documentation/3D&#32;Models)
   * Buildable 3D model schematics for each constructed system of the project.
-5. Final Bill of Materials
+5. Final Bill of Materials (to be added later)
   * All components ordered compiled to generate the total cost for building this project.
-6. Datasheet
+6. Datasheet (to be added later)
   * The datasheet includes all information necessary for other systems to interface with your project in the intended manner, such as the power expectations, interfacing, and compliance. The datasheet will also include results from all experimentation and the interpretation of the results.
-7. Poster
+7. Poster (to be added later)
   * Poster that is presented at the finale of Capstone II.
 
 ### Software
