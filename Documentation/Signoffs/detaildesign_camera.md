@@ -67,7 +67,9 @@ The primary data acquisition system will utilize camera sensors to determine the
     - ONVIF is a standardized method to communicate to IP surveillance cameras with servers, etc. [5]. RTSP is a protocol that allows for video and audio streaming over a network [5]. The camera should be able to support ONVIF, RTSP, or both.
     - The wireless communication from the cameras to the server and vice versa will be addressed in a later subsystem, though the camera must have some means of being connected to a wireless transmission system or have it embedded. The cameras must be able to support streaming protocols.
   * Minimum Image Acquisition Rate
-    - It is intended that the mobile application and sign will be updated at least once per minute, which requires all cameras to transmit at least one image that can be processed by the AI algorithms per minute. Thus, a frame rate of 1 fps (60 images per minute) is at minimum needed.
+    - The minimum image acquisition rate is determined by the need for an adequate frame rate to capture moving cars through the entrances of the dynamically tracked Sector 6, and in particular Camera 6b in which a car can be visible in a 19.2 ft field of view that is 22.4 ft away from the camera.
+    - The cameras for the statically tracked lots monitor and take images of static parking spots, and they will take images that determine if the spot is filled by a car or not. Thus, the minimum frame rate will be based off the dynamically tracked lots.
+    - The speed limit in the Bell Hall Parking lot is 15 mph, though it is expected that some students will drive higher at 25 mph through these entrances. Thus, a car entering Entrance B of Sector 6 will be in the field of view of the camera for ( (19.2 ft / 5280 ft/mi) / 25 mi/h * 60 m/h * 60 s/m ) = 0.524 s, or 524 ms. To ensure that a car entering Entrance B at this speed is recorded in images by Camera 6b, a frame rate of 5 fps is needed to capture at least 2 or 3 images of the car for the AI to determine its presence and its direction. However, the lowest frame rate that a camera can support is 24 fps [7], which means that a 24 fps camera at minimum is required since this image rate will provide at least 20 images of a car going through the entrances to the AI application.
 
 ![Figure 3. Bell Hall Sectors Analysis](../Images/Bell_Hall_Lot_Sectors_Analysis.jpg)
 <div align="center"> Figure 3. Minimum FOV and Resolution Requirements for Each Sector in the Bell Hall Red Zone
@@ -106,7 +108,7 @@ The primary data acquisition system will utilize camera sensors to determine the
 6. Data Obtainability and Image Acquisition Rate
   * The Avigilon cameras are ONVIF compliant as well as have the RTSP protocol, so we can communicate with the cameras to obtain video/image feed.
   * The cameras also support streaming protocols such as RTP/UDP and RTP/RTSP/HTTP/TCP for data transmission over networks.
-  * The cameras have an image rate (frame rate) of 30 fps, which is well above the minimum rate of image acquisition.
+  * The cameras have an image rate (frame rate) of 30 fps, which is above the minimum rate of image acquisition.
 
 ## Bill of Materials
 
@@ -119,17 +121,19 @@ The primary data acquisition system will utilize camera sensors to determine the
 
 ## Cited Sources
 
-[1] A. Gunzi, “Vehicle Detection and Tracking using Computer Vision,” _Chatbots Life_, 7 Mar 2017. [https://chatbotslife.com/vehicle-detection-and-tracking-using-computer-vision-baea4df65906](https://chatbotslife.com/vehicle-detection-and-tracking-using-computer-vision-baea4df65906)
+[1] A. Gunzi, “Vehicle Detection and Tracking using Computer Vision,” _Chatbots Life_, 7 Mar 2017. [https://chatbotslife.com/vehicle-detection-and-tracking-using-computer-vision-baea4df65906](https://chatbotslife.com/vehicle-detection-and-tracking-using-computer-vision-baea4df65906).
 
-[2] B. Djukic, “Detecting vehicles using machine learning and computer vision,” _Towards Data Science_, 25 Apr 2017. [https://towardsdatascience.com/detecting-vehicles-using-machine-learning-and-computer-vision-e319ee149e10](https://towardsdatascience.com/detecting-vehicles-using-machine-learning-and-computer-vision-e319ee149e10)
+[2] B. Djukic, “Detecting vehicles using machine learning and computer vision,” _Towards Data Science_, 25 Apr 2017. [https://towardsdatascience.com/detecting-vehicles-using-machine-learning-and-computer-vision-e319ee149e10](https://towardsdatascience.com/detecting-vehicles-using-machine-learning-and-computer-vision-e319ee149e10).
 
-[3] S. Meyer, “STUDY: Average Car Size is Increasing – will roads still be safe for small cars and pedestrians?,” _The Zebra_, 2022. [https://www.thezebra.com/resources/driving/average-car-size/](https://www.thezebra.com/resources/driving/average-car-size/)
+[3] S. Meyer, “STUDY: Average Car Size is Increasing – will roads still be safe for small cars and pedestrians?,” _The Zebra_, 2022. [https://www.thezebra.com/resources/driving/average-car-size/](https://www.thezebra.com/resources/driving/average-car-size/).
 
-[4] "A Practical Guide to CCTV Video Resolutions," _Optiview_, 2022. [https://optiviewusa.com/cctv-video-resolutions/](https://optiviewusa.com/cctv-video-resolutions/)
+[4] "A Practical Guide to CCTV Video Resolutions," _Optiview_, 2022. [https://optiviewusa.com/cctv-video-resolutions/](https://optiviewusa.com/cctv-video-resolutions/).
 
-[5] A. Hurley, "ONVIF vs. RTSP: Which is better?," _VXG_, 6 Oct. 2022. [https://www.videoexpertsgroup.com/onvif-vs-rtsp/](https://www.videoexpertsgroup.com/onvif-vs-rtsp/)
+[5] A. Hurley, "ONVIF vs. RTSP: Which is better?," _VXG_, 6 Oct. 2022. [https://www.videoexpertsgroup.com/onvif-vs-rtsp/](https://www.videoexpertsgroup.com/onvif-vs-rtsp/).
 
-[6] "2.0 Megapixel Day/Night H.264 HD Indoor Dome Camera," _Avigilon_, 2013. [https://www.securityinformed.com/datasheets/avigilon-2-0-h3-d1-ip-dome-camera/co-3126-ga/2.0-H3-DdatasheetEN2.pdf](https://www.securityinformed.com/datasheets/avigilon-2-0-h3-d1-ip-dome-camera/co-3126-ga/2.0-H3-DdatasheetEN2.pdf)
+[6] "2.0 Megapixel Day/Night H.264 HD Indoor Dome Camera," _Avigilon_, 2013. [https://www.securityinformed.com/datasheets/avigilon-2-0-h3-d1-ip-dome-camera/co-3126-ga/2.0-H3-DdatasheetEN2.pdf](https://www.securityinformed.com/datasheets/avigilon-2-0-h3-d1-ip-dome-camera/co-3126-ga/2.0-H3-DdatasheetEN2.pdf).
+
+[7] "Frame Rate - Everything You Need to Know," _Nashville Film Institute_. [https://www.nfi.edu/frame-rate/](https://www.nfi.edu/frame-rate/).
 
 # Revisions
 
