@@ -48,6 +48,8 @@ Another major stakeholder is **Tennessee Tech** itself because the data collecte
 
 ### Recognitions
 
+We first would like to thank Kristen Voyles and Rob Sexton at NSWC Dahlgren for their mentorship about the engineering design process throughout the entire capstone process. Their feedback and advice were invaluable, not just for the project but for us as future engineers as well.
+
 We would like to thank the Office of Parking and Transportation, University Police, and Facilities at Tennessee Tech for allowing to implement this project on campus. More recognitions to come!
 
 Also, thank you to WUCT - News Talk 94.1/AM 1600 for featuring our project on your station! We are excited that the community is excited about our project. Go check out the news article here: ["TTU Capstone Students Working To Develop Program To Better Parking"](https://newstalk941.com/ttu-capstone-students-working-to-develop-program-to-better-parking/).
@@ -71,7 +73,7 @@ All signoffs, electrical schematics, 3D models, and bill of materials (BOM) and 
 1. [Signoffs](/Documentation/Signoffs)
   * Signoffs are written for each subsystem in which each subsystem's design is analyzed in light of the constraints to ensure their functionality prior to ordering their components. Signoffs once approved will be stored here.
 2. [Electrical](/Documentation/Electrical)
-  * The Electrical folder will contains two folders: [PCB](/Documentation/Signoffs/PCB) and [Schematics](/Documentation/Signoffs/Schematics). The PCB folder contains all designs for printed circuit boards (PCBs) that are custom built for this project. The Schematics folder contains all buildable wiring schematics for analog circuits designed for this project.
+  * The Electrical folder will contains two folders: [PCB](/Documentation/Electrical/PCB) and [Schematics](/Documentation/Electrical/Schematics). The PCB folder contains all designs for printed circuit boards (PCBs) that are custom built for this project. The Schematics folder contains all buildable wiring schematics for analog circuits designed for this project.
 3. [Images](/Documentation/Images)
   * Images for the project, such as images of the project when built, images used for signoffs, etc.
 4. [3D Models](/Documentation/3D&#32;Models)
