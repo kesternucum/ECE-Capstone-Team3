@@ -24,7 +24,7 @@ Height: 4.1 in (104 mm)
 ## Buildable Schematic
 
 ![Figure 1. Temporary Casing Model](../3D&#32;Models/3DTempCasing.PNG)
-<div align="center"> Figure 2. Physical Sign PDF Schematic 
+<div align="center"> Figure 1. Temporary Casing 3D Model
 <br />
 <div align="left">
 
