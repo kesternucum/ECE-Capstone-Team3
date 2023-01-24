@@ -51,13 +51,11 @@ It must be strong enough to drill through. Acrylic meets these requirements and 
 
 
 ## BOM for Sign Power
-Example********************************
 | Name of Item | Description | Used in which subsystem(s) | Part Number | Manufacturer | Quantity |    Price   | Total |
 | ------------ | ----------- | -------------------------- | ----------- | ------------ | -------- | ---------- | ----- |
 |Dayaanee Clear Acrylic Box with Lid|     "Plastic Square Cube Containers with Lid Storage Box 5.9x5.9x5.9 Inches "|     Temporary Casing|     N/A|     Dayaanee|     4|     $26.99|     $107.96|
 |Henkel Clear Silicone Waterproof Sealant|     “2.7 oz Tub Clear Silicone Waterproof Sealant, Single Tube”|    Temporary Casing|     908570|     Henkel|     2|     $6.28|     $12.56|
 |Total|     |     |     |     Total Components|   6|     Total Cost|     $120.52|
-Example*************************************
 ## Revisions
 	
 ## Cited Sources
