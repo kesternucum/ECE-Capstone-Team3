@@ -11,6 +11,8 @@ In addition, the server will be designed to use the YOLO object detection algori
 
 There are two frameworks that will either be used to run the YOLO algorithm. The first is OpenCV, which is a free, open-source library for computer vision applications that has been used extensively throughout industry. It is known for its high performance (as compared with other frameworks like TensorFlow) and its extensive documentation, providing a relatively easy learning experience for beginners. The hardware requirements for OpenCV are listed as according to their influence on certain computer parts. OpenCV (3.4.2 at minimum) has options to use enable CUDA for faster YOLO performance with GPU acceleration, though OpenCV is primarily CPU intensive [3]. The other framework is Darknet, which was made specifically for YOLO but runs only on Linux [4]. Darknet can also be used with OpenCV and CUDA dependencies as well. The computer components will be selected based off being able to support either of these frameworks, which should have similar constraints.
 
+The server must also be able to run the Linux operating system due to the versatility of Linux as compared with Windows or MacOS for the needed programming power with the video feeds and AI applications.
+
 1. CPU
   * The processor must be powerful enough to perform tasks such as determining the number of vehicles present in a parking lot via AI analyzing images sampled from multiple cameras and via keeping track of counts from road tubes and compiling statistical data and history about parking availability. For a surveillance system, it is recommended to have one thread per camera, which for this system means 7 threads (which can be provided in 4 double-threaded cores). Thus, the CPU needs at least 6 double-threaded cores which allows half of the threads to be devoted to obtaining images from the cameras and the other half for processing the images, processing road tube counts, and sending the processed data to the server. For live streaming applications, a frequency of 3.0 GHz is required for 1080p streaming (1080p is the intended resolution of the camera feeds) [5].
   * OpenCV can be run a laptop with a processor as "low" as an Intel Core Duo with a frequency of 1.83 Hz paired with 2 GB of RAM [6]. Since the YOLO algorithm will run primarily on the GPU, [6] provides a minimum baseline of what OpenCV needs to run, which is a minimum of 2 cores each with 1 thread. However, [3] tested YOLOv4 with CUDA-enabled OpenCV on a computer with an Intel Core i5 7300HQ CPU and a Nvidia GTX 1050 Ti GPU, and although the i5 7300HQ produced only 2.1 fps, the CPU for our system must match or exceed the performance of this CPU.
@@ -41,6 +43,8 @@ There are two frameworks that will either be used to run the YOLO algorithm. The
 9. CPU Cooler
   * Since the server will be running 24/7 and will be doing very heavy computations due to the number of video feeds being inputted and the amount of processing required for the AI algorithm and the mobile application queries, to prevent the CPU from overheating, a cooling mechanism is needed. The CPU cooler must be able to be fitted into the case.
 
+In addition, all parts must be compatible with each other in terms of socket size, form factor, etc.
+
 ## Buildable Schematic
 
 ![Figure 1. Server Components within Case](../3D&#32;Models/Server.png)
@@ -49,62 +53,79 @@ There are two frameworks that will either be used to run the YOLO algorithm. The
 
 ## Analysis
 
-When selecting these parts, these parts were entered into PCPartPicker to ensure all parts listed below are compatible.
+When selecting these parts, these parts were entered into PCPartPicker to ensure all parts listed below are compatible, in which the build can be viewed at [11]. Form factors, socket sizes, etc. have been examined to also ensure compatibility.
 
 1. CPU
   * Selected Part: AMD Ryzen 5 3600 6-Core, 12-Thread Unlocked Desktop Processor with Wraith Stealth Cooler
     - The AMD Ryzen 5 3600 meets the specifications listed above. This CPU has 6 cores and 12 threads, a base clock frequency of 3.6 GHz, a maximum frequency of 4.2 GHz, and a maximum frequency of 4.6 GHz.
     - Purchasing this CPU from Amazon comes with its own cooling unit.
     - The AMD Ryzen 5 3600 also has a better performance especially in terms of speed as compared with the Intel i5 7300HQ used as a minimum CPU marker [14].
+    - The AMD Ryzen 5 3600 has an AM4 socket size, which matches that of the Gigabyte B550 motherboard.
 
 2. GPU
   * Selected Part: PNY GeForce GTX 1650 4GB GDDR6 Dual Fan Graphics Card
     - The GTX 1650 GPU meets the specifications listed above. This GPU uses NVIDIA Turing architecture.
     - The GTX 1650 also has a better performance especially in terms of speed as compared with the GTX 1050-Ti used as a minimum GPU marker [15].
+    - The graphics card requires a PCIe x16 slot to be fitted onto the motherboard, in which the Gigabyte B550 motherboard has two PCIe x16 slots.
 
 3. RAM
-  * Selected Part: Neo Forza FAYE 16GB (2x8GB) 288-Pin DDR4 3200 (PC4 25600) SDRAM Desktop Memory Model
-    - The Neo Forza GB DDR4 RAM meets the specifications listed above. This RAM has 16 GB of RAM, which is enough to handle the image collection and processing from all cameras and the other applications the system will need to perform.
+  * Selected Part: CORSAIR Vengeance LPX 16GB (2 x 8GB) 288-Pin PC RAM DDR4 3200 (PC4 25600) Desktop Memory Model
+    - The Corsair DDR4 RAM meets the specifications listed above. This RAM has 16 GB of RAM, which is enough to handle the image collection and processing from all cameras and the other applications the system will need to perform.
+    - The RAM requires DDR4 sockets to be fitted onto the motherboard, and the Gigbayte B550 motherboard does have four DDR4 sockets for both RAM sticks to be inserted in.
 
 4. Storage
   * Selected Part for Boot Drive: Team Group MP33 M.2 2280 128GB PCIe 3.0 x4 with NVMe 1.3 3D NAND Internal Solid State Drive (SSD)
     - The Team Group SSD meets the specifications listed for the boot drive SSD since it meets the storage requirements of 128 GB.
+    - The Gigabyte B550 motherboard has an M.2 port for the SSD drive to be fitted onto.
+    - The Linux OS software can be loaded onto Team Group 128 GB SSD in the server via a USB flash drive once this computer has been fully built.
   * Selected Part for Storage Drive: Seagate BarraCuda 2TB Internal Hard Drive HDD – 3.5 Inch SATA 6Gb/s 7200 RPM 256MB Cache 3.5-Inch
     - The Seagate BarraCuda Hard Drive meets the specifications listed for the storage drive since it has 7200 rpm as well as 2TB for storage.
+    - The Corsair 4000D case has two 3.5 inch HDD trays in which the hard drive can be fitted onto. The second HDD tray also allows for more storage could be added in the future if needed.
 
 5. Power Supply
   * Selected Part: Thermaltake Toughpower GX1 80+ Gold 500W SLI/CrossFire Ready Continuous Power ATX 12V V2.4/EPS V2.92 Non Modular Power Supply
     - The Thermaltake Toughpower GX1 Power Supply meets the specifications listed above since the estimated wattage of all of the selected parts according to PCPartPicker is 254 W [11]. This power supply is 500 W and 80 Plus Gold certified, and it has a MTBF of 100,000 hours as well as an input voltage of 100 V to 240 V.
+    - The power supply has an ATX form factor, which is the same as the Corsair case, so the Thermaltake Toughpower GX1 power supply will fit in the Corsair 4000D case. The Gigabyte B550 is also ATX, so the power supply and motherboard are compatible with each other.
+    - Buying a power supply comes with all the standard cables needed for completing a computer. This is a standard in power supply packaging.
 
 6. Motherboard
   * Selected Part: GIGABYTE B550 GAMING X V2 AM4 AMD B550 SATA 6Gb/s USB 3.0 ATX AMD Motherboard
-  * The Gigabyte B550 Motherboard meets the specifications listed above. It is compatible with the AMD 5700X CPU, has an AM4, and is able to have a Wi-Fi adapter be able to be connected. The motherboard is also ATX which also for easy fitting of the parts in the case.
+    - The Gigabyte B550 Motherboard meets the specifications listed above.
+    - The Gigabyte B550 motherboard has an AM4 socket, in which the AMD Ryzen 5 3600 can be inserted onto. The Wraith Stealth CPU cooler is also compatible with AM4.
+    - This motherboard also has an ATX form factor, which matches that of the Corsair case and the Thermaltake Toughpower power supply. Thus, the motherboard will fit in the selected case and is compatible with the power supply.
+    - It also has three PCIe x1 slots and two PCIe x16 slots, in which the Wavlink Wi-Fi adapter and the GTX 1650 GPU can be inserted into, respectively.
+    - It also has four DDR4 sockets which can support both Corsair Vengeance RAM sticks.
+    - The motherboard has an M.2 port for the Team Group SSD.
 
 7. Case
   * Selected Part: Corsair 4000D Airflow CC-9011200-WW Black Steel / Plastic / Tempered Glass ATX Mid Tower Computer Case
-  * The Corsair 4000D case meets the above specifications by having enough space to fit all components and by having two fans for airflow.
+    - The Corsair 4000D case meets the above specifications by having enough space to fit all components and by having two fans for airflow. The buildable schematic in Figure 1 shows how all of the listed selected parts can fit in this case.
+    - The case has an ATX form factor, which matches that of the Gigabyte B550 motherboard and the Thermaltake Toughpower GX1 power supply, which means that the motherboard and the power supply will fit in the case.
+    - The case also has two 3.5 inch HDD trays, in which one can house the Seagate BarraCuda hard drive.
 
 8. Wi-Fi Adapter
   * Selected Part: Wavlink AX3000 Wifi 6 PCIe WiFi Card Bluetooth 5.2 Tri-band 2.4G/5G/6G Network Card 802.11ax,Up to 3000Mbps WiFi Network Card with MU-MIMO, OFDMA, Heat Sink, for Desktop PC Support Windows 11,10 64bit
-  * The Wavlink AX3000 Wi-Fi Adapter meets the above specifications since it can accommodate up to 3000 Mbps.
+    - The Wavlink AX3000 Wi-Fi Adapter meets the above specifications since it can accommodate up to 3000 Mbps.
+    - The Wavlink AX300 Wi-Fi adapter requires a PCIe x1 slot, in which the Gigabyte B550 motherboard has three PCIe x1 slots (two of which will be accessible once the GPU is placed onto the motherboard). It also has a cable that plugs directly into the motherboard for power and data transmission.
 
 9. CPU Cooler
-  * The AMD Ryzen 5 3600 Processor comes with its own Wraith Stealth Cooler which fits over the CPU.
+  * Selected Part: Wraith Stealth Cooler
+    -  The AMD Ryzen 5 3600 Processor comes with its own Wraith Stealth Cooler which fits over the CPU. The Wraith Stealth Cooler is also compatible with every AM4 motherboard, just like the one selected.
 
 ## BOM
 
 | Name of Item | Description | Used in which subsystem(s) | Part Number | Manufacturer | Quantity | Unit Price | Total |
 | ------------ | ----------- | -------------------------- | ----------- | ------------ | -------- | ---------- | ----- |
 | AMD Ryzen 5 3600 Processor | 6-Core, 12-Thread Unlocked Desktop Processor with Wraith Stealth Cooler | Server | 100-100000031BOX | AMD | 1 | $111.44 | $111.44 |
-| PNY GeForce GTX 1650 Graphics Card | 4GB GDDR6 Dual Fan GPU | Server | GV-N1630OC-4GD | PNY | 1 | $172.32 | $172.32 |
-| Neo Forza FAYE 16GB (2x8GB) SDRAM Desktop Memory Model |  288-Pin DDR4 3200 (PC4 25600) Desktop Memory Model | Server | NMUD480E82-3200DG20 | Neo Forza | 1 | $52.99 | $52.99 |
+| PNY GeForce GTX 1650 Graphics Card | 4GB GDDR6 Dual Fan GPU | Server | GV-N1630OC-4GD | PNY | 1 | $189.99 | $189.99 |
+| CORSAIR Vengeance LPX 16GB (2 x 8GB) RAM |  288-Pin PC RAM DDR4 3200 (PC4 25600) Desktop Memory Model | Server | CMK16GX4M2B3200C16R | Corsair | 1 | $48.98 | $48.98 |
 | Team Group 128GB SSD | MP33 M.2 2280 128GB PCIe 3.0 x4 with NVMe 1.3 3D NAND Internal SSD | Server | TM8FP6128G0C101 | Team Group | 1 | $17.99 | $17.99 |
 | Seagate BarraCuda 2TB Internal Hard Drive |  3.5 Inch SATA 6Gb/s 7200 RPM 256MB Cache 3.5-Inch HDD | Server | ST2000DM008 | Seagate | 1 | $49.99 | $49.99 |
-| Thermaltake Toughpower GX2 80+ Gold 600W Power Supply | 500W SLI/CrossFire Ready Continuous Non Modular Power Supply | Server | PS-TPD-0500Nnfagu-1 | Thermaltake | 1 | $54.99 | $54.99 |
+| Thermaltake Toughpower GX2 80+ Gold 600W Power Supply | 500W SLI/CrossFire Ready Continuous Non Modular Power Supply | Server | PS-TPD-0500Nnfagu-1 | Thermaltake | 1 | $59.99 | $59.99 |
 | GIGABYTE B550 GAMING X V2 ATX AMD Motherboard | AM4 AMD B550 SATA 6Gb/s USB 3.0 Motherboard | Server | B550 | Gigabyte | 1 | $129.99 | $129.99 |
 | Corsair 4000D ATX Mid Tower Computer Case | Airflow Black Steel / Plastic / Tempered Glass Case | Server | CC-9011200-WW | Corsair | 1 | $104.99 | $104.99 |
 | Wavlink AX3000 WiFi Network Card |Wifi 6 PCIe WiFi Card Bluetooth 5.2 Tri-band 2.4G/5G/6G Network Card 802.11ax,Up to 3000Mbps with MU-MIMO, OFDMA, Heat Sink, for Desktop PC Support Windows 11,10 64bit Wi-Fi Adapter | Server | 675X2 | Wavlink | 1 | $61.99 | $61.99 |
-| | | | | | | | **$756.69** |
+| | | | | | | | **$775.35** |
 
 ## Links to Purchase Parts
 
@@ -113,7 +134,7 @@ AMD Ryzen 5 3600 CPU:
 
 PNY GeForce GTX 1650 4GB GDDR6 Dual Fan Graphics Card: [https://www.amazon.com/PNY-GeForce-1650-GDDR6-Graphics/dp/B08C7VTFQ8/ref=psdc_284822_t3_B01M360WG6](https://www.amazon.com/PNY-GeForce-1650-GDDR6-Graphics/dp/B08C7VTFQ8/ref=psdc_284822_t3_B01M360WG6)
 
-Neo Forza FAYE 16GB (2x8GB) SDRAM Desktop Memory Model: [https://www.newegg.com/neo-forza-16gb-288-pin-ddr4-sdram/p/0RN-0097-00019](https://www.newegg.com/neo-forza-16gb-288-pin-ddr4-sdram/p/0RN-0097-00019)
+CORSAIR Vengeance LPX 16GB (2 x 8GB) 288-Pin DDR4 RAM: [https://www.newegg.com/corsair-16gb-288-pin-ddr4-sdram/p/N82E16820233867?Item=9SIB8PYJEA5377&Source=socialshare&cm_mmc=snc-social-_-sr-_-9SIB8PYJEA5377-_-01302023](https://www.newegg.com/corsair-16gb-288-pin-ddr4-sdram/p/N82E16820233867?Item=9SIB8PYJEA5377&Source=socialshare&cm_mmc=snc-social-_-sr-_-9SIB8PYJEA5377-_-01302023)
 
 Team Group 128GB M.2 SSD: [https://www.newegg.com/team-group-mp33-128gb/p/N82E16820331414?Description=m.2%20ssd%20128%20gb&cm_re=m.2_ssd%20128%20gb-_-20-331-414-_-Product](https://www.newegg.com/team-group-mp33-128gb/p/N82E16820331414?Description=m.2%20ssd%20128%20gb&cm_re=m.2_ssd%20128%20gb-_-20-331-414-_-Product)
 
@@ -165,3 +186,5 @@ Wavlink AX3000 Wifi Network Card: [https://www.newegg.com/wavlink-690a5d-usb-3-0
 12/4/2022 - Downscaled components to cut costs
 
 1/24/2023 - Updated components to factor in YOLO algorithm with CUDA-enabled OpenCV
+
+1/30/2023 - Included compatibility of selected parts
