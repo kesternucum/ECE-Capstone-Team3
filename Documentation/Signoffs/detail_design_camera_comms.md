@@ -39,7 +39,7 @@ The requirements for this subsystem are derived from shall statements in the con
 1. This device is an Ethernet to WiFi adapter. This allows for the device to communicate between the network and the cameras.
 2. The range that this device must reach was determined to be 100 meters after liberally measuring the distance from Bell Hall to the corner of the parking lot. The chosen device is able to reach 250 meters in poor conditions.
 
- ![The distance measurement between cameras and the building](../images/distance_parking_lot.png)
+ ![The distance measurement between cameras and the building](../images/distanceparkinglot.png)
 
 3. Using an aggressive estimate to approximate the bandwidth required by the device, using 3 megapixels and 30 frames per second at the highest quality in the calculations, the camera would require only 76.8 Mbps[2], compared to the 300Mbps provided by the adapter, this is well within scope.
 4. The setup of this device would be simple, consisting of connecting the ethernet cable to a POE injector that feeds into the camera’s CAT5 RJ45 port directly. To power it, the device can be fed 5V DC to its DC 2.0 power hole. The power consumption of this device is considered “low” by most standards and will be able to be designed for in the power subsystem.
