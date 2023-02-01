@@ -53,22 +53,26 @@ The Arduino Mega board is roughly 101mm x 53.3mm[1]. The dimensions of the IRLZ4
 
 ## Analysis
 	
-Seven-Segment Display 
+1. Seven-Segment Display 
 
 The Keiurot LED strips were chosen due to them being an adjustable (length 32 cm) cost-effective option that is already waterproof (IP67 rated), bright, and a readily available product. These LED strips also have 3M adhesive weather-resistant backing on each strip, which will allow for each LED to be easily attached to the sign in the seven-segment orientation. The sign will also be easily drilled through to feed the wires through to each transistor housed in the waterproof casing. The Arduino Mega board was chosen due to the necessary capabilities mentioned in the constraints above (number of PINs, serial communication, available power output for the ESP8266 module). It has 54 digital I/O ports as well as multiple serial communication PIN options, but the most important point is that the board has a 3.3 V output for the ESP8266 module and all 16 PINS needed for the outputs to the power transistors and serial communication to the external module. This board was also chosen due to Arduino’s IDE working very well with the ESP8266 module. This board is also readily available from many different sources unlike other comparable boards. The IRLZ44NPBF power transistors were chosen due to them being a cost-effective option that has switching that works with the Arduino output voltage (5 V) and current (40 mA) from the output PINs using the configuration seen in Figure 1. A power source of 12 V DC also works perfectly with the board and the chosen 12 V LED strip and power transistor configuration [1][6].
 
-Wireless Transfer Module
+2. Wireless Transfer Module
+	
 The Sparkfun ESP8266 Module was chosen due to its wireless capabilities as well as its ease of use with the Arduino Mega board and IDE. The in depth analysis of this will be included in the corresponding communication signoff [7].
 
 
-Physical Sign
+3. Physical Sign
+	
 The physical sign was chosen due to it being large enough to hold both seven-segment displays on the face (24 in x 36 in), the option to add sand for added weight and stability, and it being able to be easily moved from one spot to another before the sand is added [3]. The custom vinyl poster was chosen due to it being a waterproof and readily available option[5]. This custom vinyl poster will then be mounted using double sided weather-resistant adhesive tape [11]. The A-Frame design was also a chosen benefit due to it adding extra protection and a mounting surface for the case holding the Arduino, transistors, and ESP8266 module.
 
 
-Power
+4. Power
+	
 The in depth analysis of this will be in the corresponding power signoff.
 
-Weatherproofing
+5. Weatherproofing
+	
 The chosen weatherproofing case is the Flemoon IP54 rated enclosure [10]. This was chosen due to its cost-effectiveness and size (12.5 in x 8.5 in x 5 in). This will also meet all of the required specifications of size and water resistance. This will then be mounted to the inside of the physical sign using the same mounting tape used for the vinyl lettering. Note that weight is not a concern due to the tape being rated to hold up to 60 lbs.
 
 
