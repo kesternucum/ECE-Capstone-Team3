@@ -84,8 +84,8 @@ The chosen weatherproofing case is the Flemoon IP54 rated enclosure [10]. This w
 |Keiurot Car Led Strip Lights|     "2CM Waterproof Led Light Strips for Cars Motorcycles Golf Cart Interior & Exterior Marine Boat Red Led Strip 12V 5050 18SMD|      Pack of 4"|     Sign|     4P-MDLEST0011-R|     Keiurot|     4|     $12.69|     $50.76|
 |Jumbl Outdoor A-Frame Sandwich Signboard 24” x 36” Display Surface|     PVC Sign Protector & Sand Fill Holes – Duel Display Signage Stand for Storefront Sidewalk Curb (Black)|     Sign|     JUMCHH583B|     Jumbl|     1|     $129.99|     $129.99|
 |Sakrete 0.5-cu ft 50-lb All-purpose Sand|     All Purpose Sand|     Sign|     40100223|     Sakrete|     1|     $5.48|     $5.48|
-|wall26 Custom Poster Prints|     "Personalized Pictures Photos to Vinyl|      Durable and Waterproof 24x36 inches"|     Sign|     PPP-CUSTOM-24x36|     wall26|     1|     $22.99|     $22.99|
-|IRLZ44NPBF|     "N-Channel 55 V 47A (Tc) 3.8W (Ta)|      110W (Tc) Through Hole TO-220AB"|     Sign|     IRLZ44NPBF|     Infineon Technologies|     14|     $1.52|     $21.28|
+|wall26 Custom Poster Prints|     "Personalized Pictures Photos to Vinyl Durable and Waterproof 24x36 inches"|     Sign|     PPP-CUSTOM-24x36|     wall26|     1|     $22.99|     $22.99|
+|IRLZ44NPBF|     "N-Channel 55 V 47A (Tc) 3.8W (Ta) 110W (Tc) Through Hole TO-220AB"|     Sign|     IRLZ44NPBF|     Infineon Technologies|     14|     $1.52|     $21.28|
 |WiFi Module - ESP8266 (4MB Flash)|      Self contained SOC with integrated TCP/IP protocol stack that can give any microcontroller access to your WiFi network|     Sign|     WRL-17146|     Sparkfun|     1|     $7.50|     $7.50|
 |Flemoon Electrical Junction Box|     IP54 Waterproof Outdoor Extension Cord Cover Weatherproof, Protect Outlet|     Sign|     B09NLW5HMX|    Flemoon|     1|     $29.99|     $29.99|
 |Gorilla Heavy Duty, Extra Long Double Sided Mounting Tape|  Extra Long Double Sided Mounting Tape|     Sign|    00052427008053|    Gorilla|     1|     $12.24|     $12.24|
