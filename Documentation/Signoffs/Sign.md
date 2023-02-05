@@ -38,7 +38,7 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 <div align="left">
 
 
-![Figure 3. Physical Sign Schematic Showing Mounted Weatherproof Case](../3D&#32;Models/3DSign.PNG)
+![Figure 3. Physical Sign Schematic Showing Mounted Weatherproof Case](../3D&#32;Models/33DSignView2.PNG)
 <div align="center"> Figure 2. Physical Sign PDF Schematic Showing Mounted Weatherproof Case
 <br />
 <div align="left">
