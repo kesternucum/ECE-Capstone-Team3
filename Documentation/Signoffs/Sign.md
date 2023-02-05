@@ -38,7 +38,7 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 <div align="left">
 
 
-![Figure 3. Physical Sign Schematic Showing Mounted Weatherproof Case](../3D&#32;Models/33DSignView2.PNG)
+![Figure 3. Physical Sign Schematic Showing Mounted Weatherproof Case](../3D&#32;Models/3DSignView2.PNG)
 <div align="center"> Figure 2. Physical Sign PDF Schematic Showing Mounted Weatherproof Case
 <br />
 <div align="left">
@@ -65,6 +65,8 @@ a. LED Strips
 > - Readily available
 > - 3M adhesive weather-resistant backing for easy attachment to sign
 
+The specs/features above show that the product meets the required constraints.
+	
 b. Microcontroller
 
 - Arduino Mega board chosen for:
@@ -74,6 +76,8 @@ b. Microcontroller
 > - Arduino's IDE works well with ESP8266 module
 > - Readily available from many different sources
 
+The specs/features above show that the product meets the required constraints.
+	
 c. Power Transistor Circuits
 
 - Power transistor circuit used for each LED, consisting of IRLZ44N power transistor, 12V DC source, 10 KOhm resistor, and grounding
@@ -83,6 +87,7 @@ c. Power Transistor Circuits
 > - Switching works with Arduino output voltage (5 V) and current (40 mA)
 > - Power source of 12 V DC works well with board, LED strip, and power transistor configuration
 
+The specs/features above show that the product meets the required constraints.
 
 2. Wireless Data Transfer Module
 
@@ -91,7 +96,8 @@ c. Power Transistor Circuits
 > - The module is very compatible with the Arduino Mega board and its IDE
 - In-depth analysis can be found in the corresponding communication signoff.
 
-
+The specs/features above show that the product meets the required constraints.
+	
 3. Outdoor Physical Sign/Stand
 
 - Physical sign will be an A-Frame sandwich style sign that expands
@@ -111,7 +117,8 @@ c. Power Transistor Circuits
 > - Readily available
 > - Mountable using Gorilla double sided weather-resistant adhesive tape 
 
-
+The specs/features above show that the products meet the required constraints.
+	
 4. Power 
 
 The power that will be sent to the sign will be a separate subsystem sending out 12 Volts and the required current output for connected components. This will be sent to each LED strip on the sign and to the Arduino. 
@@ -127,7 +134,7 @@ The in depth analysis of this will be in the corresponding power signoff.
 - Mounted to the inside of the physical sign using double-sided weather-resistant adhesive tape.
 - Gorilla double sided weather-resistant adhesive tape is rated to hold up to 60 lbs, so weight is not a concern.
 
-
+The specs/features above show that the product meets the required constraints.
 
 I. Background (Weatherproofing)
 
