@@ -51,6 +51,6 @@ This product is made of acrylic, and acrylic meets the requirements of being abl
  
  [1] “Dayaanee Clear Acrylic Box with Lid, Plastic Square Cube Containers with Lid Storage Box 5.9x5.9x5.9 Inches for Candy Pill and Tiny Jewelry, 2 Pack, ”https://www.amazon.com/Acrylic-Plastic-Dayaanee-Containers-5-9x5-9x5-9/dp/B09HK5Q5BK/ref=sr_1_3_sspa?crid=2HOSAHRZGEVO9&keywords=waterproof%2Bacrylic%2Bbox&qid=1674586236&sprefix=waterproof%2Bacrylic%2Bbox%2Caps%2C100&sr=8-3-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFFVlJFOEFEUTRVOCZlbmNyeXB0ZWRJZD1BMDMzNzUzMjFPOFhOOUsxOE9URTUmZW5jcnlwdGVkQWRJZD1BMDI0NzQxMTJWR1dTQ09KRUdNV0gmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl&th=1, amazon.com. 2022.
  
-[2] “Henkel 908570 2.7 oz Tub Clear Silicone Waterproof Sealant, Single Tube,” https://www.amazon.com/Loctite-Silicone-Waterproof-2-7-Ounce-908570/dp/B0002BBX3U/ref=sr_1_3?keywords=silicone%2Bsealant%2Bwaterproof&qid=1674589143&sr=8-3&th=1.amazon.com. 2022.
+[2] “Henkel 908570 2.7 oz Tub Clear Silicone Waterproof Sealant, Single Tube,” https://www.amazon.com/Loctite-Silicone-Waterproof-2-7-Ounce-908570/dp/B0002BBX3U/ref=sr_1_3?keywords=silicone%2Bsealant%2Bwaterproof&qid=1674589143&sr=8-3&th=1, amazon.com. 2022.
  
 
