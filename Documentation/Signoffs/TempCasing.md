@@ -35,15 +35,18 @@ This product is made of acrylic, and acrylic meets the requirements of being abl
 
 
 ## BOM for Sign Power
-Example********************************
 | Name of Item | Description | Used in which subsystem(s) | Part Number | Manufacturer | Quantity |    Price   | Total |
 | ------------ | ----------- | -------------------------- | ----------- | ------------ | -------- | ---------- | ----- |
 |Dayaanee Clear Acrylic Box with Lid|     "Plastic Square Cube Containers with Lid Storage Box 5.9x5.9x5.9 Inches "|     Temporary Casing|     N/A|     Dayaanee|     4|     $26.99|     $107.96|
 |Henkel Clear Silicone Waterproof Sealant|     “2.7 oz Tub Clear Silicone Waterproof Sealant, Single Tube”|    Temporary Casing|     908570|     Henkel|     2|     $6.28|     $12.56|
 |Total|     |     |     |     Total Components|   6|     Total Cost|     $120.52|
-Example*************************************
-## Revisions
-        	
+
+ ## Revisions
+
+ Rev 1. 
+- Updated 3D Buildable Schematic to show camera mounted on light pole in temporary casing.
+- Updated constraints
+ 
 ## Cited Sources
  
  [1] “Dayaanee Clear Acrylic Box with Lid, Plastic Square Cube Containers with Lid Storage Box 5.9x5.9x5.9 Inches for Candy Pill and Tiny Jewelry, 2 Pack, ”https://www.amazon.com/Acrylic-Plastic-Dayaanee-Containers-5-9x5-9x5-9/dp/B09HK5Q5BK/ref=sr_1_3_sspa?crid=2HOSAHRZGEVO9&keywords=waterproof%2Bacrylic%2Bbox&qid=1674586236&sprefix=waterproof%2Bacrylic%2Bbox%2Caps%2C100&sr=8-3-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFFVlJFOEFEUTRVOCZlbmNyeXB0ZWRJZD1BMDMzNzUzMjFPOFhOOUsxOE9URTUmZW5jcnlwdGVkQWRJZD1BMDI0NzQxMTJWR1dTQ09KRUdNV0gmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl&th=1, amazon.com. 2022.
