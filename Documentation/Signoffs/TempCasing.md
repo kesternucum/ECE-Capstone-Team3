@@ -19,9 +19,10 @@ The temporary casing for the cameras will be a minimal design meant to protect t
 <div align="left">
  
 ## Analysis
+ 
 Dayaanee Clear Acrylic Box with Lid chosen for:
 1.     Camera Size 
-- Dimensions of 5.9 x 5.9 x 5.9 inches due to camera needing at least 5.4 in x 5.4 in x 4.1 in giving a 0.5 in x 0.5 in x 1.8 in tolerance
+Necessary dimensions of 5.9 x 5.9 x 5.9 inches due to camera needing at least 5.4 in x 5.4 in x 4.1 in giving a 0.5 in x 0.5 in x 1.8 in tolerance.
  
 2.     Clarity
 This product has a transparent face and bottom which will suit this application for visibility. 
