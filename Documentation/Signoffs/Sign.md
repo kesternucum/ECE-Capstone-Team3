@@ -9,8 +9,8 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 ## Constraints
 
 1. Seven-Segment Display & Controls
-- Must have waterproof controllable display viewable from the road capable of showing number of open parking spots
-- Must have a microcontroller with at least a 14 Digital output PINs, RX/TX PINs, and capable of connecting a external wireless communication module
+- Must have waterproof controllable display viewable in the daylight (At least 2000 millicandelas at a 60 degree viewing angle or 1.68 Lumens [12] [13]) and from the road capable of showing number of open parking spots 
+- Must have a microcontroller with at least a 14 Digital output PINs, RX/TX PINs, and capable of connecting a external wireless communication module to connect to the 
 - Must have a power circuit for switching display LEDs on/off using power from separate subsystem
 2. Outdoor Physical Sign/Stand
 - Must be large enough to hold controllable display and static text viewable from the road
@@ -58,12 +58,9 @@ a. LED Strips
 > > - Optimum viewing distance is 120 feet and maximum viewing distance is 525 feet [8]
 
 - Keiurot LED strips chosen for:
-> - Cuttable to desired length (32 cm max)
-> - Cost-effective ($12.79 for a 4 pack)
 > - Already waterproof (IP67 rated)
-> - Bright (1000 Lumens)
-> - Readily available
-> - 3M adhesive weather-resistant backing for easy attachment to sign
+> - These LED strips claim to be rated for 1000 Lumens each, which meets the constraint of being seen in the daylight. 
+> - 3M adhesive weather-resistant backing to attach to sign
 
 The specs/features above show that the product meets the required constraints.
 	
@@ -114,7 +111,6 @@ The specs/features above show that the product meets the required constraints.
 
 - The wall26 Custom Poster Prints vinyl poster was chosen for:
 > - Waterproof
-> - Readily available
 > - Mountable using Gorilla double sided weather-resistant adhesive tape 
 
 The specs/features above show that the products meet the required constraints.
@@ -175,6 +171,9 @@ Added mounting tape to BOM.
 Rev. 3
 Reorganized info completely/cut out most paragraphs and listed spec/constraints
 
+Rev. 4
+Added info about LED visibilty in daylight
+	
 ## Cited Sources
  [1] “Arduino Mega 2560 REV3 [A000067],”amazon.com, 2022.
 https://www.amazon.com/ARDUINO-MEGA-2560-REV3-A000067/dp/B0046AMGW0/ref=sr_1_3?keywords=Amazon.com%3A+Arduino+Mega+2560+REV3+%5BA000067%5D+%3A+Electronics&qid=1675097507&sr=8-3
@@ -204,4 +203,7 @@ https://www.sparkfun.com/products/17146
 
 [11] “Gorilla Heavy Duty, Extra Long Double Sided Mounting Tape, 1" x 120", Black, (Pack of 1).” Amazon.com, 2022.
 https://www.amazon.com/Gorilla-Heavy-Double-Sided-Mounting/dp/B082TQ3KB5/ref=asc_df_B082TQ3KB5?tag=bingshoppinga-20&linkCode=df0&hvadid=80195721143474&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=&hvtargid=pla-4583795268108518&th=1
+[12] “Millicandela to lumens calculator.” Rapid Tables, 2022
+https://www.rapidtables.com/calc/light/mcd-to-lumen-calculator.html
 
+[13] “LEDs that are visible in sunlight.” Maker Pro, 2022 https://maker.pro/forums/threads/leds-that-are-visible-in-sunlight.1046/
