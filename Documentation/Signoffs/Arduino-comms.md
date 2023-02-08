@@ -42,6 +42,8 @@ The requirements for this device are:
 5.The shield consumes low power, making it an efficient solution for powering the communication interface.
 6. The shield provides multiple inputs, including UART, GPIO, ADC, PWM, I2C, and SPI, which can be used to connect various peripherals to the Arduino board.
 7. The device was chosen because it fulfills all of the aforementioned requirements as well as being very cheap ($7.50 a piece on sparkfun.)
+8. The device is easy to install, and meant to be placed atop of the Arduino.
+9. ![Wiring diagram](../Images/esp8266-wiring-diagram.png)
 
 ## Cited Sources
 
