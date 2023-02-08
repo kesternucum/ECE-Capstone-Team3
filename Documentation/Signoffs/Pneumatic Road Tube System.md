@@ -133,9 +133,6 @@ This secondary data collecting system will count the number of cars departing or
 | Cable Gland | Weatherproof IP68 adjustable locknut for 13-18 mm cable diameter | Secondary Acquisition System | B07ZRHPRP7 | Qilipsu | 6 | $10.99 | $60.99 |
 | Junction box | IP67 waterproof enclosure, (7.9"x5.9"x3.9")
 | Secondary Acquisition System | QL-201510AG | Qilipsu | 3 | $18.99 | $59.97 |
-| Quick link | 3/16” steel quick link for chain connecting | Secondary Acquisition System | 69062 | Haul-master | 1 | $1.99 | $1.99 |
-| Chain  | ¼”, 35ft chain coil | Secondary Acquisition System | 47698 | Haul-master | 1 | $35.00 | $35.00 |
-| U-post | Steel post, 3ft tall | Secondary Acquisition System | 493051 | Blue hawk | 3 | $4.70 | $14.10 |
 | ESP8266 | 4MB flash, wifi module | Secondary Acquisition System | WRL-17146 | Spark Fun | 3 | $7.50 | $22.50 |
 |Total|	|   |   |    Total Components|    51|   Total Cost|    $711.46|
 
