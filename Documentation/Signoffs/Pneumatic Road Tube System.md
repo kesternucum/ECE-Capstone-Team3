@@ -130,11 +130,11 @@ This secondary data collecting system will count the number of cars departing or
 | Ground Stake | 11 inch long, ⅝ diameter hole | Secondary Acquisition System | VORG9089194 | Lehigh | 6 | $2.22 | $13.32 |
 | Road Tube End Plug | Allen head plug for road tube | Secondary Acquisition System | 1002119 | Lancer | 6 | $0.76 | $4.56 |
 | Hose Clamp  | Steel hose clamp, ¼” - ⅝” size range | Secondary Acquisition System | 2208004 | Qilipsu | 10 | $0.63 | $6.30 |
-| Cable Gland | Weatherproof IP68 adjustable locknut for 13-18 mm cable diameter | Secondary Acquisition System | B07ZRHPRP7 | Qilipsu | 6 | $10.99 | $60.99 |
+| Cable Gland | Weatherproof IP68 adjustable locknut for 13-18 mm cable diameter | Secondary Acquisition System | B07ZRHPRP7 | Qilipsu | 1 | $10.99 | $10.99 |
 | Junction box | IP67 waterproof enclosure, (7.9"x5.9"x3.9")
 | Secondary Acquisition System | QL-201510AG | Qilipsu | 3 | $18.99 | $59.97 |
 | ESP8266 | 4MB flash, wifi module | Secondary Acquisition System | WRL-17146 | Spark Fun | 3 | $7.50 | $22.50 |
-|Total|	|   |   |    Total Components|    51|   Total Cost|    $711.46|
+|Total|	|   |   |    Total Components|    41|   Total Cost|    $664.96|
 
 
 
