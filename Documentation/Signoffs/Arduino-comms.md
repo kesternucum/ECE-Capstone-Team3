@@ -37,9 +37,9 @@ The requirements for this device are:
 
  ![The distance measurement between the corner of the parking lot and the building.](../Images/distanceparkinglot.png)
 
-3.The shield supports multiple security protocols to ensure a secure connection to the university's WiFi network.
+3. The shield supports multiple security protocols to ensure a secure connection to the university's WiFi network.
 4. The shield’s 9600bps transmission rate allows it to fulfill the 1000 bps transmission rate requirement easily.
-5.The shield consumes low power, making it an efficient solution for powering the communication interface.
+5. The shield consumes low power, making it an efficient solution for powering the communication interface.
 6. The shield provides multiple inputs, including UART, GPIO, ADC, PWM, I2C, and SPI, which can be used to connect various peripherals to the Arduino board.
 7. The device was chosen because it fulfills all of the aforementioned requirements as well as being very cheap ($7.50 a piece on sparkfun.)
 8. The device is easy to install, and meant to be placed atop of the Arduino.
