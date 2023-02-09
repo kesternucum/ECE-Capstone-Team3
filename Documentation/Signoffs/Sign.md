@@ -100,11 +100,11 @@ The specs/features above show that the product meets the required constraints.
 	
 3. Outdoor Physical Sign/Stand
 
-The RoadTrafficSigns Custom 18” x 24” Aluminum Sign was chosen due to it meeting the size constraint of being to at least be able to hold both seven segment displays totalling 16 inches x 13 inches (each display being 7 inches x 13 inches with 2 inches of spacing).
+- The RoadTrafficSigns Custom 18” x 24” Aluminum Sign was chosen due to it meeting the size constraint of being to at least be able to hold both seven segment displays totalling 16 inches x 13 inches (each display being 7 inches x 13 inches with 2 inches of spacing).
 
-This sign also has customizable text options for placement and size when ordering  this meets the static text constraint.
+- This sign also has customizable text options for placement and size when ordering  this meets the static text constraint.
 
-This will then be mounted to the post shown in the power subsystem design using the add on mounting hardware with the custom sign. 
+- This will then be mounted to the post shown in the power subsystem design using the add on mounting hardware with the custom sign. 
  
 4. Power 
 
