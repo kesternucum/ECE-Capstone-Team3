@@ -110,7 +110,8 @@ The specs/features above show that the product meets the required constraints.
 
 The power that will be sent to the sign will be a separate subsystem sending out 12 Volts and the required current output for connected components. This will be sent to each LED strip on the sign and to the Arduino. 
 
-The in depth analysis of this and the solar panel mounting to the post will be in the corresponding power signoff. Note: The detailed schematic and design for the post will be in the power detail design.
+The in depth analysis of this and the solar panel mounting to the post will be in the corresponding power signoff. 
+Note: The detailed schematic and design for the post will be in the power detail design.
 
 
 5. Weatherproofing
