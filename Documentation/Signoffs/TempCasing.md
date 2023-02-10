@@ -33,6 +33,7 @@ This box does not claim to be waterproof, but this is not an issue due to waterp
 4.     Durability
 This product is made of acrylic, and acrylic meets the requirements of being able to drill through for mounting the camera and cutting for the hose clamp to feed through[1]. 
 
+The camera will be mounted to the top of the acrylic casing using mounting hardware provided with cameras like seen in Figure 1. Then, the casing will be mounted to the light pole using the hose clamp from the primary data acquisition system subsystem fed through two cuts in the casing.
 
 ## BOM for Sign Power
 | Name of Item | Description | Used in which subsystem(s) | Part Number | Manufacturer | Quantity |    Price   | Total |
@@ -46,6 +47,9 @@ This product is made of acrylic, and acrylic meets the requirements of being abl
  Rev 1. 
 - Updated 3D Buildable Schematic to show camera mounted on light pole in temporary casing.
 - Updated constraints
+
+ Rev 2. 
+ - Added Mounting info in analysis under durability section
  
 ## Cited Sources
  
@@ -53,4 +57,5 @@ This product is made of acrylic, and acrylic meets the requirements of being abl
  
 [2] “Henkel 908570 2.7 oz Tub Clear Silicone Waterproof Sealant, Single Tube,” https://www.amazon.com/Loctite-Silicone-Waterproof-2-7-Ounce-908570/dp/B0002BBX3U/ref=sr_1_3?keywords=silicone%2Bsealant%2Bwaterproof&qid=1674589143&sr=8-3&th=1, amazon.com. 2022.
  
+
 
