@@ -33,7 +33,7 @@ This box does not claim to be waterproof, but this is not an issue due to waterp
 4.     Durability
 This product is made of acrylic, and acrylic meets the requirements of being able to drill through for mounting the camera and cutting for the hose clamp to feed through[1]. 
 
-The camera will be mounted to the top of the acrylic casing using mounting hardware provided with cameras like seen in Figure 1. Then, the casing will be mounted to the light pole using the hose clamp from the primary data acquisition system subsystem fed through two cuts in the casing.
+The camera will be mounted to the top of the acrylic casing using mounting hardware provided with cameras. Then, the casing will be mounted to the light pole using the hose clamp from the primary data acquisition system subsystem fed through two cuts in the casing like seen in Figure 1.
 
 ## BOM for Sign Power
 | Name of Item | Description | Used in which subsystem(s) | Part Number | Manufacturer | Quantity |    Price   | Total |
