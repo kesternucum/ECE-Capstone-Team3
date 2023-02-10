@@ -38,7 +38,7 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 
 
 ![Figure 3. Physical Sign Schematic View 2](../3D&#32;Models/NewSignView2.PNG)
-<div align="center"> Figure 2. Physical Sign PDF Schematic View 2
+<div align="center"> Figure 3. Physical Sign PDF Schematic View 2
 <br />
 <div align="left">
 
