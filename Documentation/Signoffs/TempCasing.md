@@ -13,7 +13,7 @@ The temporary casing for the cameras will be a minimal design meant to protect t
 
 ## Buildable Schematic
  
-![Figure 1. Temporary Casing Model](../3D&#32;Models/3DTempCasing.PNG)
+![Figure 1. Temporary Casing Model](../3D&#32;Models/3DTempCasingNew.PNG)
 <div align="center"> Figure 2. Physical Sign PDF Schematic 
 <br />
 <div align="left">
