@@ -33,7 +33,7 @@ This box does not claim to be waterproof, but this is not an issue due to waterp
 4.     Durability
 This product is made of acrylic, and acrylic meets the requirements of being able to drill through for mounting the camera and cutting for the hose clamp to feed through[1]. 
 
-The camera will be mounted like seen in Figure 1.
+The camera and casing will be mounted like seen in Figure 1.
 
 ## BOM for Sign Power
 | Name of Item | Description | Used in which subsystem(s) | Part Number | Manufacturer | Quantity |    Price   | Total |
