@@ -9,18 +9,16 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 ## Constraints
 
 1. Seven-Segment Display & Controls
-- Must have waterproof controllable display viewable in the daylight (At least 2000 millicandelas at a 60 degree viewing angle or 1.68 Lumens [12] [13]) and from the road capable of showing number of open parking spots 
+- Must have waterproof controllable display viewable in the daylight (1000 nits for daylight or 3426 total Lumens [8]) and from the road capable of showing number of open parking spots 
 - Must have a microcontroller with at least a 14 Digital output PINs, RX/TX PINs, and capable of connecting a external wireless communication module to connect to the 
-- Must have a power circuit for switching display LEDs on/off using power from separate subsystem
+- Must have a power circuit rated for switching display LEDs on/off using microcontroller output PIN voltage and power from separate subsystem
 
 2. Outdoor Physical Sign/Stand
 - Must be large enough to hold controllable display and static text viewable from the road
 - Must be able to withstand reasonable weather requirements (storm, mid to heavy wind, etc.)
 
 3. Weatherproofing
-- Must protect Seven-Segment display controls at least partially from dust and water
-- Must be mountable on interior of Physical Sign
-
+- Must protect Seven-Segment display controls from dust and water (Note: This design will be handled by the sign power subsystem)
 
 
 
@@ -57,12 +55,12 @@ a. LED Strips
 > - Each segment is roughly 7 inches (W) x 13 inches (H) 
 > - The following analysis shows how these seven-segments will meet the required constraints of visibility:
 > > - Length of road parallel to main entrance is roughly 100 feet and width is roughly 20 feet [9]
-> > - Maximum viewing angle when entering the lot is 102 feet [9]
-> > - Optimum viewing distance is 120 feet and maximum viewing distance is 525 feet [8]
+> > - Maximum viewing angle when entering the lot is 102 feet [6]
+> > - Optimum viewing distance is 120 feet and maximum viewing distance is 525 feet [5]
 
 - Keiurot LED strips chosen for:
 > - Already waterproof (IP67 rated)
-> - These LED strips claim to be rated for 1000 Lumens each, which meets the constraint of at least 2000 millicandelas at a 60 degree viewing angle or 1.68 Lumens to be seen in the daylight. 
+> - These LED strips claim to be rated for 1000 Lumens each, which meets the constraint of at least 3,426 Lumens total (14,000 Lumens total amongst all 14 strips). Note: This is typically used for LED/LCD array signs which require much more clarity for optimal legibility [8]. 
 > - 3M adhesive weather-resistant backing to attach directly to the sign.
 
 The specs/features above show that the product meets the required constraints.
@@ -84,8 +82,10 @@ c. Power Transistor Circuits
 - Each transistor connected to an Arduino Mega digital I/O pin
 
 - IRLZ44NPBF power transistors chosen for:
-> - Switching works with Arduino output voltage (5 V) and current (40 mA)
-> - Power source of 12 V DC works well with board, LED strip, and power transistor configuration
+> - Rated for up to 55 V and 47 A (VDSS) which meets the required constraints of 12 V and 0.7 A per LED strip
+> - VGS(th) is 1 V which meets the required constraint of 5V output from Arduino I/O PINs
+
+Note: Each transistor will be switched on and off by the Arduino effectively opening and closing the circuit with 12 V constantly being supplied to each LED strip as seen in Figure 1.
 
 The specs/features above show that the product meets the required constraints.
 
@@ -102,9 +102,9 @@ The specs/features above show that the product meets the required constraints.
 
 - The RoadTrafficSigns Custom 18” x 24” Aluminum Sign was chosen due to it meeting the size constraint of being to at least be able to hold both seven segment displays totalling 16 inches x 13 inches (each display being 7 inches x 13 inches with 2 inches of spacing).
 
-- This sign also has customizable text options for placement and size when ordering  this meets the static text constraint.
+- This sign also has customizable text options for placement and size when ordering that meets the static text constraint.
 
-- This will then be mounted to the post shown in the power subsystem design using the add on mounting hardware with the custom sign. 
+- This will then be mounted to the post shown in the power subsystem design using the add-on mounting hardware with the custom sign. 
  
 4. Power 
 
@@ -134,23 +134,28 @@ Weatherproofing will be designed in the Sign Power subsystem. This will include 
 ## Revisions
 
 Rev. 1 
-Added more detail to 3D schematic
-Updated Analysis and Constraints with more detail
-Switched some info in Analysis to Constraints
+- Added more detail to 3D schematic
+- Updated Analysis and Constraints with more detail
+- Switched some info in Analysis to Constraints
 
 Rev. 2
-Clarified LED strip and vinyl poster mounting in correlation to the 3D buildable schematic.
-Removed unnecessary text from Constraints section.
-Added mounting tape to BOM.
+- Clarified LED strip and vinyl poster mounting in correlation to the 3D buildable schematic.
+- Removed unnecessary text from Constraints section.
+- Added mounting tape to BOM.
 
 Rev. 3
-Reorganized info completely/cut out most paragraphs and listed spec/constraints.
+- Reorganized info completely/cut out most paragraphs and listed spec/constraints.
 
 Rev. 4
-Added info about LED visibility in daylight.
+- Added info about LED visibility in daylight.
 
 Rev. 5
-Changed design from A-Frame sign to post with aluminum sign and clarified details about this in the analysis, BOM, and sources. 
+- Changed design from A-Frame sign to post with aluminum sign and clarified details about this in the analysis, BOM, and sources. 
+
+Rev. 6
+- Redefined LED light analysis
+- Fix Citations
+- Clarified transistor analysis and constraints
 	
 ## Cited Sources
  [1] “Arduino Mega 2560 REV3 [A000067],”amazon.com, 2022.
@@ -170,11 +175,10 @@ https://www.sparkfun.com/products/17146
 
 [7] "Flemoon Large Outdoor Electrical Box (12.5 x 8.5 x 5 inch), IP54 Waterproof Outdoor Extension Cord Cover Weatherproof, Protect Outlet, Plug, Socket, Timer, Power Strip, Holiday Light Decoration, Black." Amazon.com, 2022. https://www.amazon.com/Flemoon-Electrical-Waterproof-Weatherproof-Decoration/dp/B09NLW5HMX/ref=sr_1_6?crid=1LA2KM2X4G1R0&keywords=waterproof%2Bjunction%2Bbox&qid=1675091689&sprefix=waterproof%2Bjunctio%2Caps%2C480&sr=8-6&th=1
 
-[8] “Millicandela to lumens calculator.” Rapid Tables, 2022.
-https://www.rapidtables.com/calc/light/mcd-to-lumen-calculator.html
+[8] “Nits vs Lumens vs Luminance.” New Haven Display, 2022. https://newhavendisplay.com/blog/nits-vs-lumens-vs-luminance/#:~:text=1%20Nit%20%3D%203.426%20Lumens.%20To%20convert%20nits,by%203.426.%20How%20to%20convert%20lumens%20to%20nits%3F
 
-[9] “LEDs that are visible in sunlight.” Maker Pro, 2022. https://maker.pro/forums/threads/leds-that-are-visible-in-sunlight.1046/
-
-[10] “18" x 24" Customizable Horizontal Black Sign Template.” RoadTrafficSigns, 2022.
+[9] “18" x 24" Customizable Horizontal Black Sign Template.” RoadTrafficSigns, 2022.
 https://www.roadtrafficsigns.com/fos/custom-metal-sign/custom-metal-sign-18x24/sku-k-3428-bk
+
+
 
