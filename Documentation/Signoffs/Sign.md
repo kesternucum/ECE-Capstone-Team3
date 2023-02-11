@@ -9,7 +9,7 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 ## Constraints
 
 1. Seven-Segment Display & Controls
-- Must have waterproof controllable display viewable in the daylight (1000 nits for daylight or 3426 total Lumens [8]) and from the road capable of showing number of open parking spots 
+- Must have waterproof controllable display viewable in the daylight (1000 nits[8]) and from the road capable of showing number of open parking spots 
 - Must have a microcontroller with at least a 14 Digital output PINs, RX/TX PINs, and capable of connecting a external wireless communication module to connect to the 
 - Must have a power circuit rated for switching display LEDs on/off using microcontroller output PIN voltage and power from separate subsystem
 
@@ -60,7 +60,7 @@ a. LED Strips
 
 - Keiurot LED strips chosen for:
 > - Already waterproof (IP67 rated)
-> - These LED strips claim to be rated for 1000 Lumens each, which meets the constraint of at least 3,426 Lumens total (14,000 Lumens total amongst all 14 strips). Note: This is typically used for LED/LCD array signs which require much more clarity for optimal legibility [8]. 
+> - These LED strips claim to be rated for 1000 Lumens each, then with a max viewing apex angle of 160 degrees (average max for LED strips) equates to roughly 318.3 Candela. Then, over both seven-segment displays (16 inches x 13 inches) equate to 2,371.5 Nits (Cd/m^2) which meets the constraint of at least 1000 Nits total. Note: This is typically used for LED/LCD array signs which require much more clarity for optimal legibility [8]. 
 > - 3M adhesive weather-resistant backing to attach directly to the sign.
 
 The specs/features above show that the product meets the required constraints.
