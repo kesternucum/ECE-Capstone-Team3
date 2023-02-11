@@ -60,7 +60,7 @@ a. LED Strips
 
 - Keiurot LED strips chosen for:
 > - Already waterproof (IP67 rated)
-> - These LED strips claim to be rated for 1000 Lumens each, then with a max viewing apex angle of 160 degrees (average max for LED strips) equates to roughly 318.3 Candela. Then, over both seven-segment displays (16 inches x 13 inches) equate to 2,371.5 Nits (Cd/m^2) which meets the constraint of at least 1000 Nits total.
+> - LED strips rated for 1000 Lumens each, a max viewing apex angle of 160 degrees (average max for LED strips) equates to roughly 318.3 Candela. Over both seven-segment displays (16 inches x 13 inches) equate to 2,371.5 Nits (Cd/m^2) which meets the constraint of at least 1000 Nits total.
 Note: This is typically used for LED/LCD array signs which require much more clarity for optimal legibility [8]. 
 > - 3M adhesive weather-resistant backing to attach directly to the sign.
 
