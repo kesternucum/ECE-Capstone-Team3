@@ -54,8 +54,8 @@ a. LED Strips
 > - Each LED strip is roughly 6 inches long
 > - Each segment is roughly 7 inches (W) x 13 inches (H) 
 > - The following analysis shows how these seven-segments will meet the required constraints of visibility:
-> > - Length of road parallel to main entrance is roughly 100 feet and width is roughly 20 feet [9]
-> > - Maximum viewing angle when entering the lot is 102 feet [6]
+> > - Length of road parallel to main entrance is roughly 100 feet and width is roughly 20 feet [6]
+> > - Maximum viewing distance when entering the lot is 102 feet [6]
 > > - Optimum viewing distance is 120 feet and maximum viewing distance is 525 feet [5]
 
 - Keiurot LED strips chosen for:
