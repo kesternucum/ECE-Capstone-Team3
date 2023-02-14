@@ -9,7 +9,7 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 ## Constraints
 
 1. Seven-Segment Display & Controls
-- Must have waterproof controllable display directly viewable in the daylight (1000 nits[8]) and from the road capable of showing number of open parking spots 
+- Must have waterproof controllable display directly viewable in the daylight (at least 10,000 millicandela per LED [12]) and from the road capable of showing number of open parking spots 
 - Must have a microcontroller with at least a 14 Digital output PINs, RX/TX PINs, and capable of connecting a external wireless communication module to connect to the 
 - Must have a power circuit rated for switching display LEDs on/off using microcontroller output PIN voltage and power from separate subsystem
 
@@ -60,7 +60,7 @@ a. LED Strips
 
 - Keiurot LED strips chosen for:
 > - Already waterproof (IP67 rated)
-> - LED strips rated for 1000 Lumens each, a max viewing apex angle of 160 degrees (average max for LED strips) equates to roughly 318.3 Candela. Over both seven-segment displays (16 inches x 13 inches) equate to 2,371.5 Nits (Cd/m^2) which meets the constraint of at least 1000 Nits total for daylight visibility. 
+> - LED strips rated for 1000 Lumens each (18 LEDs total per strip so 55.5 Lumens per LED) , a max viewing apex angle of 160 degrees (average max for LED strips) equates to roughly 10,680 millicandela. which meets the constraint of at least 10,000 millicandela total for daylight visibility. 
 > - 3M adhesive weather-resistant backing to attach directly to the lens covers.
 > - Cuttable to size of 6 inches per strip to meet the size constraint of creating a viewable display from the road (7 inch x 13 inch seven-segment displays)
 The specs/features above show that the product meets the required constraints.
@@ -69,7 +69,7 @@ The specs/features above show that the product meets the required constraints.
 > - A lens to cover the Keiurot LED strips to meet the constraint of visibility due to the necessity of not staring directly at the LEDs. 
 > - This lens cover also meets all size constraints of the Keiurot LED strips.
 > - This lens cover also comes with mounting hardware and end caps for a clean finish and to attach to the sign.
-> - Note: This cover allows the LED strips to directly be viewed by shining onto a translucent surface.
+> - Note: This cover allows the LED strips to directly be viewed by shining onto a translucent surface, and will completely house each LED strip. 
 
 
 b. Microcontroller
@@ -78,8 +78,7 @@ b. Microcontroller
 > - Necessary capabilities for number of PINs, serial communication, and output for ESP8266 module
 > - 54 digital I/O ports and multiple serial communication PIN options
 > - 3.3 V output for ESP8266 module and 16 PINs for outputs to power transistors and serial communication to external module
-> - Arduino's IDE works well with ESP8266 module
-> - Readily available from many different sources
+> - Arduino's IDE works well with ESP8266 module 
 
 The specs/features above show that the product meets the required constraints.
 	
@@ -123,7 +122,8 @@ Note: The detailed schematic and design for the post will be in the power detail
 
 5. Weatherproofing
 
-Weatherproofing will be designed in the Sign Power subsystem. This will include casing for all of the transistors, Arduino, communication module, and battery.
+Weatherproofing will be designed in the Sign Power subsystem. 
+Note: This will include the housing for all of the transistors, Arduino, communication module, and battery.
 
 
 
@@ -170,7 +170,10 @@ Rev. 7
 - Clarified LED visibility (size and brightness)
 
 Rev. 8
-Added Lens cover for LED strips
+- Added Lens cover for LED strips
+
+Rev. 9
+- Changed info on LED brightness and updated 3D schematic
 	
 ## Cited Sources
  [1] “Arduino Mega 2560 REV3 [A000067],”amazon.com, 2022.
@@ -198,3 +201,7 @@ https://www.roadtrafficsigns.com/fos/custom-metal-sign/custom-metal-sign-18x24/s
 [10] “Muzata 10PACK 3.3FT/1M Flexible Silver LED Channel with Milky White LED Cover Lens Bendable Aluminum Profile Housing Track for Strip Tape Light Anodized Curved Mount U106 1M WW, LB1.” amazon.com, 2022.
 https://www.amazon.com/dp/B07P8NWBP5/ref=emc_b_5_t
 
+[11] “Candela.” Nist, 2022.
+https://www.nist.gov/si-redefinition/candela
+
+[12] Illuminating Engineering Society (IES) Lighting Handbook, 10th Edition, Chapter 27: Daylighting Metrics, Section 27.2.2 "Luminance Contrast Ratio", and Section 27.3.3 "Minimum Luminance".
