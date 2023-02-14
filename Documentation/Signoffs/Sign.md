@@ -9,7 +9,7 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 ## Constraints
 
 1. Seven-Segment Display & Controls
-- Must have waterproof controllable display viewable in the daylight (1000 nits[8]) and from the road capable of showing number of open parking spots 
+- Must have waterproof controllable display directly viewable in the daylight (1000 nits[8]) and from the road capable of showing number of open parking spots 
 - Must have a microcontroller with at least a 14 Digital output PINs, RX/TX PINs, and capable of connecting a external wireless communication module to connect to the 
 - Must have a power circuit rated for switching display LEDs on/off using microcontroller output PIN voltage and power from separate subsystem
 
@@ -61,13 +61,15 @@ a. LED Strips
 - Keiurot LED strips chosen for:
 > - Already waterproof (IP67 rated)
 > - LED strips rated for 1000 Lumens each, a max viewing apex angle of 160 degrees (average max for LED strips) equates to roughly 318.3 Candela. Over both seven-segment displays (16 inches x 13 inches) equate to 2,371.5 Nits (Cd/m^2) which meets the constraint of at least 1000 Nits total for daylight visibility. 
-> - 3M adhesive weather-resistant backing to attach directly to the sign.
+> - 3M adhesive weather-resistant backing to attach directly to the lens covers.
 > - Cuttable to size of 6 inches per strip to meet the size constraint of creating a viewable display from the road (7 inch x 13 inch seven-segment displays)
 The specs/features above show that the product meets the required constraints.
 
 - Muzata Milky White LED Cover Lens was chosen for:
 > - A lens to cover the Keiurot LED strips to meet the constraint of visibility due to the necessity of not staring directly at the LEDs. 
 > - This lens cover also meets all size constraints of the Keiurot LED strips.
+> - This lens cover also comes with mounting hardware and end caps for a clean finish and to attach to the sign.
+> - Note: This cover allows the LED strips to directly be viewed by shining onto a translucent surface.
 
 
 b. Microcontroller
