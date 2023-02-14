@@ -64,7 +64,12 @@ a. LED Strips
 > - 3M adhesive weather-resistant backing to attach directly to the sign.
 > - Cuttable to size of 6 inches per strip to meet the size constraint of creating a viewable display from the road (7 inch x 13 inch seven-segment displays)
 The specs/features above show that the product meets the required constraints.
-	
+
+- Muzata Milky White LED Cover Lens was chosen for:
+> - A lens to cover the Keiurot LED strips to meet the constraint of visibility due to the necessity of not staring directly at the LEDs. 
+> - This lens cover also meets all size constraints of the Keiurot LED strips.
+
+
 b. Microcontroller
 
 - Arduino Mega board chosen for:
@@ -130,7 +135,8 @@ Weatherproofing will be designed in the Sign Power subsystem. This will include 
 |WiFi Module - ESP8266 (4MB Flash)|      Self contained SOC with integrated TCP/IP protocol stack that can give any microcontroller access to your WiFi network|     Sign|     WRL-17146|     Sparkfun|     1|     $7.50|     $7.50|
 |Custom 18” x 24” Aluminum Sign|      Custom Aluminum Sign with Custom Wording|     Sign|    K-3428-BK|     RoadTrafficSigns|     1|     $37.75|     $37.75|
 |Post Attachment Kit|      2 Bolts for Heavy Duty Posts and 2 Bolts for Economy Posts Attachment Hardware for Posts - 4 bolts|     Sign|	K-KIT2|     RoadTrafficSigns|     1|     $1.87|     $1.87|
-|Total|     |     |     |     Total Components|    22|     Total Cost|     $167.56|
+|Muzata Milky White LED Cover Lens|     10PACK 3.3FT/1M Flexible Silver LED Channel with Milky White LED Cover Lens|     Sign|   MZZ411|     Muzata|     2|     $39.99|     $79.98|
+|Total|     |     |     |     Total Components|    24|     Total Cost|     $247.54|
 
 ## Revisions
 
@@ -160,6 +166,9 @@ Rev. 6
 
 Rev. 7
 - Clarified LED visibility (size and brightness)
+
+Rev. 8
+Added Lens cover for LED strips
 	
 ## Cited Sources
  [1] “Arduino Mega 2560 REV3 [A000067],”amazon.com, 2022.
@@ -184,5 +193,6 @@ https://www.sparkfun.com/products/17146
 [9] “18" x 24" Customizable Horizontal Black Sign Template.” RoadTrafficSigns, 2022.
 https://www.roadtrafficsigns.com/fos/custom-metal-sign/custom-metal-sign-18x24/sku-k-3428-bk
 
-
+[10] “Muzata 10PACK 3.3FT/1M Flexible Silver LED Channel with Milky White LED Cover Lens Bendable Aluminum Profile Housing Track for Strip Tape Light Anodized Curved Mount U106 1M WW, LB1.” amazon.com, 2022.
+https://www.amazon.com/dp/B07P8NWBP5/ref=emc_b_5_t
 
