@@ -33,7 +33,7 @@ This box does not claim to be waterproof, but this is not an issue due to waterp
 4.     Durability
 This product is made of acrylic, and acrylic meets the requirements of being able to drill through for mounting the camera and cutting for the hose clamp to feed through[1]. 
 
-Mounting Instructions (Reference Figure 1)
+## Mounting Instructions (Reference Figure 1)
 1. Camera will be mounted in the center of the top of the acrylic case using the mounting hardware that came with the camera.
 2. Two slits of equal height and 2 to 4 inches apart will then be made on the lower back side wall (2 inches from bottom wall) of the case with the camera pointing outwards for the first hose clamp to be fed through (See Figure 1).
 3. Two more slits will then be made above the slits made in Step 2 (2 inches from top wall).
