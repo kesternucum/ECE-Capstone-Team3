@@ -13,8 +13,18 @@ The temporary casing for the cameras will be a minimal design meant to protect t
 
 ## Buildable Schematic
  
-![Figure 1. Temporary Casing Model](../3D&#32;Models/3DTempCasingNew1.PNG)
-<div align="center"> Figure 2. Physical Sign PDF Schematic 
+ ![Figure 1. Temporary Casing Model](../3D&#32;Models/3TempCaseSchem1.PNG)
+<div align="center"> Figure 1. Physical Sign PDF Schematic (Buildable View 1)
+<br />
+<div align="left">
+ 
+ ![Figure 2. Temporary Casing Model](../3D&#32;Models/TempCaseSchem2.PNG)
+<div align="center"> Figure 2. Physical Sign PDF Schematic (Hose Clamp Hole View)
+<br />
+<div align="left">
+ 
+![Figure 3. Temporary Casing Model](../3D&#32;Models/3DTempCasingNew1.PNG)
+<div align="center"> Figure 3. Physical Sign PDF Schematic Final View
 <br />
 <div align="left">
  
@@ -61,6 +71,9 @@ Rev. 3
  
 Rev. 4
 - Added Mounting instructions to correlate with Buildable Schematic
+
+ Rev. 5
+ - Added Buildable Schematic Views
  
 ## Cited Sources
  
