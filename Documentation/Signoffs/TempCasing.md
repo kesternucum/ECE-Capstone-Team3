@@ -33,6 +33,13 @@ This box does not claim to be waterproof, but this is not an issue due to waterp
 4.     Durability
 This product is made of acrylic, and acrylic meets the requirements of being able to drill through for mounting the camera and cutting for the hose clamp to feed through[1]. 
 
+Mounting Instructions (Reference Figure 1)
+1. Camera will be mounted in the center of the top of the acrylic case using the mounting hardware that came with the camera.
+2. Two slits of equal height and 2 to 4 inches apart will then be made on the lower back side wall (2 inches from bottom wall) of the case with the camera pointing outwards for the first hose clamp to be fed through (See Figure 1).
+3. Two more slits will then be made above the slits made in Step 2 (2 inches from top wall).
+4. The hose clamps will then be fed through these slits and tightened onto the light post securing the casing.
+Note: Make sure to just snuggly hand tighten any hardware and not overtighten
+ 
 The camera and casing will be mounted like seen in Figure 1.
 
 ## BOM for Sign Power
@@ -44,15 +51,18 @@ The camera and casing will be mounted like seen in Figure 1.
 
  ## Revisions
 
- Rev 1. 
+Rev. 1 
 - Updated 3D Buildable Schematic to show camera mounted on light pole in temporary casing.
 - Updated constraints
 
- Rev 2. 
- - Added Mounting info in analysis under durability section
+Rev. 2 
+- Added Mounting info in analysis under durability section
  
- Rev 3.
- - Added Notes on Schematic for Mounting/removed paragraph on mounting.
+Rev. 3
+- Added Notes on Schematic for Mounting/removed paragraph on mounting.
+ 
+Rev. 4
+- Added Mounting instructions to correlate with Buildable Schematic
  
 ## Cited Sources
  
