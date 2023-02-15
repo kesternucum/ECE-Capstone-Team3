@@ -13,7 +13,7 @@ The temporary casing for the cameras will be a minimal design meant to protect t
 
 ## Buildable Schematic
  
- ![Figure 1. Temporary Casing Model](../3D&#32;Models/3TempCaseSchem1.PNG)
+ ![Figure 1. Temporary Casing Model](../3D&#32;Models/TempCaseSchem1.PNG)
 <div align="center"> Figure 1. Physical Sign PDF Schematic (Buildable View 1)
 <br />
 <div align="left">
@@ -28,7 +28,7 @@ The temporary casing for the cameras will be a minimal design meant to protect t
 <br />
 <div align="left">
  
-## Mounting Instructions (Reference Figure 1)
+## Mounting Instructions (Reference Figures 1-3)
 1. Camera will be mounted in the center of the top of the acrylic case using the mounting hardware that came with the camera.
 2. Two slits of equal height and 2 to 4 inches apart will then be made on the lower back side wall (2 inches from bottom wall) of the case with the camera pointing outwards for the first hose clamp to be fed through (See Figure 1).
 3. Two more slits will then be made above the slits made in Step 2 (2 inches from top wall).
