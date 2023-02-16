@@ -182,7 +182,9 @@ Rev. 8
 
 Rev. 9
 - Changed info on LED brightness and updated 3D schematic
-	
+
+Rev. 10
+- Added more PDF schematic stages/steps and views to make it buildable.
 ## Cited Sources
  [1] “Arduino Mega 2560 REV3 [A000067],”amazon.com, 2022.
 https://www.amazon.com/ARDUINO-MEGA-2560-REV3-A000067/dp/B0046AMGW0/ref=sr_1_3?keywords=Amazon.com%3A+Arduino+Mega+2560+REV3+%5BA000067%5D+%3A+Electronics&qid=1675097507&sr=8-3
