@@ -43,9 +43,11 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 <div align="left">
 
 ![Figure 4. Physical Sign Schematic View 3](../3D&#32;Models/NewSignView2.0.PNG)
-<div align="center"> Figure 3. Physical Sign 3D Schematic View
+<div align="center"> Figure 4. Physical Sign 3D Schematic Final Product View
 <br />
 <div align="left">
+
+Note: The dimensions on the final view show the placement of each LED strip/Lens. 	
 
 ## Analysis
 
