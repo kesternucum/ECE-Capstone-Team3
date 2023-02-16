@@ -20,6 +20,13 @@ The camera communications subsystem allows each camera to connect to the univers
 
 ![Wiring diagram for the networking device](../Images/Camera_Comm_wiring.png)
 
+![Figure 2. Camera Communications 3D Schematic](../3D&#32;Models/CameraComm3D.PNG)
+<div align="center"> Figure 2. Camera Communication Module 3D Placement Schematic 
+<br />
+<div align="left">
+
+Note: The Module will be attached to the interior of the casing using a double sided adhesive tape. 
+
 ## Analysis
 
 1. Chosen Device:
