@@ -47,7 +47,7 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 <br />
 <div align="left">
 
-Note: The dimensions on the final view show the placement of each LED strip/Lens. 	
+Note: The dimensions on the final view show the placement of each LED strip/Lens. Each LED strip's wires will also be sent to the weatherpoof box holding all circuit components (In the Power subsystem signoff).	
 
 ## Analysis
 
