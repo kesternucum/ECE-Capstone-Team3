@@ -9,7 +9,7 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 ## Constraints
 
 1. Seven-Segment Display & Controls
-- Must have waterproof controllable display directly viewable in the daylight (at least 10,000 millicandela per LED [12]) and from the road capable of showing number of open parking spots 
+- Must have waterproof controllable display directly viewable in the daylight ("the minimum luminance required for a LED to be visible in direct sunlight is around 10,000 to 15,000 millicandela (mcd). However, this can vary depending on the specific application and viewing conditions. For example, a LED used in a traffic signal or sign may require a higher luminance level to ensure visibility in a busy urban environment with high levels of background light." [12]) and from the road capable of showing number of open parking spots 
 - Must have a microcontroller with at least a 14 Digital output PINs, RX/TX PINs, and capable of connecting a external wireless communication module to connect to the 
 - Must have a power circuit rated for switching display LEDs on/off using microcontroller output PIN voltage and power from separate subsystem
 
