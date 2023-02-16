@@ -20,12 +20,12 @@ Note: All units are in Inches
 <br />
 <div align="left">
  
- ![Figure 2. Temporary Casing Model](../3D&#32;Models/TempCaseSchem2.0.PNG)
+ ![Figure 2. Temporary Casing Model](../3D&#32;Models/TempCaseSchem2.1.PNG)
 <div align="center"> Figure 2. Physical Sign PDF Schematic (Hose Clamp Hole View)
 <br />
 <div align="left">
  
-![Figure 3. Temporary Casing Model](../3D&#32;Models/3DTempCasingNew1.PNG)
+![Figure 3. Temporary Casing Model](../3D&#32;Models/3DTempCasingNew1.0.PNG)
 <div align="center"> Figure 3. Physical Sign PDF Schematic Final View
 <br />
 <div align="left">
