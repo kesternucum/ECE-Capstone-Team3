@@ -93,6 +93,11 @@ Rev. 4
 Rev. 5
 - Added Buildable Schematic Views
 - Added information about hose clamps
+ 
+Rev. 6
+- Added sealing mounting and cuts info
+- Updated Schematics to show width of slits and sealing info
+ 
 ## Cited Sources
  
  [1] “Dayaanee Clear Acrylic Box with Lid, Plastic Square Cube Containers with Lid Storage Box 5.9x5.9x5.9 Inches for Candy Pill and Tiny Jewelry, 2 Pack, ”https://www.amazon.com/Acrylic-Plastic-Dayaanee-Containers-5-9x5-9x5-9/dp/B09HK5Q5BK/ref=sr_1_3_sspa?crid=2HOSAHRZGEVO9&keywords=waterproof%2Bacrylic%2Bbox&qid=1674586236&sprefix=waterproof%2Bacrylic%2Bbox%2Caps%2C100&sr=8-3-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFFVlJFOEFEUTRVOCZlbmNyeXB0ZWRJZD1BMDMzNzUzMjFPOFhOOUsxOE9URTUmZW5jcnlwdGVkQWRJZD1BMDI0NzQxMTJWR1dTQ09KRUdNV0gmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl&th=1, amazon.com. 2022.
