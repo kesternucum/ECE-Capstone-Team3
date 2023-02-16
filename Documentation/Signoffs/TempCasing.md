@@ -31,13 +31,19 @@ Note: All units are in Inches
 <div align="left">
  
 ## Mounting Instructions (Reference Figures 1-3)
-1. Camera will be mounted in the center of the top of the acrylic case using the mounting hardware that came with the camera.
-2. Two slits of equal height and 2 to 4 inches apart will then be made on the lower back side wall (2 inches from bottom wall) of the case with the camera pointing outwards for the first hose clamp to be fed through (See Figure 1).
-3. Two more slits will then be made above the slits made in Step 2 (2 inches from top wall).
-4. The hose clamps will then be fed through these slits and tightened onto the light post securing the casing.
+
+ 1. Camera will be mounted in the center of the top of the acrylic case using the mounting hardware that came with the camera.
+
+ 2. Two slits of equal height and 2 to 4 inches apart will then be made on the lower back side wall (2 inches from bottom wall) of the case with the camera pointing outwards for the first hose clamp to be fed through (See Figure 1).
+
+ 3. Two more slits will then be made above the slits made in Step 2 (2 inches from top wall).
+
+ 4. The hose clamps will then be fed through these slits and tightened onto the light post securing the casing.
 Note: Make sure to just snuggly hand tighten any hardware and not overtighten 
 
-## Analysis
+ 5. After tightened put waterproof sealant over each both mounting screw points and each slit made.
+
+ ## Analysis
  
 Dayaanee Clear Acrylic Box with Lid chosen for:
 1.     Camera Size 
@@ -55,6 +61,8 @@ This product is made of acrylic, and acrylic meets the requirements of being abl
 5.     Mounting
 The mounting hardware provided with the cameras will be used to mount the cameras to the interior top side of the casing.
 
+Henkel Clear Silicone Waterproof Sealant will then be reused to seal any slits made and mounting points.
+ 
 The Steelsoft Hose clamps were chosen due to being:
 - Stainless Steel (Weather Resistant)
 - Meets the constraint of being at least 22 inches per clamp due to being cuttable to size.
