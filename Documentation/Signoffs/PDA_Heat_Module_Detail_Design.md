@@ -19,7 +19,9 @@ Reliability Constraints
 
 ## Buildable Schematic
 
-No buildable schematic was created for this design.
+![Heat_Module_Wiring](https://user-images.githubusercontent.com/80428236/219547418-005a2b73-7603-46de-b484-d2eaae911cac.png)
+
+Figure 1. Electrical Wiring Schematic
 
 ## Analysis
 
@@ -41,25 +43,11 @@ Addressing Risks
 
 ## Bill of Materials
 
-| Name of Item | Description | Used in which subsystem(s) | Part Number | Manufacturer | Quantity |    Price   | Total |
-
-| ------------ | ----------- | -------------------------- | ----------- | ------------ | -------- | ---------- | ----- |
-
-|Arduino Nano|     "Arduino Nano 33 BLE Sense"|     Primary Data Acquisition System|     ABX00031|     Arduino|     7|     $40.50|     $283.50|
-
-|Film Heater Plate|     "4 PCS Film Heater Plate Adhesive Pad, Icstation PI Heating Elements Film 5V 1W Flexible Polymerize Heater Film Stripboard Mat 30mmx40mm"|     Primary Data Acquisition System|     Number Not Found|     Amazon|     2|     $15.99|     $31.98|
-
-## Revisions
-
-**Revision 1 - 02/11/2023**
-
-Updated constraints requirement.
-
-Removed invalid buildable schematic.
-
-Changed method of temperature detection.
-
-Created a Bill of Materials.
+| Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
+|--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
+|Arduino Nano| Arduino Nano 33 BLE Sense | Primary Data Acquisition | ABX00031 | Arduino | 7 | $40.50 | $283.50 |
+|Film Heater Plate| 4 PCS Film Heater Plate Adhesive Pad, Icstation PI Heating Elements Film 5V 1W Flexible Polymerize Heater Film Stripboard Mat 30mmx40mm | Primary Data Acquisition | Number Not Found | Icstation | 2 | $15.99 | $31.98 |
+| Total | | | | Total Components | 9 | Total Cost | $315.48 |
 
 ## Cited Sources
 
@@ -76,3 +64,11 @@ Created a Bill of Materials.
 [6] Garcia, Jose, “Reading Temperature & Humidity on Nano 33 BLE Sense,” _arduino.cc_, 2023. https://docs.arduino.cc/tutorials/nano-33-ble-sense/humidity-and-temperature-sensor.
 
 [7] “4 PCS Film Heater Plate Adhesive Pad, Icstation PI Heating Elements Film 5V 1W Flexible Polymerize Heater Film Stripboard Mat 30mmx40mm,” _amazon.com_, 2023. https://www.amazon.com/5V-Flexible-Polyimide-Heater-Plate/dp/B0727X2DGC/.
+
+## Revisions
+
+**02/11/2023**
+Updated constraints requirement.
+Removed invalid buildable schematic.
+Changed method of temperature detection.
+Created a Bill of Materials.
