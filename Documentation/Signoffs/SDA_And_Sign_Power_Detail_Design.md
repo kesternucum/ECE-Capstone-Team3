@@ -57,17 +57,23 @@ Placement Constraints
 
 ## Buildable Schematic
 
-<img width="323" alt="Arduino_Wiring_No_Sign_Schematic" src="https://user-images.githubusercontent.com/80428236/219543234-ce0d9854-0549-4f5d-b9ed-3c6f44d9f141.png">
+<img width="323" alt="Arduino_Wiring_No_Sign_Schematic" src="https://user-images.githubusercontent.com/80428236/219543509-28dd4a0d-46ad-4e21-997c-77dab535d8e0.png">
+Figure 1. Wiring Schematic Without Sign
 
 ![Arduino_Wiring_With_Sign_Schematic](https://user-images.githubusercontent.com/80428236/219543255-b8a8db36-60c3-46c1-867e-7cf3528142ec.png)
+Figure 2. Wiring Schematic With Sign
 
 ![Post_Model](https://user-images.githubusercontent.com/80428236/219543298-e8a7edb6-a43f-4d11-9a07-de3856bceb66.png)
+Figure 3. Post Model
 
 ![Post_Side_Model](https://user-images.githubusercontent.com/80428236/219543316-c5561a02-4226-4d40-8b0a-a6c3202c7a98.png)
+Figure 4. Post Side View
 
 ![Post_Front_Model](https://user-images.githubusercontent.com/80428236/219543334-61d1f62a-2539-4eb8-9c46-672756a36deb.png)
+Figure 5. Post Front View
 
 ![Post_Back_Model](https://user-images.githubusercontent.com/80428236/219543340-2048f3db-c25c-4541-9b26-5bff8f9fe251.png)
+Figure 6. Post Back View
 
 ## Analysis
 
@@ -87,6 +93,7 @@ Meeting Placement Requirements
 1. Our team has been granted permission to place posts into the ground around the Bell Hall parking lot, therefore, a post will be used to hold the needed solar panel, battery, and arduino. The posts will be placed in the areas as seen in Figure 7 with the post holding the sign notated by the yellow square. These locations are right next to the pneumatic tubes which will prevent leaving an excess of loose wire, as well as being located on the grass so they should not obstruct parking. The post with the sign is also located next to a parking entrance, so the sign should be easy to see for students driving into the lot.
 
 ![Post_Placement](https://user-images.githubusercontent.com/80428236/219543389-bb18b5e1-8dec-4e8c-9cc5-fdf84bdf782e.jpg)
+Figure 7. Post Placement
 
 ## Bill of Materials
 
