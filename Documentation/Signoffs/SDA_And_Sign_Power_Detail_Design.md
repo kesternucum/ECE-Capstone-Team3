@@ -104,26 +104,6 @@ Figure 7. Post Placement
 
 ## Bill of Materials
 
-| Name of Item | Description | Used in which subsystem(s) | Part Number | Manufacturer | Quantity |    Price   | Total |
-
-| ------------ | ----------- | -------------------------- | ----------- | ------------ | -------- | ---------- | ----- |
-
-|Solar Panel|     "12V FLEXIBLE SOLAR PANEL – 20 WATTS"|     Post|     Number Not Found|     Dakota Lithium|     3|     $49.00|     $147.00|
-
-|Rechargeable Battery|     "12V 7Ah Battery, HWE Energy Rechargeable LiFePO4 Battery, 4000+ Deep Cycle Lithium Iron Phosphate Battery Built-in BMS"|     Post|     Number Not Found|     Amazon|     3|     $34.56|     $103.68|
-
-|Steel Post|     "Blue Hawk Powder-coated Steel U-post For Garden Fence"|     Post|     493053|     Lowe’s|     3|     $7.98|     $23.94|
-
-|22 AWG Wire|     "BATTERY DOCTOR Primary Automotive Wire: 22 AWG Wire Size, PVC, Stranded, 100 ft Lg, Red"|     Post|     34GC76|     Grainger|     1|     $9.93|     $9.93|
-
-|22 AWG Wire|     "BATTERY DOCTOR Primary Automotive Wire: 22 AWG Wire Size, PVC, Stranded, 100 ft Lg, Black"|     Post|     34GC72|     Grainger|     1|     $10.61|     $10.61|
-
-|Crimp Kit|     "620pcs Dupont Line Connector 2.54mm Dupont Cable Jumper Wire Pin Header Housing Kit Male Crimp Pin Female Pin Terminal Connector"|     Post|     CQ00824|     Temu|     1|     $10.99|     $10.99|
-
-|Junction Box|     "QILIPSU Hinged Cover Stainless Steel Latch 410x310x180mm Junction Box with Mounting Plate, Universal IP67 Project Box Waterproof DIY Electrical Enclosure, ABS Plastic Grey (16.1"x12.2"x7.1")"|     Post|     Number Not Found|     Amazon|     3|     $75.99|     $227.97|
-
-|Locknut|     "QILIPSU 3/4 NPT Nylon Cable Gland, Waterproof IP68 Adjustable Locknut for 13-18mm Cable Diameter (3/4 NPT, 6pcs)"|     Post|     Number Not Found|     Amazon|     2|     $10.99|     $21.98|
-
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 |Solar Panel| 12V FLEXIBLE SOLAR PANEL – 20 WATTS | Secondary Data Acquisiton & Sign | Number Not Found | Dakota Lithium | 3 | $49.00 | $147.00 |
