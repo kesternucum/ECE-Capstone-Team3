@@ -57,53 +57,17 @@ Placement Constraints
 
 ## Buildable Schematic
 
-![Figure 1. Device Connection](../Electrical/Arduino_Wiring_No_Sign_Schematic.PNG)
+<img width="323" alt="Arduino_Wiring_No_Sign_Schematic" src="https://user-images.githubusercontent.com/80428236/219543234-ce0d9854-0549-4f5d-b9ed-3c6f44d9f141.png">
 
-&lt;div align="center"> Figure 1. Device Connection
+![Arduino_Wiring_With_Sign_Schematic](https://user-images.githubusercontent.com/80428236/219543255-b8a8db36-60c3-46c1-867e-7cf3528142ec.png)
 
-&lt;br />
+![Post_Model](https://user-images.githubusercontent.com/80428236/219543298-e8a7edb6-a43f-4d11-9a07-de3856bceb66.png)
 
-&lt;div align="left">
+![Post_Side_Model](https://user-images.githubusercontent.com/80428236/219543316-c5561a02-4226-4d40-8b0a-a6c3202c7a98.png)
 
-![Figure 2. Device Connection With Sign](../Electrical/Arduino_Wiring_With_Sign_Schematic.PNG)
+![Post_Front_Model](https://user-images.githubusercontent.com/80428236/219543334-61d1f62a-2539-4eb8-9c46-672756a36deb.png)
 
-&lt;div align="center"> Figure 2. Device Connection With Sign
-
-&lt;br />
-
-&lt;div align="left">
-
-![Figure 3. Post Model](../3D Models/Post_Model.PNG)
-
-&lt;div align="center"> Figure 3. Post Model
-
-&lt;br />
-
-&lt;div align="left">
-
-![Figure 4. Post Side View](../Images/Post_Side_Model.PNG)
-
-&lt;div align="center"> Figure 4. Post Side View
-
-&lt;br />
-
-&lt;div align="left">
-
-![Figure 5. Post Front View](../Images/Post_Front_Model.PNG)
-
-&lt;div align="center"> Figure 5. Post Front View
-
-&lt;br />
-
-&lt;div align="left">
-
-![Figure 6. Post Back View](../Images/Post_Back_Model.PNG)
-
-&lt;div align="center"> Figure 6. Post Back View
-
-&lt;br />
-
-&lt;div align="left">
+![Post_Back_Model](https://user-images.githubusercontent.com/80428236/219543340-2048f3db-c25c-4541-9b26-5bff8f9fe251.png)
 
 ## Analysis
 
@@ -122,13 +86,7 @@ Meeting Placement Requirements
 
 1. Our team has been granted permission to place posts into the ground around the Bell Hall parking lot, therefore, a post will be used to hold the needed solar panel, battery, and arduino. The posts will be placed in the areas as seen in Figure 7 with the post holding the sign notated by the yellow square. These locations are right next to the pneumatic tubes which will prevent leaving an excess of loose wire, as well as being located on the grass so they should not obstruct parking. The post with the sign is also located next to a parking entrance, so the sign should be easy to see for students driving into the lot.
 
-![Figure 7. Post Placement](../Images/Post_Placement.PNG)
-
-&lt;div align="center"> Figure 7. Post Placement
-
-&lt;br />
-
-&lt;div align="left">
+![Post_Placement](https://user-images.githubusercontent.com/80428236/219543389-bb18b5e1-8dec-4e8c-9cc5-fdf84bdf782e.jpg)
 
 ## Bill of Materials
 
