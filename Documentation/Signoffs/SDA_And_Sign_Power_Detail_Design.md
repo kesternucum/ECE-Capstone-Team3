@@ -57,7 +57,7 @@ Placement Constraints
 
 ## Buildable Schematic
 
-![Figure 1. Device Connection](../Images/Arduino_Wiring_No_Sign_Schematic.PNG)
+![Figure 1. Device Connection](../Electrical/Arduino_Wiring_No_Sign_Schematic.PNG)
 
 &lt;div align="center"> Figure 1. Device Connection
 
@@ -65,7 +65,7 @@ Placement Constraints
 
 &lt;div align="left">
 
-![Figure 2. Device Connection With Sign](../Images/Arduino_Wiring_With_Sign_Schematic.PNG)
+![Figure 2. Device Connection With Sign](../Electrical/Arduino_Wiring_With_Sign_Schematic.PNG)
 
 &lt;div align="center"> Figure 2. Device Connection With Sign
 
@@ -73,7 +73,7 @@ Placement Constraints
 
 &lt;div align="left">
 
-![Figure 3. Post Model](../Images/Post_Model.PNG)
+![Figure 3. Post Model](../3D Models/Post_Model.PNG)
 
 &lt;div align="center"> Figure 3. Post Model
 
