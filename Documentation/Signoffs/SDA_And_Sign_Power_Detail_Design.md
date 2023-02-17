@@ -124,6 +124,18 @@ Figure 7. Post Placement
 
 |Locknut|     "QILIPSU 3/4 NPT Nylon Cable Gland, Waterproof IP68 Adjustable Locknut for 13-18mm Cable Diameter (3/4 NPT, 6pcs)"|     Post|     Number Not Found|     Amazon|     2|     $10.99|     $21.98|
 
+| Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
+|--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
+|Solar Panel| 12V FLEXIBLE SOLAR PANEL – 20 WATTS | Secondary Data Acquisiton & Sign | Number Not Found | Dakota Lithium | 3 | $49.00 | $147.00 |
+|Rechargeable Battery| 12V 7Ah Battery, HWE Energy Rechargeable LiFePO4 Battery, 4000+ Deep Cycle Lithium Iron Phosphate Battery Built-in BMS| Secondary Data Acquisiton & Sign |Number Not Found | Howell Energy | 3 | $34.56 | $103.68 |
+|Steel Post| Powder-coated Steel U-post |Secondary Data Acquisiton & Sign|493053|Blue Hawk| 3 | $7.98 | $23.94 |
+|22 AWG Wire| 22 AWG Wire Size, PVC, Stranded, 100 ft Lg, Red |Secondary Data Acquisiton & Sign| 34GC76 |Grainger | 1 | $9.93 | $9.93 |
+|22 AWG Wire| 22 AWG Wire Size, PVC, Stranded, 100 ft Lg, Black |Secondary Data Acquisiton & Sign| 34GC72 |Grainger | 1 | $10.61 | $10.61 |
+|Crimpt Kit| 620pcs Dupont Line Connector 2.54mm Dupont Cable Jumper Wire Pin Header Housing Kit Male Crimp Pin Female Pin Terminal Connector |Secondary Data Acquisiton & Sign| CQ00824 |Temu | 3 | $10.99 | $10.99 |
+|Junction Box| Hinged Cover Stainless Steel Latch 410x310x180mm Junction Box with Mounting Plate, Universal IP67 Project Box Waterproof DIY Electrical Enclosure, ABS Plastic Grey (16.1"x12.2"x7.1") |Secondary Data Acquisiton & Sign| Number Not Found |QILIPSU | 3 | $75.99 | $227.97 |
+|Locknut| 3/4 NPT Nylon Cable Gland, Waterproof IP68 Adjustable Locknut for 13-18mm Cable Diameter (3/4 NPT, 6pcs) |Secondary Data Acquisiton & Sign| Number Not Found |QILIPSU | 2 | $10.99 | $21.98 |
+| Total | | | | Total Components | 19 | Total Cost | $556.10 |
+
 ## Cited Sources
 
 [1] “Arduino Uno Rev3,” _arduino.cc_, 2023. https://store-usa.arduino.cc/products/arduino-uno-rev3.
