@@ -16,7 +16,7 @@ The camera communications subsystem allows each camera to connect to the univers
 
 # Buildable Schematic
 
-![Figure 2. Wiring Diagram for Vonets VAP11G-300 Wi-Fi Bridge/Repeater](../Images/Camera_Comm_wiring.png)
+![Figure 2. Wiring Diagram for Vonets VAP11G-50 Wi-Fi Bridge/Repeater](../Images/Camera_Comm_wiring.png)
 
 ![Figure 3. Camera Communications 3D Schematic](../3D&#32;Models/CameraComm3D.PNG)
 <div align="center"> Figure 3. Camera Communication Module 3D Placement Schematic
@@ -27,10 +27,10 @@ Note: The Module will be attached to the interior of the casing using a double s
 
 ## Analysis
 
-Selected Camera: Vonets VAP11G-300 Wi-Fi Bridge/Repeater
+Selected Adapter: Vonets VAP11G-500 Wi-Fi Bridge/Repeater
 
 1. Ethernet-to-WiFi Adaptor
-  - The VAP116-300 Wi-Fi Bridge/Repeater has an ethernet cable that can be connected to the Avigilon cameras (which can either be used for power over ethernet or transmission via ethernet, if no power is available).
+  - The VAP116-500 Wi-Fi Bridge/Repeater has an ethernet cable that can be connected to the Avigilon cameras (which can either be used for power over ethernet or transmission via ethernet, if no power is available).
 
 2. Network Capabilities
   - The device has a transmission rate of 300 Mbps, which is well above the needed streaming rate of 8 Mbps.
@@ -42,10 +42,10 @@ Selected Camera: Vonets VAP11G-300 Wi-Fi Bridge/Repeater
 
 | Name of Item | Description | Used in which subsystem(s) | Part Number | Manufacturer | Quantity | Unit Price | Total |
 | ------------ | ----------- | -------------------------- | ----------- | ------------ | -------- | ---------- | ----- |
-| VONETS VAP11G-300 WiFi to Ethernet Converter | WiFi Bridge 2.4GHz WiFi Repeater/Point to Point with RJ45 Male DC/USB Powered for PLC IP Camera Printer Medical Devices Network Device | Primary Data Acquisition | VAP11G-300 | Vonets | 7 | $25.98 | $25.98 |
-| | | | | | | | **$181.86** |
+| VONETS VAP11G-500 WiFi to Ethernet Converter | WiFi Bridge 2.4GHz WiFi Repeater/Point to Point with RJ45 Male DC/USB Powered for PLC IP Camera Printer Medical Devices Network Device | Primary Data Acquisition | VAP11G-500 | Vonets | 7 | $30.09 | $30.09 |
+| | | | | | | | **$210.63** |
 
-Link to Purchase: [https://www.amazon.com/Vonets-VAP11G-300-Wireless-Multi-Functional-Amplifier/dp/B014SK2H6W/ref=sr_1_1_sspa?crid=WCTZO0AN6W4B&keywords=VONETS+VAP11G-300&qid=1676496048&sprefix=vonets+vap11g-300%2Caps%2C132&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyQlg3NkIwUkhaM0NTJmVuY3J5cHRlZElkPUEwOTk5NDQ1MjI1WThGUTc2UjBWMSZlbmNyeXB0ZWRBZElkPUEwOTk1OTgzMTBHOTdYRlMzSFQwViZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=](https://www.amazon.com/Vonets-VAP11G-300-Wireless-Multi-Functional-Amplifier/dp/B014SK2H6W/ref=sr_1_1_sspa?crid=WCTZO0AN6W4B&keywords=VONETS+VAP11G-300&qid=1676496048&sprefix=vonets+vap11g-300%2Caps%2C132&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyQlg3NkIwUkhaM0NTJmVuY3J5cHRlZElkPUEwOTk5NDQ1MjI1WThGUTc2UjBWMSZlbmNyeXB0ZWRBZElkPUEwOTk1OTgzMTBHOTdYRlMzSFQwViZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=)
+Link to Purchase: [Purchase Link](https://www.banggood.com/Vonets-WiFi-Repeater-WiFi-Bridge-300Mbps-CPE-Support-Up-to-500-Meters-Transmission-Vonets-VAP11G-500-p-1809093.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=US&utm_content=minha&utm_campaign=aceng-pmax-us-pc&currency=USD&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_us&utm_campaign=aceng-pmax-usca-p15-35-20221108-massa&utm_content=massa&ad_id=&gclid=Cj0KCQiA6LyfBhC3ARIsAG4gkF-SkGisDUw3-_x7-yabmkP7mRqE_e8zQtwWceim2ZT_6vMrRdEAVsEaAm0nEALw_wcB)
 
 ## Cited Sources
 
