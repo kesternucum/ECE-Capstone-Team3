@@ -68,7 +68,11 @@ Addressing Risks
 ## Revisions
 
 **02/11/2023**
+
 Updated constraints requirement.
+
 Removed invalid buildable schematic.
+
 Changed method of temperature detection.
+
 Created a Bill of Materials.
