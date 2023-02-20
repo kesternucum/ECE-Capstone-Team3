@@ -14,7 +14,7 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 - Must have a power circuit rated for switching display LEDs on/off using microcontroller output PIN voltage and power from separate subsystem
 
 2. Outdoor Physical Sign/Stand
-- Must be large enough to hold controllable display and static text viewable from the road
+- Must be large enough to hold controllable display and static text viewable from the road (at least 3 inches in height [5])
 - Must be able to withstand reasonable weather requirements (storm, mid to heavy wind, etc.)
 
 3. Weatherproofing
@@ -31,25 +31,25 @@ The sign will be a physical entity at the entrance of the parking lot that will 
 <div align="left">
 
 
-![Figure 2. Physical Sign Schematic](../3D&#32;Models/NewSignView1.1.PNG)
+![Figure 2. Physical Sign Schematic](../3D&#32;Models/NewSignView1.2.PNG)
 <div align="center"> Figure 2. Physical Sign PDF Schematic 
 <br />
 <div align="left">
 
 
-![Figure 3. Physical Sign Schematic View 2](../3D&#32;Models/NewSignView2.1.PNG)
+![Figure 3. Physical Sign Schematic View 2](../3D&#32;Models/NewSignView2.2.PNG)
 <div align="center"> Figure 3. Physical Sign Final Product Schematic View
 <br />
 <div align="left">
 
-![Figure 4. Physical Sign Schematic View 3](../3D&#32;Models/NewSignView2.0.PNG)
+![Figure 4. Physical Sign Schematic View 3](../3D&#32;Models/NewSignView3.0.PNG)
 <div align="center"> Figure 4. Physical Sign 3D Schematic View
 <br />
 <div align="left">
 
 Note: 
 - The dimensions on the final view show the placement of each LED strip/Lens. 
-- Each LED strip's wires will also be sent to the weatherpoof box holding all circuit components (In the Power subsystem signoff). The necessary holes will be drilled through the sign behind each Lens/Strip for each wire to be fed through. 	
+- Each LED strip's wires will also be sent to the weatherproof box holding all circuit components (In the Power subsystem signoff). The necessary holes will be drilled through the sign behind each Lens/Strip for each wire to be fed through. 	
 
 ## Analysis
 
@@ -69,15 +69,16 @@ a. LED Strips
 - Keiurot LED strips chosen for:
 > - Already waterproof (IP67 rated)
 > - LED strips rated for 1000 Lumens each (18 LEDs total per strip so 55.5 Lumens per LED) , a max viewing apex angle of 160 degrees (average max for LED strips) equates to roughly 10,680 millicandela. which meets the constraint of at least 10,000 millicandela total for daylight visibility. 
-> - 3M adhesive weather-resistant backing to attach directly to the lens covers.
+> - 3M adhesive weather-resistant backing to attach directly to the sign.
 > - Cuttable to size of 6 inches per strip to meet the size constraint of creating a viewable display from the road (7 inch x 13 inch seven-segment displays)
 The specs/features above show that the product meets the required constraints.
 
-- Muzata Milky White LED Cover Lens was chosen for:
-> - A lens to cover the Keiurot LED strips to meet the constraint of visibility due to the necessity of not staring directly at the LEDs. 
-> - This lens cover also meets all size constraints of the Keiurot LED strips.
-> - This lens cover also comes with mounting hardware and end caps for a clean finish and to attach to the sign.
-> - Note: This cover allows the LED strips to directly be viewed by shining onto a translucent surface, and will completely house each LED strip. 
+- Gaffer Power Transparent tape chosen for:
+> - A lensing to cover the Keiurot LED strips to meet the constraint of visibility due to the necessity of not staring directly at the LEDs. 
+> - This tape can meet all size constraints of the Keiurot LED strips due to it being cuttable to the preferred size and can also be layered in necessary while maintaining a clean finish.
+> - The tape is weather resistant for long-term durability. 
+>-  The tape is also patterned which allows for the light to be dispersed along the tape lens.
+> - Note: This cover allows the LED strips to directly be viewed by shining onto a translucent surface. 
 
 
 b. Microcontroller
@@ -116,7 +117,7 @@ The specs/features above show that the product meets the required constraints.
 
 - The RoadTrafficSigns Custom 18” x 24” Aluminum Sign was chosen due to it meeting the size constraint of being to at least be able to hold both seven segment displays totalling 16 inches x 13 inches (each display being 7 inches x 13 inches with 2 inches of spacing).
 
-- This sign also has customizable text options for placement and size when ordering that meets the static text constraint.
+- This sign also has customizable text options (roughly 3.6 inches in height with a max readable distance being roughly 130 feet away [5]) for placement and size when ordering that meets the static text constraint.
 
 - This will then be mounted to the post shown in the power subsystem design using the add-on mounting hardware with the custom sign. 
  
@@ -145,8 +146,8 @@ Note: This will include the housing for all of the transistors, Arduino, communi
 |WiFi Module - ESP8266 (4MB Flash)|      Self contained SOC with integrated TCP/IP protocol stack that can give any microcontroller access to your WiFi network|     Sign|     WRL-17146|     Sparkfun|     1|     $7.50|     $7.50|
 |Custom 18” x 24” Aluminum Sign|      Custom Aluminum Sign with Custom Wording|     Sign|    K-3428-BK|     RoadTrafficSigns|     1|     $37.75|     $37.75|
 |Post Attachment Kit|      2 Bolts for Heavy Duty Posts and 2 Bolts for Economy Posts Attachment Hardware for Posts - 4 bolts|     Sign|	K-KIT2|     RoadTrafficSigns|     1|     $1.87|     $1.87|
-|Muzata Milky White LED Cover Lens|     10PACK 3.3FT/1M Flexible Silver LED Channel with Milky White LED Cover Lens|     Sign|   MZZ411|     Muzata|     2|     $39.99|     $79.98|
-|Total|     |     |     |     Total Components|    24|     Total Cost|     $247.54|
+|Transparent Duct Tape|     Ultra High Performance Weather Resistant Tape for Discreet|     Sign|   GP-ClrDctPrnt|     Gaffer Power|     1|     $12.88|     $12.88|
+|Total|     |     |     |     Total Components|    24|     Total Cost|     $180.44|
 
 ## Revisions
 
@@ -185,6 +186,10 @@ Rev. 9
 
 Rev. 10
 - Added more PDF schematic stages/steps and views to make it buildable.
+Rev. 11
+- Adjusted custom sign letter print size and changed lens housing to a transparent tape lens due to size restrictions
+-Adjusted schematic
+
 ## Cited Sources
  [1] “Arduino Mega 2560 REV3 [A000067],”amazon.com, 2022.
 https://www.amazon.com/ARDUINO-MEGA-2560-REV3-A000067/dp/B0046AMGW0/ref=sr_1_3?keywords=Amazon.com%3A+Arduino+Mega+2560+REV3+%5BA000067%5D+%3A+Electronics&qid=1675097507&sr=8-3
@@ -208,10 +213,9 @@ https://www.sparkfun.com/products/17146
 [9] “18" x 24" Customizable Horizontal Black Sign Template.” RoadTrafficSigns, 2022.
 https://www.roadtrafficsigns.com/fos/custom-metal-sign/custom-metal-sign-18x24/sku-k-3428-bk
 
-[10] “Muzata 10PACK 3.3FT/1M Flexible Silver LED Channel with Milky White LED Cover Lens Bendable Aluminum Profile Housing Track for Strip Tape Light Anodized Curved Mount U106 1M WW, LB1.” amazon.com, 2022.
-https://www.amazon.com/dp/B07P8NWBP5/ref=emc_b_5_t
-
-[11] “Candela.” Nist, 2022.
+[10] “Candela.” Nist, 2022.
 https://www.nist.gov/si-redefinition/candela
 
-[12] Illuminating Engineering Society (IES) Lighting Handbook, 10th Edition, Chapter 27: Daylighting Metrics, Section 27.2.2 "Luminance Contrast Ratio", and Section 27.3.3 "Minimum Luminance".
+[11] Illuminating Engineering Society (IES) Lighting Handbook, 10th Edition, Chapter 27: Daylighting Metrics, Section 27.2.2 "Luminance Contrast Ratio", and Section 27.3.3 "Minimum Luminance".
+
+[12] “Transparent Duct Tape, Ultra High Performance Weather Resistant Tape for Discreet, No Show Repairs and Mounting | Residential, Commercial and Industrial Uses | by Gaffer Power (2 Inch x 20 Yards).” amazon.com, 2022. https://www.amazon.com/Transparent-Performance-Residential-Gaffer-Power/dp/B076J2BS1B/ref=sr_1_5?crid=YG10GJ8KGJXY&keywords=frosted+waterproof+tape&qid=1676677399&sprefix=frosted+waterproof+tape%2Caps%2C156&sr=8-5
