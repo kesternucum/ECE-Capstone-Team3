@@ -49,15 +49,24 @@ Important Notes
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-|Arduino Nano| Arduino Nano 33 BLE Sense | Primary Data Acquisition | ABX00031 | Arduino | 7 | $40.50 | $283.50 |
-|Film Heater Plate| 4 PCS Film Heater Plate Adhesive Pad, Icstation PI Heating Elements Film 5V 1W Flexible Polymerize Heater Film Stripboard Mat 30mmx40mm | Primary Data Acquisition | Number Not Found | Icstation | 2 | $15.99 | $31.98 |
-| Total | | | | Total Components | 9 | Total Cost | $315.48 |
-
-| Name of Item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total | |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 |Arduino Nano| Arduino Nano 33 IoT | Primary Data Acquisition | ABX00027 | Arduino | 7 | $24.00 | $168.00 |
 |Transistor| MOSFET N-CH 55V 47A | Primary Data Acquisition | IRLZ44NPBF-ND | Infineon Technologies | 7 | $1.52 | $10.64 |
 |Film Heater Plate| 5V 1W Flexible Polymerize Heater Film Stripboard Mat 30mmx40mm | Primary Data Acquisition | Number Not Found | Icstation | 2 | $15.99 | $31.98 |
-| **Total** | | | | **Total Components** | 16 | *
+| Total | | | | Total Components | 16 | Total Cost | $210.62 |
+
+## Cited Sources
+
+[1] “2.0 Megapixel Day/Night H.264 HD Indoor Dome Camera,” _AVIGILON_, 2013.  https://www.securityinformed.com/datasheets/avigilon-2-0-h3-d1-ip-dome-camera/co-3126-ga/2.0-H3-DdatasheetEN2.pdf.
+
+[2] “Climate and Average Weather Year Round in Cookeville,” _Weather Spark_, 2023. https://weatherspark.com/y/15151/Average-Weather-in-Cookeville-Tennessee-United-States-Year-Round.
+
+[3] “Cookeville Weather Records,” _Extreme Weather Watch_, 2022. https://www.extremeweatherwatch.com/cities/cookeville.
+
+[4] “Arduino Nano 33 IoT,” _arduino.cc_, 2023. https://store-usa.arduino.cc/products/arduino-nano-33-iot.
+
+[5] “4 PCS Film Heater Plate Adhesive Pad, Icstation PI Heating Elements Film 5V 1W Flexible Polymerize Heater Film Stripboard Mat 30mmx40mm,” _amazon.com_, 2023. https://www.amazon.com/5V-Flexible-Polyimide-Heater-Plate/dp/B0727X2DGC/.
+
+[6] “IRLZ44NPBF,” _Digi-Key_, 2023. https://www.digikey.com/en/products/detail/infineon-technologies/IRLZ44NPBF/811808.
 
 ## Revisions
 
@@ -80,17 +89,3 @@ Updated analysis to address being able to power the heat module.
 Changed device used to communicate to server and power on heating element.
 
 Update Bill of Materials.
-
-## Cited Sources
-
-[1] “2.0 Megapixel Day/Night H.264 HD Indoor Dome Camera,” _AVIGILON_, 2013.  https://www.securityinformed.com/datasheets/avigilon-2-0-h3-d1-ip-dome-camera/co-3126-ga/2.0-H3-DdatasheetEN2.pdf.
-
-[2] “Climate and Average Weather Year Round in Cookeville,” _Weather Spark_, 2023. https://weatherspark.com/y/15151/Average-Weather-in-Cookeville-Tennessee-United-States-Year-Round.
-
-[3] “Cookeville Weather Records,” _Extreme Weather Watch_, 2022. https://www.extremeweatherwatch.com/cities/cookeville.
-
-[4] “Arduino Nano 33 IoT,” _arduino.cc_, 2023. https://store-usa.arduino.cc/products/arduino-nano-33-iot.
-
-[5] “4 PCS Film Heater Plate Adhesive Pad, Icstation PI Heating Elements Film 5V 1W Flexible Polymerize Heater Film Stripboard Mat 30mmx40mm,” _amazon.com_, 2023. https://www.amazon.com/5V-Flexible-Polyimide-Heater-Plate/dp/B0727X2DGC/.
-
-[6] “IRLZ44NPBF,” _Digi-Key_, 2023. https://www.digikey.com/en/products/detail/infineon-technologies/IRLZ44NPBF/811808.
