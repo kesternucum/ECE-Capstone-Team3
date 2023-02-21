@@ -27,26 +27,26 @@ Note: The Module will be attached to the interior of the casing using a double s
 
 ## Analysis
 
-Selected Adapter: Vonets VAP11G-500 Wi-Fi Bridge/Repeater
+Selected Adapter: Vonets VAP11G-500S Wi-Fi Bridge/Repeater
 
 1. Ethernet-to-WiFi Adaptor
-  - The VAP116-500 Wi-Fi Bridge/Repeater has an ethernet cable that can be connected to the Avigilon cameras (which can either be used for power over ethernet or transmission via ethernet, if no power is available).
+  - The VAP116-500S Wi-Fi Bridge/Repeater has an ethernet cable that can be connected to the Avigilon cameras (which can either be used for power over ethernet or transmission via ethernet, if no power is available).
 
 2. Network Capabilities
   - The device has a transmission rate of 300 Mbps, which is well above the needed streaming rate of 8 Mbps.
 
 3. Range
-  - The ethernet-to-WiFi converter has a unobstructed range of 500 m unobstructed and obstructed of 250 m, which are both well-above the minimum range of 100 m needed to reach routers in Bell Hall.
+  - The ethernet-to-WiFi converter has a unobstructed range of 200 m unobstructed and obstructed of 100 m, which are both well-above the maximum range of 85 m needed to reach routers in Bell Hall.
 
 ## Bill of Materials
 
 | Name of Item | Description | Used in which subsystem(s) | Part Number | Manufacturer | Quantity | Unit Price | Total |
 | ------------ | ----------- | -------------------------- | ----------- | ------------ | -------- | ---------- | ----- |
-| VONETS VAP11G-500 WiFi to Ethernet Converter | WiFi Bridge 2.4GHz WiFi Repeater/Point to Point with RJ45 Male DC/USB Powered for PLC IP Camera Printer Medical Devices Network Device | Primary Data Acquisition | VAP11G-500 | Vonets | 7 | $30.09 | $30.09 |
-| | | | | | | | **$210.63** |
+| VONETS VAP11G-500S WiFi to Ethernet Converter | WiFi Bridge 2.4GHz WiFi Repeater/Point to Point with RJ45 Male DC/USB Powered for PLC IP Camera Printer Medical Devices Network Device | Primary Data Acquisition | VAP11G-500S | Vonets | 2 | $37.98 | $37.98 |
+| | | | | | | | **$75.96** |
 
-Link to Purchase: [Purchase Link](https://www.banggood.com/Vonets-WiFi-Repeater-WiFi-Bridge-300Mbps-CPE-Support-Up-to-500-Meters-Transmission-Vonets-VAP11G-500-p-1809093.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=US&utm_content=minha&utm_campaign=aceng-pmax-us-pc&currency=USD&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_us&utm_campaign=aceng-pmax-usca-p15-35-20221108-massa&utm_content=massa&ad_id=&gclid=Cj0KCQiA6LyfBhC3ARIsAG4gkF-SkGisDUw3-_x7-yabmkP7mRqE_e8zQtwWceim2ZT_6vMrRdEAVsEaAm0nEALw_wcB)
-
+Link to Purchase: [Purchase Link](https://www.amazon.com/%E3%80%90Upgraded-VAP11G-500S-Industrial-High-Power-Application/dp/B0B8ND6MQL/ref=asc_df_B0B8ND6MQL/?tag=hyprod-20&linkCode=df0&hvadid=632999243731&hvpos=&hvnetw=g&hvrand=9508670858144407738&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9013670&hvtargid=pla-1892171855661&psc=1)
+ 
 ## Cited Sources
 
 [1] [https://golightstream.com/what-is-video-bitrate/](https://golightstream.com/what-is-video-bitrate/)
