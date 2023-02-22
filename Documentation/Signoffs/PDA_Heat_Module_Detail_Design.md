@@ -19,9 +19,9 @@ Reliability Constraints
 
 ## Buildable Schematic
 
-![Heat_Module_Wiring](https://user-images.githubusercontent.com/80428236/219547418-005a2b73-7603-46de-b484-d2eaae911cac.png)
+<img width="711" alt="Heat_Module_Connections" src="https://user-images.githubusercontent.com/80428236/220764233-ebf7f7dd-a200-4a18-8d08-23d50f3e80be.png">
 
-Figure 1. Electrical Wiring Schematic
+Figure 1. Hardware Electrical Connections
 
 ## Analysis
 
