@@ -18,7 +18,7 @@ The camera communications subsystem allows each camera to connect to the univers
 
 ![Figure 2. Wiring Diagram for Vonets VAP11G-50 Wi-Fi Bridge/Repeater](../Images/Camera_Comm_wiring.png)
 
-![Figure 3. Camera Communications 3D Schematic](../3D&#32;Models/CameraComm3D.PNG)
+![Figure 3. Camera Communications 3D Schematic](../3D&#32;Models/CameraComm3DV2.PNG)
 <div align="center"> Figure 3. Camera Communication Module 3D Placement Schematic
 <br />
 <div align="left">
