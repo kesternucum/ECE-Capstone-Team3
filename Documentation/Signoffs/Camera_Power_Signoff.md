@@ -69,18 +69,6 @@ Meeting Reliability Requirements
 |USB Power Adapter| DGZZI DC Converter Buck Module 12V to USB 5V 3A DC-DC Converter Step Down Adapter | Primary Data Acquisition | Number Not Found | DGZZI | 7 | $10.59 | $74.13 |
 | Total | | | | Total Components | 21 | Total Cost | $659.05 |
 
-## Revisions
-
-**02/16/2023**
-
-Revised and added to the constraints section.
-
-Added new valid buildable schematic.
-
-Rewrote analysis section.
-
-Added items to the Bill of Materials.
-
 ## Cited Sources
 
 [1] “2.0 Megapixel Day/Night H.264 HD Indoor Dome Camera,” _AVIGILON_, 2013.  https://www.securityinformed.com/datasheets/avigilon-2-0-h3-d1-ip-dome-camera/co-3126-ga/2.0-H3-DdatasheetEN2.pdf.
@@ -98,3 +86,15 @@ Added items to the Bill of Materials.
 [7] “DGZZI DC Converter Buck Module 12V to USB 5V 3A DC-DC Converter Step Down Adapter for Car,” _amazon.com_, 2023. https://www.amazon.com/DGZZI-Converter-Module-DC-DC-Adapter/dp/B086DF7646/ref=asc_df_B086DF7646/. 
 
 [8] Laboy, Gabriel, “Secondary Data Acquisition & Sign Power Detail Design,” _GitHub_, 11 Feb 2023. https://github.com/kesternucum/ECE-Capstone-Team3/blob/Gabe-SDA-And-Sign-Power-Signoff/Documentation/Signoffs/SDA_And_Sign_Power_Detail_Design.md.
+
+## Revisions
+
+**02/16/2023**
+
+Revised and added to the constraints section.
+
+Added new valid buildable schematic.
+
+Rewrote analysis section.
+
+Added items to the Bill of Materials.
