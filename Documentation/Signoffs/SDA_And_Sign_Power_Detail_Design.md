@@ -45,7 +45,7 @@ Placement Constraints
 2. The power source must be within close proximity of the pneumatic tubes
 3. The power source must be within close proximity of the sign
 
-## Buildable Schematic
+## Buildable Schematics
 
 <img width="474" alt="image" src="https://user-images.githubusercontent.com/80428236/219544087-3666c724-eb90-476f-9c66-4056ddcab685.png">
 
