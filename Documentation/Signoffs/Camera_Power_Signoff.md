@@ -50,13 +50,13 @@ Recharging the Power Source
 Connecting the Devices
 
 1. Cameras
-    1. Given that the wifi module for this subsystem will take the ethernet port located on the camera, the 2-pin terminal block will have to be used. Therefore, wire will just be crimped between the camera and battery with an intermediary 750 mA fuse [12] in order to protect it in the case of overcurrent.
+    * Given that the wifi module for this subsystem will take the ethernet port located on the camera, the 2-pin terminal block will have to be used. Therefore, wire will just be crimped between the camera and battery with an intermediary 750 mA fuse [12] in order to protect it in the case of overcurrent.
 2. Wifi Module
-    2. It has already been decided in the communication subsystem for primary data acquisition that the USB power supply will remain connected. Given that the USB connection looks for a 5 V input [2], it has been decided to use a step down converter from 12 V to 5 V which can handle a maximum current of 3 A [10]. This should be compatible given the wifi module will draw a maximum of 2 A [2], and it will be protected with 2.5 A fuse [13] to prevent overcurrent.
+    * It has already been decided in the communication subsystem for primary data acquisition that the USB power supply will remain connected. Given that the USB connection looks for a 5 V input [2], it has been decided to use a step down converter from 12 V to 5 V which can handle a maximum current of 3 A [10]. This should be compatible given the wifi module will draw a maximum of 2 A [2], and it will be protected with 2.5 A fuse [13] to prevent overcurrent.
 3. Arduino Nano
-    3. Given that the Arduino board only allows the option of using the Vin and GND pins for an external power source [3], wire from the battery to the Arduino pins will be used to connect to power. To protect the Arduino from overcurrent, 250 mA fuses [11] will be connected between the Arduino and battery.
+    * Given that the Arduino board only allows the option of using the Vin and GND pins for an external power source [3], wire from the battery to the Arduino pins will be used to connect to power. To protect the Arduino from overcurrent, 250 mA fuses [11] will be connected between the Arduino and battery.
 4. Heat Plate
-    4. The heat plate only has a positive and negative wire, so it will be connected via crimping to the battery. In order to protect from overcurrent, 250 mA fuses [11] will be used.
+    * The heat plate only has a positive and negative wire, so it will be connected via crimping to the battery. In order to protect from overcurrent, 250 mA fuses [11] will be used.
 
 Distributing Power
 
