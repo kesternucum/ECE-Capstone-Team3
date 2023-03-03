@@ -64,10 +64,14 @@ Meeting Reliability Requirements
 
 | Name of Item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-|Rechargeable Battery| 12V 7Ah Battery, HWE Energy Rechargeable LiFePO4 Battery, 4000+ Deep Cycle Lithium Iron Phosphate Battery Built-in BMS | Primary Data Acquisition | Number Not Found | Howell Energy | 7 | $34.56 | $241.92 |
-|Solar Panel| 12V FLEXIBLE SOLAR PANEL – 20 WATTS | Primary Data Acquisition | Number Not Found | Dakota Lithium | 7 | $49.00 | $343.00 |
-|USB Power Adapter| DGZZI DC Converter Buck Module 12V to USB 5V 3A DC-DC Converter Step Down Adapter | Primary Data Acquisition | Number Not Found | DGZZI | 7 | $10.59 | $74.13 |
-| Total | | | | Total Components | 21 | Total Cost | $659.05 |
+|Rechargeable Battery| 12V 7Ah Battery, HWE Energy Rechargeable LiFePO4 Battery, Built-in BMS | Primary Data Acquisition | N/A | Howell Energy | 7 | $34.56 | $241.92 |
+|Solar Panel| 30W 24V Monocrystalline Solar Panel | Primary Data Acquisition | N/A | Newpowa | 7 | $46.99 | $328.93 |
+|USB Power Adapter| DGZZI DC Converter Buck Module 12V to USB 5V 3A DC-DC Converter Step Down Adapter | Primary Data Acquisition | N/A | DGZZI | 7 | $10.59 | $74.13 |
+|250mA Fuse| Pack of 5-250mA (0.25A) Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow | Primary Data Acquisition | N/A | Techman | 14 | $6.49 | $90.86 |
+|750mA Fuse| Pack of 5-750mA (0.75A) Glass Fuse (GDC), 250v, 5mm x 20mm (3/16" X 3/4") Slow Blow | Primary Data Acquisition | N/A | Techman | 7 | $5.99 | $41.93 |
+|2.5A Fuse| Pack of 5-2.5A Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow (Fast Acting) | Primary Data Acquisition | N/A | Techman | 7 | $6.79 | $47.53 |
+|Fuse Cartridge| FUSE HLDR CARTRIDGE 250V 5A PCB | Primary Data Acquisition | 4268 | Keystone Electronics | 28 | $0.73 | $20.44 |
+| Total | | | | Total Components | 77 | Total Cost | $845.74 |
 
 ## Cited Sources
 
