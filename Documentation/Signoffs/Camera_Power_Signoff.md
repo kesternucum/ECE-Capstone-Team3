@@ -2,44 +2,34 @@
 
 ## Big Picture
 
-The primary data acquisition will use cameras designed for power over ethernet. Due to the monitoring system being outdoors and away from buildings, the cameras can’t be powered by traditional means of ethernet cables. Therefore, a “wireless” solution will have to be developed in order to ensure that the cameras can have a reliable and hands-off way to remain powered.
+The primary data acquisition subsystem will utilize a number of different electrical components in order to ensure the cameras can transfer images over to the server. Given its high elevation location on the outdoor posts, there will be no easily feasible way to wire the subsystem to a grounded power source. Therefore, a “wireless” solution will have to be developed in order to ensure that the cameras can have a reliable and hands-off way to remain powered, along with any other needed devices to ensure the system remains operational.
 
 ## Specifications
 
 Hardware Constraints
 
-1. Avigilon Cameras
-    * Power Consumption
-        * 6 W with external power (10 W for -IR option)
-        * 6 W with IEEE 802.3af Class 3 PoE (10 W for -IR option)
-    * Input Voltage
-        * 12 VDC +/- 10%, 6 W min (10 W min with -IR option)
-        * 24 VAC +/- 10%, 8 VA min (12 VA min with -IR option)
-    * Power Supply Connection
-        * Power over Ethernet - IEEE 802.3af Class 3 compliant
-        * 2-pin terminal block
+1. Avigilon Cameras [1]
+    * Input Voltage - 12 VDC +/- 10%
+    * Input Power - 6 W min 
+    * Power Supply Connection - Power over Ethernet (IEEE 802.3af Class 3), 2-pin terminal block
 2. WiFi Module [2]
-    * Power Consumption
-        * Less than 2 W
-    * Input Voltage
-        * 5-15 VDC
-    * Power Supply Connection
-        * 2.1mm plug
-        * USB
-3. Arduino Nano 33 BLE Sense [3]
-    * Operating Voltage
-        * 3.3 V
-    * Input Voltage Limit
-        * 21 V
-    * Power Supply Connection
-        * USB, Vin & GND pin
+    * Input Voltage - 5 VDC (Max 24 VDC)
+    * Current Draw - 2 A
+    * Power Supply Connection - USB, 2.1mm plug
+3. Arduino Nano 33 IoT [3]
+    * Input Voltage - 3.3 V (Max 21 V)
+    * Current Draw - 85 mA [4]
+    * Power Supply Connection - USB, Vin & GND pin
+4. Heater Plate [5]
+    * Input Voltage - 5 V
+    * Input Power - 1 W
+    * Power Supply Connection - Positive and Negative wire
 
 Reliability Constraints
 
 1. Should keep all devices powered during operational hours (8:00am - 4:30pm)
 2. Should not interfere with operations of the primary data acquisition system
-3. Should require minimal maintenance once installed
-4. Weather should not impact power to the devices
+3. Power source should be rechargeable to minimize maintenance
 
 ## Buildable Schematic
 
@@ -49,16 +39,34 @@ Figure 1. Electrical Wiring Schematic
 
 ## Analysis
 
-Meeting Hardware Requirements
+Selecting the Power Source
 
-1. It has worked in our favor that all devices that need to be powered can run off a 12 volt power source. Therefore, a Howell Energy 12 volt 7 amp-hour rechargeable battery [4] has been selected. The battery is lightweight, compact, and provides the needed 12 volts to all devices [4].
-2. There are a few connection options for some of the devices and the following will be done for each device. The WiFi module only has a 2.1mm plug or USB power option, and in this case it has been decided to use a converter buck module which takes a 12v positive and negative wire input and steps it down to a 5v output [7]. For the Arduino, the Vin and GND input will be used for reuse of some wiring resources used for a different design [8] to maintain cost-effectiveness and connected by crimping. Lastly, the 2-pin terminal for the camera will be connected to the battery, as the ethernet port will be used by the WiFi module making it unavailable for power.
+1. It serves to the convenience of this subsystem that all devices that need to be powered can accept or require 12 V to operate (as seen in the constraints section). Therefore, it has been decided to go with a 12 V 7 Ah LiFePO4 battery produced by Howell Energy [6]. These batteries do not occupy much space (5.94 x 2.56 x 3.7 in) and last much longer than their sealed lead-acid counterpart, as well as being capable of being recharged [6]. 
 
-Meeting Reliability Requirements
+Recharging the Power Source
 
-1. In order to make sure that the system will require little maintenance power-wise, the battery chosen is rechargeable, and the easiest method of recharging will be done via solar power given there are no nearby outlets. Therefore, the 12 volt solar panel made by Dakota Lithium has been selected. The panel is compatible with 12 volt 7 amp-hour batteries, weatherproof, and can fully charge the battery in under 9 hours (about a day's worth of sunlight) [5]. It also does not require a charge controller [5], so a connection to the battery via crimping should be sufficient to get it working. 
-2. Replacement of the solar panel is also not a major concern, as most solar panels do not begin until about 10 years into its lifespan [6] and Dakota Lithium’s solar panel in particular has an 11 year warranty [5]. The Howell Energy battery only has a three-year warranty [4], but given that the project serves as a proof of concept, and the lower price of this battery, this will be accepted. Longer lasting batteries will be a consideration for future iterations of the project.
-3. Protection of the battery and Arduino will be handled in the casing subsystem design.
+1. The only feasible solution for recharging the battery given its location is by using a solar panel. Therefore, a 30 W 24 V solar panel made by Newpowa [7] has been selected. The solar panel will be used in tandem with a charger controller designed to take in 16-25 V and convert it to a 12-14.6 V output [9], and is also rated to handle up to 150 W so there should be no compatibility issues. The charge controller is also designed in mind for charging LiFePO4 batteries [9], so it should function well with the Howell battery.
+
+Connecting the Devices
+
+1. Cameras
+    1. Given that the wifi module for this subsystem will take the ethernet port located on the camera, the 2-pin terminal block will have to be used. Therefore, wire will just be crimped between the camera and battery with an intermediary 750 mA fuse [12] in order to protect it in the case of overcurrent.
+2. Wifi Module
+    2. It has already been decided in the communication subsystem for primary data acquisition that the USB power supply will remain connected. Given that the USB connection looks for a 5 V input [2], it has been decided to use a step down converter from 12 V to 5 V which can handle a maximum current of 3 A [10]. This should be compatible given the wifi module will draw a maximum of 2 A [2], and it will be protected with 2.5 A fuse [13] to prevent overcurrent.
+3. Arduino Nano
+    3. Given that the Arduino board only allows the option of using the Vin and GND pins for an external power source [3], wire from the battery to the Arduino pins will be used to connect to power. To protect the Arduino from overcurrent, 250 mA fuses [11] will be connected between the Arduino and battery.
+4. Heat Plate
+    4. The heat plate only has a positive and negative wire, so it will be connected via crimping to the battery. In order to protect from overcurrent, 250 mA fuses [11] will be used.
+
+Distributing Power
+
+1. The camera, wifi module, Arduino, and heat plate draw roughly 500 mA, 2 A, 85 mA, and 200 mA, respectively, as seen in the constraints. Summed up, this equals 2.785 A of current drawn which is far less than the max 7 A outputted by the Howell battery [6], so there is no concern about making sure all devices get sufficient power.
+
+Important Notes
+
+1. High level wiring connections are shown in figure 1.
+2. Protection of all devices against weather will be handled by the ME team on the project.
+3. The BoM does not accurately reflect what will be purchased, but instead how much the system would need given the original outline of the project. 
 
 ## Bill of Materials
 
@@ -77,19 +85,31 @@ Meeting Reliability Requirements
 
 [1] “2.0 Megapixel Day/Night H.264 HD Indoor Dome Camera,” _AVIGILON_, 2013.  https://www.securityinformed.com/datasheets/avigilon-2-0-h3-d1-ip-dome-camera/co-3126-ga/2.0-H3-DdatasheetEN2.pdf.
 
-[2] “VAP11G-500,” _Vonets_, 2023. http://www.vonets.com/ProductViews.asp?D_ID=83.
+[2] “【Upgraded Version】 VONETS VAP11G-500S Industrial High-Power 2.4GHz WiFi Bridge/Wireless Router/Ethernet WiFi to Ethernet Adapter for Industrial Application, PLC, Printer, Medical, Network Devices,” _amazon.com_, 2023. https://www.amazon.com/%E3%80%90Upgraded-VAP11G-500S-Industrial-High-Power-Application/dp/B0B8ND6MQL.
 
-[3] “Arduino Nano 33 BLE Sense,” _arduino.cc_, 2023. https://store-usa.arduino.cc/products/arduino-nano-33-ble-sense.
+[3] “Arduino Nano 33 IoT,” _arduino.cc_, 2023. https://store-usa.arduino.cc/products/arduino-nano-33-iot.
 
-[4] “12V 7Ah Battery, HWE Energy Rechargeable LiFePO4 Battery, 4000+ Deep Cycle Lithium Iron Phosphate Battery Built-in BMS, Perfect for Fish Finder, Alarm System, Small UPS, Solar, Ride on Toys,” _amazon.com_, 2023. https://www.amazon.com/Battery-HWE-Energy-Rechargeable-Phosphate/dp/B0B4R1PJK9/ref=asc_df_B0B4R1PJK9/.
+[4] “[Nano 33 IOT power consumption > 22mA in sleep](https://forum.arduino.cc/t/nano-33-iot-power-consumption-22ma-in-sleep/1014574),” _Arduino Forum_, Jul 2022. https://forum.arduino.cc/t/nano-33-iot-power-consumption-22ma-in-sleep/1014574.
 
-[5] “12V FLEXIBLE SOLAR PANEL - 20 WATTS,” _Dakota Lithium_, 2023. https://dakotalithium.com/product/12v-solar-panel/.
+[5] “4 PCS Film Heater Plate Adhesive Pad, Icstation PI Heating Elements Film 5V 1W Flexible Polymerize Heater Film Stripboard Mat 30mmx40mm,” _amazon.com_, 2023. https://www.amazon.com/5V-Flexible-Polyimide-Heater-Plate/dp/B0727X2DGC/.
 
-[6] Sendy, Andrew, “How long do solar panels actually last?” _SolarReviews_, 14 Jan 2022.  https://www.solarreviews.com/blog/how-long-do-solar-panels-last.
+[6] “12V 7Ah Battery, HWE Energy Rechargeable LiFePO4 Battery, 4000+ Deep Cycle Lithium Iron Phosphate Battery Built-in BMS, Perfect for Fish Finder, Alarm System, Small UPS, Solar, Ride on Toys,” _amazon.com_, 2023. https://www.amazon.com/Battery-HWE-Energy-Rechargeable-Phosphate/dp/B0B4R1PJK9/.
 
-[7] “DGZZI DC Converter Buck Module 12V to USB 5V 3A DC-DC Converter Step Down Adapter for Car,” _amazon.com_, 2023. https://www.amazon.com/DGZZI-Converter-Module-DC-DC-Adapter/dp/B086DF7646/ref=asc_df_B086DF7646/. 
+[7] “30W 24V Monocrystalline Solar Panel,” _Newpowa_, 2023. https://www.newpowa.com/30w-24v-monocrystalline-solar-panel/.
 
-[8] Laboy, Gabriel, “Secondary Data Acquisition & Sign Power Detail Design,” _GitHub_, 11 Feb 2023. https://github.com/kesternucum/ECE-Capstone-Team3/blob/Gabe-SDA-And-Sign-Power-Signoff/Documentation/Signoffs/SDA_And_Sign_Power_Detail_Design.md.
+[8] Sendy, Andrew, “How long do solar panels actually last?” _SolarReviews_, 14 Jan 2022.  https://www.solarreviews.com/blog/how-long-do-solar-panels-last.
+
+[9] “Powerwerx MPPT-150-14.6, DC-to-DC Solar Charger Controller for Bioenno 12V LiFePO4 Batteries,” _amazon.com_, 2023. https://www.amazon.com/Powerwerx-MPPT-150-14-6-Charger-Controller-Batteries/dp/B087ZSY8CR.
+
+[10] “DGZZI DC Converter Buck Module 12V to USB 5V 3A DC-DC Converter Step Down Adapter for Car,” _amazon.com_, 2023. https://www.amazon.com/DGZZI-Converter-Module-DC-DC-Adapter/dp/B086DF7646. 
+
+[11] “Pack of 5-250mA (0.25A) Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow (Fast Acting),” _amazon.com_, 2023.  https://www.amazon.com/Pack-250mA-0-25A-Glass-Acting/dp/B074LB1CWC/ref=asc_df_B074LB1CWC/.
+
+[12] “Pack of 5-750mA (0.75A) Glass Fuse (GDC), 250v, 5mm x 20mm (3/16" X 3/4") Slow Blow (Time Delay),” _amazon.com_, 2023. https://www.amazon.com/Pack-5-750mA-0-75A-Glass-Delay/dp/B074L9P4JM/ref=asc_df_B074L9P4JM/.
+
+[13] “Pack of 5-2.5A Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow (Fast Acting),” _amazon.com_, 2023. https://www.amazon.com/Pack-5-2-5A-Glass-Fuse-Acting/dp/B074HFG2P6/.
+
+[14] “4268,” _Digi-Key_, 2023. https://www.digikey.com/en/products/detail/keystone-electronics/4628/2137316.
 
 ## Revisions
 
@@ -102,3 +122,15 @@ Added new valid buildable schematic.
 Rewrote analysis section.
 
 Added items to the Bill of Materials.
+
+**03/03/2023**
+
+Updated Big Picture section to better reflect the purpose of detail design.
+
+Revised the constraints sections for readability.
+
+Reorganized analysis section for readability and included electrical analysis.
+
+Updated Bill of Materials.
+
+Added more references.
