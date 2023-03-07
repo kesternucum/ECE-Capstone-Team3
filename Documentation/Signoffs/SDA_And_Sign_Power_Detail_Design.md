@@ -112,9 +112,9 @@ Important Notes
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-|Solar Panel| 150 Watt 18 Volt Monocrystalline Solar Panel High | Secondary Data Acquisition & Sign | N/A | Dokio | 3 | $155.00 | $465.00 |
+|Solar Panel| 150 Watt 18 Volt Monocrystalline Solar Panel | Secondary Data Acquisition & Sign | N/A | Dokio | 3 | $155.00 | $465.00 |
 |Rechargeable Battery| 12V 12Ah Battery, HWE Energy Rechargeable LiFePO4 Battery, Built-in BMS | Secondary Data Acquisition & Sign | N/A | Howell Energy | 3 | $54.99 | $164.97 |
-|Steel Post| Powder-coated Steel U-post | Secondary Data Acquisition & Sign | 493053 | Blue Hawk | 3 | $7.98 | $23.94 |
+|Steel Post| Powder-coated Steel U-post| Secondary Data Acquisition & Sign | 493053 | Blue Hawk | 3 | $7.98 | $23.94 |
 |22 AWG Wire| 22 AWG Wire Size, PVC, Stranded, 100 ft Lg, Red | Secondary Data Acquisition & Sign | 34GC76 |Grainger | 1 | $9.93 | $9.93 |
 |22 AWG Wire| 22 AWG Wire Size, PVC, Stranded, 100 ft Lg, Black | Secondary Data Acquisition & Sign | 34GC72 |Grainger | 1 | $10.61 | $10.61 |
 |Crimp Kit| CHENBO 620pcs 2.54mm/0.1" Connectors Wire Jumper Cable Pin Header Connector Housing Assortment Kit | Secondary Data Acquisition & Sign | CQ00824 | Chenbo | 1 | $10.99 | $10.99 |
