@@ -49,11 +49,11 @@ Reliability Constraints
 
 ## Buildable Schematics
 
-<img width="474" alt="image" src="https://user-images.githubusercontent.com/80428236/219544087-3666c724-eb90-476f-9c66-4056ddcab685.png">
+![new_tubes_connections](https://user-images.githubusercontent.com/80428236/223566765-f44c632a-a1a4-4e37-9099-05aa1cb7d3cb.png)
 
 Figure 1. Wiring Schematic Without Sign
 
-![Arduino_Wiring_With_Sign_Schematic](https://user-images.githubusercontent.com/80428236/219543255-b8a8db36-60c3-46c1-867e-7cf3528142ec.png)
+![new_sign_connections](https://user-images.githubusercontent.com/80428236/223566805-849242e1-438c-4853-97e8-133700581958.png)
 
 Figure 2. Wiring Schematic With Sign
 
