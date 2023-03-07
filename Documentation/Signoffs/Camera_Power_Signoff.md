@@ -38,7 +38,7 @@ Reliability Constraints
 
 ## Buildable Schematic
 
-![PDA_Wiring_Schematic](https://user-images.githubusercontent.com/80428236/219553780-1b5e38c1-d0f1-47f3-a0a0-48e2fc9916c7.png)
+![new_camera_connections](https://user-images.githubusercontent.com/80428236/223566903-4d639d9c-5294-49fc-8227-97c6a2726850.png)
 
 Figure 1. Electrical Wiring Schematic
 
