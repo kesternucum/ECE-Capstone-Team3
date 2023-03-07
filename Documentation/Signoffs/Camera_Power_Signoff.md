@@ -2,34 +2,39 @@
 
 ## Big Picture
 
-The primary data acquisition subsystem will utilize a number of different electrical components in order to ensure the cameras can transfer images over to the server. Given its high elevation location on the outdoor posts, there will be no easily feasible way to wire the subsystem to a grounded power source. Therefore, a “wireless” solution will have to be developed in order to ensure that the cameras can have a reliable and hands-off way to remain powered, along with any other needed devices to ensure the system remains operational.
+The primary data acquisition subsystem will utilize a number of different electrical components in order to ensure the cameras can transfer images over to the server. Given its high elevation on the outdoor posts, there will be no simple way to wire the subsystem to a grounded power source. Therefore, a “wireless” solution will have to be developed in order to ensure that the subsystem can have a reliable and hands-off way to remain powered, and this design goes over the implementation.
 
 ## Specifications
 
-Hardware Constraints
+Hardware Specifications
 
 1. Avigilon Cameras [1]
     * Input Voltage - 12 VDC +/- 10%
-    * Input Power - 6 W min 
-    * Power Supply Connection - Power over Ethernet (IEEE 802.3af Class 3), 2-pin terminal block
+    * Input Power - 6 W (min) 
+    * Power Supply Connections - Power over Ethernet (IEEE 802.3af Class 3), 2-pin terminal block
 2. WiFi Module [2]
-    * Input Voltage - 5 VDC (Max 24 VDC)
+    * Input Voltage - 5-24 VDC
     * Current Draw - 2 A
-    * Power Supply Connection - USB, 2.1mm plug
+    * Power Supply Connections - USB, barrel plug, DC connector
 3. Arduino Nano 33 IoT [3]
-    * Input Voltage - 3.3 V (Max 21 V)
+    * Input Voltage - 3.3-21 V 
     * Current Draw - 85 mA [4]
-    * Power Supply Connection - USB, Vin & GND pin
+    * Power Supply Connections - USB, Vin & GND pin
 4. Heater Plate [5]
     * Input Voltage - 5 V
     * Input Power - 1 W
     * Power Supply Connection - Positive and Negative wire
 
+Electrical Constraints
+
+1. The power supply must meet the voltage/current needs for all devices requiring power
+2. Devices drawing current from the power supply must be protected from overcurrent
+3. Devices receiving power must use the correct adapters to connect to the power supply
+4. The power supply must be rechargeable to minimize maintenance
+
 Reliability Constraints
 
-1. Should keep all devices powered during operational hours (8:00am - 4:30pm)
-2. Should not interfere with operations of the primary data acquisition system
-3. Power source should be rechargeable to minimize maintenance
+1. The power supply must not take up much space
 
 ## Buildable Schematic
 
@@ -39,32 +44,27 @@ Figure 1. Electrical Wiring Schematic
 
 ## Analysis
 
-Selecting the Power Source
+Electrical Constraint Analysis
 
-1. It serves to the convenience of this subsystem that all devices that need to be powered can accept or require 12 V to operate (as seen in the constraints section). Therefore, it has been decided to go with a 12 V 7 Ah LiFePO4 battery produced by Howell Energy [6]. These batteries do not occupy much space (5.94 x 2.56 x 3.7 in) and last much longer than their sealed lead-acid counterpart, as well as being capable of being recharged [6]. 
+1. All devices requiring power can accept a 12 volt input and summed together has about a  maximum current draw of about 2.8 amps. Therefore, a 12 volt, 7 amp-hour LiFePO4 rechargeable battery made by Howell Energy [6] has been selected since it provides both the needed voltage and current.
+2. The camera and communication module have a functional dependency on each other since they work together to send images to the server, and the heater plate and Arduino have a similar functional dependency since it determines when to allow power to go to the heater plate based on the weather read from the server. Therefore, a 3.5 amp fuse [7] and a 1 amp fuse [8] will be connected between the battery and respective devices to protect from overcurrent.
+3. Each device requires a different method of connection to power, so each selected adapter will be analyzed separately.
+    * The camera will not have PoE available as the selected communication module will be connected to the camera’s ethernet port to be able to connect to the server. Therefore, the 2-pin terminal block on the camera will be connected to power, and crimping will be used to secure the connection since it is wiring.
+    * The communication module specifically requires 5 volts input, so to prevent issues with voltage conversion causing changes in current, the barrel plug will be connected to instead since it accepts a wide range of voltage (including the battery’s output of 12 volts). The device comes with a barrel plug to 2-pin block adapter [2], so it will be wired to the power supply via crimping.
+    * The Arduino USB port is designed specifically for connection to laptops [3], so to prevent potential issues of powering with an adapter, the Vin and GND pins will be used. Therefore, connection via crimping will be used to secure a connection between the Arduino and power supply.
+    * The heater plate only has a positive and negative wire leading out of the device, so it will be crimped together to the power supply.
+4. The LiFePO4 battery requires a 14.6 volt, 0.7-3.5 amp (recommended) input to be charged [6]. Therefore, a combination of a solar panel and charge controller will be used since there are not many commercially available 14.6 volt solar panels.
+    * The selected solar panel is a 24 volt, 60 watt panel made by Newpowa [10]. The current output produced is 2.5 amps which is within the recommended current range needed to charge the battery.
+    * The charge controller is a maximum power point tracker (MPPT) DC-to-DC converter made by Powerwerx [11]. The controller can convert a 16-25 volt input to 14.6 volt and is rated for up to 150 watts [11], so it can handle the input from the solar panel and create the needed output to the battery.
 
-Recharging the Power Source
+Reliability Constraint Analysis
 
-1. The only feasible solution for recharging the battery given its location is by using a solar panel. Therefore, a 30 W 24 V solar panel made by Newpowa [7] has been selected. The solar panel will be used in tandem with a charger controller designed to take in 16-25 V and convert it to a 12-14.6 V output [9], and is also rated to handle up to 150 W so there should be no compatibility issues. The charge controller is also designed in mind for charging LiFePO4 batteries [9], so it should function well with the Howell battery.
-
-Connecting the Devices
-
-1. Cameras
-    * Given that the wifi module for this subsystem will take the ethernet port located on the camera, the 2-pin terminal block will have to be used. Therefore, wire will just be crimped between the camera and battery with an intermediary 750 mA fuse [12] in order to protect it in the case of overcurrent.
-2. Wifi Module
-    * It has already been decided in the communication subsystem for primary data acquisition that the USB power supply will remain connected. Given that the USB connection looks for a 5 V input [2], it has been decided to use a step down converter from 12 V to 5 V which can handle a maximum current of 3 A [10]. This should be compatible given the wifi module will draw a maximum of 2 A [2], and it will be protected with 2.5 A fuse [13] to prevent overcurrent.
-3. Arduino Nano
-    * Given that the Arduino board only allows the option of using the Vin and GND pins for an external power source [3], wire from the battery to the Arduino pins will be used to connect to power. To protect the Arduino from overcurrent, 250 mA fuses [11] will be connected between the Arduino and battery.
-4. Heat Plate
-    * The heat plate only has a positive and negative wire, so it will be connected via crimping to the battery. In order to protect from overcurrent, 250 mA fuses [11] will be used.
-
-Distributing Power
-
-1. The camera, wifi module, Arduino, and heat plate draw roughly 500 mA, 2 A, 85 mA, and 200 mA, respectively, as seen in the constraints. Summed up, this equals 2.785 A of current drawn which is far less than the max 7 A outputted by the Howell battery [6], so there is no concern about making sure all devices get sufficient power.
+1. The battery’s dimensions are 5.94 x 2.56 x 3.7 in and weighs 1.8 lbs [6], and the charge controller’s dimensions are 4 x 4 x 2 in with a weight of 0.3 lbs [11]. These are  considered small and lightweight enough according to the ME team designing the protective casing for the camera and other devices.
+    * The solar panel is not a device that needs to be protected from the weather as it is rated for outdoor use [10] and is not planned to be put inside the protective casing, so its size is irrelevant.
 
 Important Notes
 
-1. High level wiring connections are shown in figure 1.
+1. A diagram of how all devices will be connected together is shown in Figure 1.
 2. Protection of all devices against weather will be handled by the ME team on the project.
 3. The BoM does not accurately reflect what will be purchased, but instead how much the system would need given the original outline of the project. 
 
@@ -73,13 +73,11 @@ Important Notes
 | Name of Item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 |Rechargeable Battery| 12V 7Ah Battery, HWE Energy Rechargeable LiFePO4 Battery, Built-in BMS | Primary Data Acquisition | N/A | Howell Energy | 7 | $34.56 | $241.92 |
-|Solar Panel| 30W 24V Monocrystalline Solar Panel | Primary Data Acquisition | N/A | Newpowa | 7 | $46.99 | $328.93 |
-|USB Power Adapter| DGZZI DC Converter Buck Module 12V to USB 5V 3A DC-DC Converter Step Down Adapter | Primary Data Acquisition | N/A | DGZZI | 7 | $10.59 | $74.13 |
-|250mA Fuse| Pack of 5-250mA (0.25A) Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow | Primary Data Acquisition | N/A | Techman | 14 | $6.49 | $90.86 |
-|750mA Fuse| Pack of 5-750mA (0.75A) Glass Fuse (GDC), 250v, 5mm x 20mm (3/16" X 3/4") Slow Blow | Primary Data Acquisition | N/A | Techman | 7 | $5.99 | $41.93 |
-|2.5A Fuse| Pack of 5-2.5A Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow (Fast Acting) | Primary Data Acquisition | N/A | Techman | 7 | $6.79 | $47.53 |
-|Fuse Cartridge| FUSE HLDR CARTRIDGE 250V 5A PCB | Primary Data Acquisition | 4268 | Keystone Electronics | 28 | $0.73 | $20.44 |
-| Total | | | | Total Components | 77 | Total Cost | $845.74 |
+|Solar Panel| 60W 24V Monocrystalline Solar Panel | Primary Data Acquisition | N/A | Newpowa | 7 | $75.99 | $531.93 |
+|3.5A Fuse| Pack of 5-3.5A Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow | Primary Data Acquisition | N/A | Techman | 3 | $6.99 | $20.97 |
+|1A Fuse| 5x20mm 1A 250V Fast-Blow Glass Fuses (Pack of 20 Pcs) | Primary Data Acquisition | N/A | Techman | 1 | $5.99 | $5.99 |
+|Fuse Cartridge| FUSE HLDR CARTRIDGE 250V 5A PCB | Primary Data Acquisition | 4268 | Keystone Electronics | 14 | $0.73 | $10.22 |
+| Total | | | | Total Components | 32 | Total Cost | $811.03 |
 
 ## Cited Sources
 
@@ -95,21 +93,15 @@ Important Notes
 
 [6] “12V 7Ah Battery, HWE Energy Rechargeable LiFePO4 Battery, 4000+ Deep Cycle Lithium Iron Phosphate Battery Built-in BMS, Perfect for Fish Finder, Alarm System, Small UPS, Solar, Ride on Toys,” _amazon.com_, 2023. https://www.amazon.com/Battery-HWE-Energy-Rechargeable-Phosphate/dp/B0B4R1PJK9/.
 
-[7] “30W 24V Monocrystalline Solar Panel,” _Newpowa_, 2023. https://www.newpowa.com/30w-24v-monocrystalline-solar-panel/.
+[7] “Pack of 5-3.5A Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow (Fast Acting),” _amazon.com_, 2023.  https://www.amazon.com/Pack-5-3-5A-Glass-Fuse-Acting/dp/B074HH3VZ7/.
 
-[8] Sendy, Andrew, “How long do solar panels actually last?” _SolarReviews_, 14 Jan 2022.  https://www.solarreviews.com/blog/how-long-do-solar-panels-last.
+[8] “BOJACK 5x20mm 1A 1amp 250V 0.2 x 0.78 Inch F1AL250V Fast-Blow Glass Fuses(Pack of 20 Pcs),” _amazon.com_, 2023. https://www.amazon.com/BOJACK-5x20mm-F1AL250V-Fast-Blow-Glass/dp/B07S96VTJR/.
 
-[9] “Powerwerx MPPT-150-14.6, DC-to-DC Solar Charger Controller for Bioenno 12V LiFePO4 Batteries,” _amazon.com_, 2023. https://www.amazon.com/Powerwerx-MPPT-150-14-6-Charger-Controller-Batteries/dp/B087ZSY8CR.
+[9] “4268,” _Digi-Key_, 2023. https://www.digikey.com/en/products/detail/keystone-electronics/4628/2137316.
 
-[10] “DGZZI DC Converter Buck Module 12V to USB 5V 3A DC-DC Converter Step Down Adapter for Car,” _amazon.com_, 2023. https://www.amazon.com/DGZZI-Converter-Module-DC-DC-Adapter/dp/B086DF7646. 
+[10] “Newpowa 9BB 60W(Watt) Solar Panel High-Efficiency Monocrystalline 24V PV Module Designed for 24V Off Grid System, Charge Your 24V Battery of RV, Boat, Camper, Trailer, Gate Opener (60W New),” _amazon.com_, 2023. https://www.amazon.com/Newpowa-High-Efficiency-Monocrystalline-Designed-Battery/dp/B09W22RQGK/.
 
-[11] “Pack of 5-250mA (0.25A) Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow (Fast Acting),” _amazon.com_, 2023.  https://www.amazon.com/Pack-250mA-0-25A-Glass-Acting/dp/B074LB1CWC/ref=asc_df_B074LB1CWC/.
-
-[12] “Pack of 5-750mA (0.75A) Glass Fuse (GDC), 250v, 5mm x 20mm (3/16" X 3/4") Slow Blow (Time Delay),” _amazon.com_, 2023. https://www.amazon.com/Pack-5-750mA-0-75A-Glass-Delay/dp/B074L9P4JM/ref=asc_df_B074L9P4JM/.
-
-[13] “Pack of 5-2.5A Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow (Fast Acting),” _amazon.com_, 2023. https://www.amazon.com/Pack-5-2-5A-Glass-Fuse-Acting/dp/B074HFG2P6/.
-
-[14] “4268,” _Digi-Key_, 2023. https://www.digikey.com/en/products/detail/keystone-electronics/4628/2137316.
+[11] “Powerwerx MPPT-150-14.6, DC-to-DC Solar Charger Controller for Bioenno 12V LiFePO4 Batteries,” _amazon.com_, 2023. https://www.amazon.com/Powerwerx-MPPT-150-14-6-Charger-Controller-Batteries/dp/B087ZSY8CR.
 
 ## Revisions
 
@@ -123,14 +115,16 @@ Rewrote analysis section.
 
 Added items to the Bill of Materials.
 
-**03/03/2023**
+**03/07/2023**
 
 Updated Big Picture section to better reflect the purpose of detail design.
 
-Revised the constraints sections for readability.
+Revised the constraints sections to better reflect what needs to be analyzed.
 
-Reorganized analysis section for readability and included electrical analysis.
+Updated buildable schematic to reflect changes in components.
+
+Updated Analysis section to be more concise.
 
 Updated Bill of Materials.
 
-Added more references.
+Revised references.
