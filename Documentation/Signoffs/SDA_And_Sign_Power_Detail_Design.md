@@ -193,6 +193,8 @@ Added more references.
 
 Updated Big Picture section to be more concise.
 
+Updated buildable schematics to reflect changes in components.
+
 Revised the constraints sections to better reflect what needs to be analyzed.
 
 Updated Analysis section to be more concise.
