@@ -104,8 +104,8 @@ Reliability Constraint Analysis
 
 Important Notes
 
-1. Connections between all devices are shown in Figure 1.
-2. The high level setup of the post with the solar panel and pack protecting electrical devices are shown in Figures 2 through 5.
+1. Connections between all devices are shown in Figures 1 and 2.
+2. The high level setup of the post with the solar panel and pack protecting electrical devices are shown in Figures 3 through 6.
 3. The BoM does not accurately reflect what will be purchased, but instead how much the system would need given the original outline of the project. 
 
 ## Bill of Materials
