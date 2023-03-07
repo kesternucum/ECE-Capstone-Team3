@@ -74,6 +74,7 @@ Important Notes
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 |Rechargeable Battery| 12V 7Ah Battery, HWE Energy Rechargeable LiFePO4 Battery, Built-in BMS | Primary Data Acquisition | N/A | Howell Energy | 7 | $34.56 | $241.92 |
 |Solar Panel| 60W 24V Monocrystalline Solar Panel | Primary Data Acquisition | N/A | Newpowa | 7 | $75.99 | $531.93 |
+|Charge Controller| MPPT-150-14.6, DC-to-DC Solar Charger Controller | Primary Data Acquisition | N/A | Powerwerx | 7 | $41.99 | $293.93 |
 |3.5A Fuse| Pack of 5-3.5A Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow | Primary Data Acquisition | N/A | Techman | 3 | $6.99 | $20.97 |
 |1A Fuse| 5x20mm 1A 250V Fast-Blow Glass Fuses (Pack of 20 Pcs) | Primary Data Acquisition | N/A | Techman | 1 | $5.99 | $5.99 |
 |Fuse Cartridge| FUSE HLDR CARTRIDGE 250V 5A PCB | Primary Data Acquisition | 4268 | Keystone Electronics | 14 | $0.73 | $10.22 |
