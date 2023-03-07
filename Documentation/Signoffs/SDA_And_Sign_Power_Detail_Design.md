@@ -120,8 +120,7 @@ Important Notes
 |Crimp Kit| CHENBO 620pcs 2.54mm/0.1" Connectors Wire Jumper Cable Pin Header Connector Housing Assortment Kit | Secondary Data Acquisition & Sign | CQ00824 | Chenbo | 1 | $10.99 | $10.99 |
 |250 mA Fuse| Pack of 5-250mA (0.25A) Glass Fuse (GMA), 250v, 5mm x 20mm (3/16" X 3/4") Fast Blow | Secondary Data Acquisition & Sign | N/A | Techman | 1 | $6.49 | $6.49 |
 |12.5 A Fuse| Pack of 5, 3/16" X 3/4" (5X20mm) 12.5A 250V Glass Fuses, Slow Blow | Secondary Data Acquisition & Sign | N/A | Techman | 1 | $8.79 | $8.79 |
-|Fuse Cartridge| Fuse Block 20 A 250V 1 Circuit Cartridge Through Hole | Secondary Data Acquisition & Sign | 696108003002 | 	
-Würth Elektronik | 3 | $0.68 | $2.04 |
+|Fuse Cartridge| Fuse Block 20 A 250V 1 Circuit Cartridge Through Hole | Secondary Data Acquisition & Sign | 696108003002 | Würth Elektronik | 3 | $0.68 | $2.04 |
 |Junction Box| Hinged Cover Stainless Steel Latch 410x310x180mm Junction Box with Mounting Plate, Universal IP67 | Secondary Data Acquisition & Sign | N/A | QILIPSU | 3 | $75.99 | $227.97 |
 |Locknut| 3/4 NPT Nylon Cable Gland, Waterproof IP68 Adjustable Locknut for 13-18mm Cable Diameter (3/4 NPT, 6pcs) | Secondary Data Acquisition & Sign | N/A | QILIPSU | 2 | $10.99 | $21.98 |
 | Total | | | | Total Components | 22 | Total Cost | $1,007.70 |
