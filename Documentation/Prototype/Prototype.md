@@ -2,13 +2,13 @@
 
 ## Original Requirements
 
-All of the below requirements demonstrate minimum functionality of every subsystem.
+All of the below requirements demonstrate minimum functionality of every subsystem. These requirements compose the original agreement for the prototype design.
 
 ### Primary Data Acquisition System
 
 One Static Tracking Camera
  - Connected to Linux server or other PC/laptop via Ethernet.
- - Must be able to obtain footage from the camera and upload to the server.
+ - Must be able to obtain footage from the camera and upload images to the server.
  - Must be powered via solar power.
 
 ### Server
@@ -22,31 +22,37 @@ Server
 Sign
  - Must be able to display a number that is sent by the remote server.
  - Must be powered via solar power.
- - Must be able to communicate with server wirelessly, i.e. receive a number from the server and display it.
+ - Must be able to communicate with server wirelessly using the wireless communication module, i.e. receive a number from the server and display it.
 
 ### Mobile Application
 
 Mobile Application
- - Shows data that is sent from the server.
+ - Shows (arbitrary) data that is sent from the server.
  - Note: the mobile application is under the computer science team, so their work will be integrated with ours.
 
 ## Substitutions
 
+Since we were not able to design a fully functional power system, and since the wireless communications devices have not arrived, we propose to substitute power and wireless communication for increased functionality in the cameras and AI processing.
+
 ### Primary Data Acquisition System
+
+Rather than just one camera, we propose implementing two cameras (the number of cameras agreed upon for our final deliverable) for our prototype to make up for the lack of power and communications.
 
 Two Cameras
  - One static tracking camera
-    - Must be able to obtain video feed from camera via Ethernet.
+    - Must be able to obtain video feed of stationary cars in a parking lot from camera via Ethernet.
     - The goal of this camera is to obtain frames of cars in stationary parking spots.
  - One dynamic tracking camera
-    - Must be able to obtain video feed from camera via Ethernet.
+    - Must be able to obtain video feed of moving cars in a parking lot from camera via Ethernet.
     - The goal of this camera is to obtain frames of cars moving across a parking lot.
  - One camera is to be demonstrated at a time when connected via Ethernet to the Linux server.
     - The Linux server has only one Ethernet port, which is already taken up by an Ethernet cable connected to the Tech network. It also has only one available USB port, in which a USB-to-Ethernet adapter can be plugged in. Therefore, only one camera can be connected to the server via Ethernet at a time.
-    - Cameras will NOT be powered by solar power. Instead, they will be powered through a PoE injector so that the cameras are powered when connected directly to the server, which will have direct access to the camera.
+    - Cameras will NOT be powered by solar power. Instead, they will be powered via the the block terminal.
  - The cameras will be placed next to a window in the Capstone Lab to look down upon the Gold parking lot in the Engineering Quad. The Engineering Quad will serve as our prototype test lot to show basic functionality.
 
 ### Server
+
+AI was not in the original prototype design, so we propose substituting power and wireless communications for two working vehicle detection models, one for static tracking and another for dynamic tracking.
 
 Two Vehicle Detection Models
  - Static tracking model
@@ -59,10 +65,13 @@ Two Vehicle Detection Models
 
 ### Mobile Application
 
+We also propose substituting power and wireless communications for functionality in which the number of available parking spots can be determined from the two models and sent to the mobile application and sign.
+
 Remote Database
  - The remote database will perform the calculations to determine the number of available spots from both the static tracking model and the dynamic tracking model.
 
 ### Sign
 
 Sign
- - Will display data pulled directly from the remote database
+ - Will display data pulled directly from the remote database, i.e. the current number of available parking spots entered on the remote database for the mobile application.
+ - Will be powered by a computer, which will also serve as the communication system to allow the sign to communicate to the remote server via Wi-Fi.
