@@ -160,9 +160,6 @@ def count_vehicles(idxs, boxes, classIDs, vehicle_count, previous_frame_detectio
 
 	return vehicle_count, current_detections
 
-###############################################################################
-###############################################################################
-
 # load our YOLO object detector trained on COCO dataset (80 classes)
 # and determine only the *output* layer names that we need from YOLO
 print("[INFO] loading YOLO from disk...")
@@ -190,9 +187,7 @@ y2_line = video_height//2
 
 #Initialization
 previous_frame_detections = [{(0,0):0} for i in range(FRAMES_BEFORE_CURRENT)]
-
-# set lines on frame
-lines = [[(0.2, 0.5),(0.7, 0.5)], [(0.2, 0.7),(0.7, 0.7)]]
+lines = [[(0.25, 0.5),(0.43, 0.5)], [(0.2, 0.68),(0.7, 0.64)]]
 
 for line in lines:
 	line[0] = (int(line[0][0] * video_width), int(line[0][1] * video_height))
@@ -203,7 +198,6 @@ lineSides = {} #{lineIndex:{carId:{cnt:0, side:T/F} }}
 num_frames, vehicle_count = 0, 0
 writer = initializeVideoWriter(video_width, video_height, videoStream)
 start_time = int(time.time())
-num_frame_read = 0  # for pulling every Nth frame
 # loop over frames from the video file stream
 while True:
 	print("================NEW FRAME================")
@@ -223,99 +217,88 @@ while True:
 	if not grabbed:
 		break
 
-	num_frame_read = (num_frame_read + 1) % 4;  # number after modulo is the interval between processed frames
-	if (num_frame_read == 0):
+	# construct a blob from the input frame and then perform a forward
+	# pass of the YOLO object detector, giving us our bounding boxes
+	# and associated probabilities
+	blob = cv2.dnn.blobFromImage(frame, 1 / 255.0, (inputWidth, inputHeight),
+		swapRB=True, crop=False)
+	net.setInput(blob)
+	start = time.time()
+	layerOutputs = net.forward(ln)
+	end = time.time()
 
-		# construct a blob from the input frame and then perform a forward
-		# pass of the YOLO object detector, giving us our bounding boxes
-		# and associated probabilities
-		blob = cv2.dnn.blobFromImage(frame, 1 / 255.0, (inputWidth, inputHeight),
-			swapRB=True, crop=False)
-		net.setInput(blob)
-		start = time.time()
-		layerOutputs = net.forward(ln)
-		end = time.time()
+	# loop over each of the layer outputs
+	for output in layerOutputs:
+		# loop over each of the detections
+		for i, detection in enumerate(output):
+			# extract the class ID and confidence (i.e., probability)
+			# of the current object detection
+			scores = detection[5:]
+			classID = np.argmax(scores)
+			confidence = scores[classID]
 
-		# loop over each of the layer outputs
-		for output in layerOutputs:
-			# loop over each of the detections
-			for i, detection in enumerate(output):
-				# extract the class ID and confidence (i.e., probability)
-				# of the current object detection
-				scores = detection[5:]
-				classID = np.argmax(scores)
-				confidence = scores[classID]
+			# filter out weak predictions by ensuring the detected
+			# probability is greater than the minimum probability
+			if confidence > preDefinedConfidence:
+				# scale the bounding box coordinates back relative to
+				# the size of the image, keeping in mind that YOLO
+				# actually returns the center (x, y)-coordinates of
+				# the bounding box followed by the boxes' width and
+				# height
+				box = detection[0:4] * np.array([video_width, video_height, video_width, video_height])
+				(centerX, centerY, width, height) = box.astype("int")
 
-				# filter out weak predictions by ensuring the detected
-				# probability is greater than the minimum probability
-				if confidence > preDefinedConfidence:
-					# scale the bounding box coordinates back relative to
-					# the size of the image, keeping in mind that YOLO
-					# actually returns the center (x, y)-coordinates of
-					# the bounding box followed by the boxes' width and
-					# height
-					box = detection[0:4] * np.array([video_width, video_height, video_width, video_height])
-					(centerX, centerY, width, height) = box.astype("int")
+				# use the center (x, y)-coordinates to derive the top
+				# and and left corner of the bounding box
+				x = int(centerX - (width / 2))
+				y = int(centerY - (height / 2))
 
-					# use the center (x, y)-coordinates to derive the top
-					# and and left corner of the bounding box
-					x = int(centerX - (width / 2))
-					y = int(centerY - (height / 2))
+				#Printing the info of the detection
+				#print('\nName:\t', LABELS[classID],
+					#'\t|\tBOX:\t', x,y)
 
-					#Printing the info of the detection
-					#print('\nName:\t', LABELS[classID],
-						#'\t|\tBOX:\t', x,y)
+				# update our list of bounding box coordinates,
+				# confidences, and class IDs
+				boxes.append([x, y, int(width), int(height)])
+				confidences.append(float(confidence))
+				classIDs.append(classID)
 
-					# update our list of bounding box coordinates,
-					# confidences, and class IDs
-					boxes.append([x, y, int(width), int(height)])
-					confidences.append(float(confidence))
-					classIDs.append(classID)
+	# # Changing line color to green if a vehicle in the frame has crossed the line
+	# if vehicle_crossed_line_flag:
+	# 	cv2.line(frame, (x1_line, y1_line), (x2_line, y2_line), (0, 0xFF, 0), 2)
+	# # Changing line color to red if a vehicle in the frame has not crossed the line
+	# else:
+	# 	cv2.line(frame, (x1_line, y1_line), (x2_line, y2_line), (0, 0, 0xFF), 2)
 
-		# # Changing line color to green if a vehicle in the frame has crossed the line
-		# if vehicle_crossed_line_flag:
-		# 	cv2.line(frame, (x1_line, y1_line), (x2_line, y2_line), (0, 0xFF, 0), 2)
-		# # Changing line color to red if a vehicle in the frame has not crossed the line
-		# else:
-		# 	cv2.line(frame, (x1_line, y1_line), (x2_line, y2_line), (0, 0, 0xFF), 2)
+	# apply non-maxima suppression to suppress weak, overlapping
+	# bounding boxes
+	idxs = cv2.dnn.NMSBoxes(boxes, confidences, preDefinedConfidence,
+		preDefinedThreshold)
 
-		# apply non-maxima suppression to suppress weak, overlapping
-		# bounding boxes
-		idxs = cv2.dnn.NMSBoxes(boxes, confidences, preDefinedConfidence,
-			preDefinedThreshold)
+	# Draw detection box
+	drawDetectionBoxes(idxs, boxes, classIDs, confidences, frame)
 
-		# Draw detection box
-		drawDetectionBoxes(idxs, boxes, classIDs, confidences, frame)
+	vehicle_count, current_detections = count_vehicles(idxs, boxes, classIDs, vehicle_count, previous_frame_detections, frame)
+	lineSides, carCrosses = crossLine(current_detections, lineSides, frame, lines)
+	print('CROSSED!',carCrosses)
 
-		vehicle_count, current_detections = count_vehicles(idxs, boxes, classIDs, vehicle_count, previous_frame_detections, frame)
-		lineSides, carCrosses = crossLine(current_detections, lineSides, frame, lines)
+	for line in lines:
+		displayLine(frame, line)
 
-		for cross in carCrosses:
-			if ( (carCrosses[cross]['to'] == 0) and (carCrosses[cross]['crossedBothLines'] == 1) ):
-				if (carCrosses[cross]['line'] == 0):
-					print('Car Crossed: ', cross, carCrosses[cross])
-					print('Car Entered!')
-				else:
-					print('Car Crossed: ', cross, carCrosses[cross])
-					print('Car Exited!')
+	# Display Vehicle Count if a vehicle has passed the line
+	displayVehicleCount(frame, vehicle_count)
 
-		for line in lines:
-			displayLine(frame, line)
+    # write the output frame to disk
+	writer.write(frame)
 
-		# Display Vehicle Count if a vehicle has passed the line
-		displayVehicleCount(frame, len(current_detections))
+	cv2.imshow('Frame', frame)
+	if cv2.waitKey(1) & 0xFF == ord('q'):
+		break
 
-	    # write the output frame to disk
-		writer.write(frame)
-
-		cv2.imshow('Frame', frame)
-		if cv2.waitKey(1) & 0xFF == ord('q'):
-			break
-
-		# Updating with the current frame detections
-		previous_frame_detections.pop(0) #Removing the first frame from the list
-		# previous_frame_detections.append(spatial.KDTree(current_detections))
-		previous_frame_detections.append(current_detections)
+	# Updating with the current frame detections
+	previous_frame_detections.pop(0) #Removing the first frame from the list
+	# previous_frame_detections.append(spatial.KDTree(current_detections))
+	previous_frame_detections.append(current_detections)
 
 # release the file pointers
 print("[INFO] cleaning up...")
