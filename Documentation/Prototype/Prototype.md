@@ -47,7 +47,7 @@ Two Cameras
     - The goal of this camera is to obtain frames of cars moving across a parking lot.
  - Both cameras are to be demonstrated working at the same time when connected via Ethernet to the Linux server.
     - The Linux server has only one Ethernet port, which is already taken up by an Ethernet cable connected to the Tech network. It does have available USB ports, in which a USB-to-Ethernet adapter can be plugged in. This in turn is connected to an ethernet switch which will allow for mutliple feeds to be ran on the server.
-    - Cameras will NOT be powered by solar power. Instead, they will be powered via an ethernet switch that has PoE.
+    - Cameras will NOT be powered by solar power. Instead, they will be powered via the ethernet switch which has PoE.
  - The cameras will be placed next to a window in the Capstone Lab to look down upon the Gold parking lot in the Engineering Quad. The Engineering Quad will serve as our prototype test lot to show basic functionality.
 
 ### Server
