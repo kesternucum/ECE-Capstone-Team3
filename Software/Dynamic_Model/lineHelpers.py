@@ -54,7 +54,7 @@ def crossLine(currentDetections, prevLineSides, frame, lines):
 
 	#bufferFrames = 1 means as soon at the dot crosses, it will register as the car crossing
 	#bufferFrames = 5 means there must be 5 consecutive frames on the opposite side to register it crossing the line
-	bufferFrames = 1
+	bufferFrames = 3
 	crosses = {}
 
 	for lineI in range(len(lines)):
