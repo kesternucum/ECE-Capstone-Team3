@@ -10,12 +10,14 @@
 
 # import the necessary packages
 import numpy as np
+import requests
 import imutils
 import time
 from scipy import spatial
 import cv2
 from input_retrieval import *
 import os
+import json
 
 #All these classes will be counted as 'vehicles'
 list_of_vehicles = ["bicycle","car","motorbike","bus","truck", "train"]
@@ -185,8 +187,8 @@ ln = [ln[i - 1] for i in net.getUnconnectedOutLayers()]
 
 # initialize the video stream, pointer to output video file, and
 # frame dimensions
-#videoStream = cv2.VideoCapture(inputVideoPath)
-videoStream = cv2.VideoCapture(0)  # insert IP address here
+#videoStream = cv2.VideoCapture(inputVideoPath)  # for videos
+videoStream = cv2.VideoCapture('http://admin:admin@169.254.233.98/media/cam0/still.jpg?res=max')
 video_width = int(videoStream.get(cv2.CAP_PROP_FRAME_WIDTH))
 video_height = int(videoStream.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
@@ -204,6 +206,8 @@ writer = initializeVideoWriter(video_width, video_height, videoStream)
 start_time = int(time.time())
 num_frame_read = 0  # for pulling every Nth frame
 # loop over frames from the video file stream
+url_post = "https://localhost:7202/api/LiveFeed/{}/{}/{}"
+
 while True:
 	print("================NEW FRAME================")
 	num_frames+= 1
@@ -215,14 +219,15 @@ while True:
 	#Calculating fps each second
 	start_time, num_frames = displayFPS(start_time, num_frames)
 	# read the next frame from the file
+	videoStream = cv2.VideoCapture('http://admin:admin@169.254.233.98/media/cam0/still.jpg?res=max')
 	(grabbed, frame) = videoStream.read()
 
 	# if the frame was not grabbed, then we have reached the end of the stream
 	if not grabbed:
 		break
 
-	# only performs YOLOv3 processing on every 8th frame
-	num_frame_read = (num_frame_read + 1) % 8;
+	# only performs YOLOv3 processing on every 5th frame
+	#num_frame_read = (num_frame_read + 1) % 5;
 	if (num_frame_read == 0):
 
 		# blacks out part of frame to perform image processing
@@ -232,7 +237,7 @@ while True:
 		mask = np.zeros_like(frame)   # creates a mask for entire image
 		mask[:, :] = [255, 255, 255]  # makes a white mask
 		start_point = (0,0)
-		end_point = (0,0)#(1920, 540)
+		end_point = (0,0)#(1920, 140)  #1920 by 540
 		color = (0,0,0)
 		mask = cv2.rectangle(mask, start_point, end_point, color, -1)
 		masked_frame = cv2.bitwise_and(frame,mask)
@@ -299,9 +304,22 @@ while True:
 		drawDetectionBoxes(idxs, boxes, classIDs, confidences, masked_frame)
 
 		vehicle_count, current_detections = count_vehicles(idxs, boxes, classIDs, vehicle_count, previous_frame_detections, masked_frame)
+		
+		# send to livefeed api method (database)
+		num_cars = len(current_detections)
+		#post_response = requests.post(url_post.format("92opt", num_cars, False), verify=False)
+		#print(post_response)
+		
+		static_dict = {
+			"name": "Static Camera",
+			"car_count": num_cars
+		}
+		static_json = json.dumps(static_dict, indent=2)
+		with open("../static_data.json", "w") as outfile:
+			outfile.write(static_json)
 
 		# Display Vehicle Count if a vehicle has passed the line
-		displayVehicleCount(masked_frame, len(current_detections))  ####### IMPORTANT VALUE!!!!
+		displayVehicleCount(masked_frame, num_cars)
 
 	    # write the output frame to disk
 		writer.write(masked_frame)

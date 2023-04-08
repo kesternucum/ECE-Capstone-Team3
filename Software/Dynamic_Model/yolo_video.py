@@ -1,11 +1,13 @@
 # import the necessary packages
 import numpy as np
+import requests
 import imutils
 import time
 from scipy import spatial
 import cv2
 from input_retrieval import *
 from lineHelpers import crossLine, displayLine
+import json
 
 #All these classes will be counted as 'vehicles'
 list_of_vehicles = ["bicycle","car","motorbike","bus","truck", "train"]
@@ -160,9 +162,6 @@ def count_vehicles(idxs, boxes, classIDs, vehicle_count, previous_frame_detectio
 
 	return vehicle_count, current_detections
 
-###############################################################################
-###############################################################################
-
 # load our YOLO object detector trained on COCO dataset (80 classes)
 # and determine only the *output* layer names that we need from YOLO
 print("[INFO] loading YOLO from disk...")
@@ -178,7 +177,8 @@ ln = [ln[i - 1] for i in net.getUnconnectedOutLayers()]
 
 # initialize the video stream, pointer to output video file, and
 # frame dimensions
-videoStream = cv2.VideoCapture(inputVideoPath)
+#videoStream = cv2.VideoCapture(inputVideoPath)
+videoStream = cv2.VideoCapture('http://admin:admin@169.254.233.90/media/cam0/still.jpg?res=max')
 video_width = int(videoStream.get(cv2.CAP_PROP_FRAME_WIDTH))
 video_height = int(videoStream.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
@@ -190,9 +190,8 @@ y2_line = video_height//2
 
 #Initialization
 previous_frame_detections = [{(0,0):0} for i in range(FRAMES_BEFORE_CURRENT)]
-
-# set lines on frame
-lines = [[(0.2, 0.5),(0.7, 0.5)], [(0.2, 0.7),(0.7, 0.7)]]
+#lines = [[(0.1, 0.5),(0.9, 0.5)]]  # for testing with bridge.mp4
+lines = [[(0.5, 0.5),(0.5, 0.95)]] # meant to be one line
 
 for line in lines:
 	line[0] = (int(line[0][0] * video_width), int(line[0][1] * video_height))
@@ -204,6 +203,12 @@ num_frames, vehicle_count = 0, 0
 writer = initializeVideoWriter(video_width, video_height, videoStream)
 start_time = int(time.time())
 num_frame_read = 0  # for pulling every Nth frame
+MAX_SPACES = 20
+num_available_spaces = MAX_SPACES
+num_cars_in_lot = 0
+# loop over frames from the video file stream
+url_post = "https://localhost:7202/api/LiveFeed/{}/{}/{}"
+
 # loop over frames from the video file stream
 while True:
 	print("================NEW FRAME================")
@@ -216,14 +221,15 @@ while True:
 	#Calculating fps each second
 	start_time, num_frames = displayFPS(start_time, num_frames)
 	# read the next frame from the file
-	#videoStream.set(cv2.CAP_PROP_POS_FRAMES, int(videoStream.get(cv2.CAP_PROP_POS_FRAMES))+3)
+	videoStream = cv2.VideoCapture('http://admin:admin@169.254.233.90/media/cam0/still.jpg?res=max')
 	(grabbed, frame) = videoStream.read()
 
 	# if the frame was not grabbed, then we have reached the end of the stream
 	if not grabbed:
 		break
-
-	num_frame_read = (num_frame_read + 1) % 4;  # number after modulo is the interval between processed frames
+		
+	# only performs YOLOv3 processing on every 8th frame
+	#num_frame_read = (num_frame_read + 1) % 8;
 	if (num_frame_read == 0):
 
 		# construct a blob from the input frame and then perform a forward
@@ -289,21 +295,46 @@ while True:
 
 		vehicle_count, current_detections = count_vehicles(idxs, boxes, classIDs, vehicle_count, previous_frame_detections, frame)
 		lineSides, carCrosses = crossLine(current_detections, lineSides, frame, lines)
-
+		
+		#enter_or_exit = 0 # 0 - no cross, 1 - enter, 2 - exit
 		for cross in carCrosses:
-			if ( (carCrosses[cross]['to'] == 0) and (carCrosses[cross]['crossedBothLines'] == 1) ):
-				if (carCrosses[cross]['line'] == 0):
-					print('Car Crossed: ', cross, carCrosses[cross])
-					print('Car Entered!')
-				else:
-					print('Car Crossed: ', cross, carCrosses[cross])
-					print('Car Exited!')
+			print('CROSSED!',carCrosses)
+			if carCrosses[cross]['to'] == 0:
+				print('Car entered lot')
+				num_cars_in_lot += 1
+			else:
+				print('Car exited lot')
+				num_cars_in_lot -= 1
+			
+			# updates number of available spots and performs bounds checking
+			if num_cars_in_lot >= 0 and num_cars_in_lot <= 20:
+				num_available_spaces = MAX_SPACES - num_cars_in_lot 
+			elif num_cars_in_lot >= 20: # num_cars_in_lot exceeds 20
+				num_cars_in_lot = 20
+				num_available_spaces = 0
+			else: # num_cars_in_lot is below 0, which should not occur
+				num_cars_in_lot = 0
+				num_available_spaces = 20
+			print('Number of available parking spots: ', num_available_spaces)
+				 
 
 		for line in lines:
 			displayLine(frame, line)
 
-		# Display Vehicle Count if a vehicle has passed the line
-		displayVehicleCount(frame, len(current_detections))
+		# send to livefeed api method (database)  # also updates database like static model
+		#post_response = requests.post(url_post.format("92opt", cars_present, False), verify=False)
+		#print(post_response)
+
+		dynamic_dict = {
+			"name": "Dynamic Camera",
+			"car_count": num_cars_in_lot
+		}
+		dynamic_json = json.dumps(dynamic_dict, indent=2)
+		with open("../dynamic_data.json", "w") as outfile:
+			outfile.write(dynamic_json)
+			
+		# Display vehicle counter if a vehicle has passed the line
+		displayVehicleCount(frame, num_cars_in_lot)
 
 	    # write the output frame to disk
 		writer.write(frame)
