@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "intelligentparkingfb",
+  "private_key_id": "59ed35520e29261fe603bd6026960695853c2b8e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDIHL4SYkxUcGDX\nIECxWhafqEBSNRHvAngg0xKJbtXZec7iv47HM5Ta5BfW0TZBBIOfDVVqUAMRw1P9\nKl7IcKH1+SdPLUnQEwa2eHp5s3RqkPKZqMXi8u1SXwgcaI7hFQIpVvQq8ehYtEfW\n0+IZUPZ9hlKRiyAQwF7PHIyU5xd2jZE53wWPI8pPVyW4UqWXqDEud2/Sc+P/Qopb\nAOBwA01RYl0d/a8kg3ula7TPjTl1mxuNfSHJiBAk6+6vID4wJnHCQncog7z0nTZ2\nc+tF61UPR8XKavPoTJfB2nc5DObwqmHxM+zIX2VS2gA84dcGx7mtTODnk4VuwWsP\nzK65VCpbAgMBAAECggEAAjbfNSp4fo60ltM48NcQXQZQzLGtpLltEhMddDJElFPj\niC4A3g9u3D7RGYPWV9qju9GhjYjPhkjLcYe6GMaDF34atnOUpFExlJ9TEgZ8VhmL\ntbH6aDJ/K2QsNzRCluPTbEwVoGWg4cQAIrTUuBCY40OADABAHWKJ9tZYCX9gV316\nGX32iz6uGTVaTKO4T7V78HQ00A+db0n0fTe2I8e9HPLb6NNrAKLcVYOWcUQgXv0Y\nYTSEiyt9R/QyseDVXnChB5hcpLDOLR177hOVB3HlyZh/8allbFNQOwlLH4R5L9+F\nu3lniE9Pp/R8ynDTVekBK7kXbxMBZcYUYHp0k4GsQQKBgQD+mHu6Wky8RAKarGyp\nSn0stOLHbT0dM5dz9z9sl8pRq664ve09ujcqMpRGJpcxhyvQLpOUi+sErHwxWZgs\nxglRbNuffneD5uT2jlsLH9Jh9hq4mF74lgW8xSlZFUQWUFro3W4D1Y4ExJiIngbR\n4EihLA5UqzxIwAPQn4zLT9LH0QKBgQDJN1Keg1cTKrrOZxu6/DCmCEjzI2djEeuN\n20iHFhy1po8M1cg1Pm62IoZlvsmuKBewgcFBqpwt+qr08OEmbYDcejAc585+aXrh\nmOnjdSBH24KkOZ9L57D8C9PMGOm/s2ed3JXUAp391PKN4qCABOlSbGUcfG7K4XnF\n34F1JX/GawKBgGJXvjtOlCOI1cSvY83E0zNIr+y+uoOkIRWPZPVqcKE5guUjoBde\n7d4j6Xhrga2E/ByPUTxpC6AjjFl3tTteR80nEnK6ZCoUL085z9stMJPcf5fca5r0\nQEUZl44sk79WzLb0iYF7pT8cPZtQB2xciVGQdfyopEGpwg99AeKq881xAoGBALdU\nJ3tzER/Oe7tY6EQaSDzOKaEVbbou9p4d39vsgqXipk08bphMVNSvaiJDjT+XGdZg\nsnKg/oFJ9P8MhSbc+F5pGXMMpPA6LJJlHxx1d77gugvk0EV5SKCsKgG35SkbTVng\nQ8aRx98gaQprJG7firHlPs6QdOV2P9vQQwQ38U4XAoGBAM076yHQMy5D/li46cp0\neV9c/vdnvQnuD4M8dRId93EzxRv34A8Cr4pUR3z3EbMaO01M4+WLfZHa92nsfKYF\nwbLopfw7YNqEs9JbJaD2/XHJ4Rft9hEVY90A4r6mpgLbQlUmk4NFHsobaqJ5twNi\nVoryMzIpl2S8rV61PSGlUIR5\n-----END PRIVATE KEY-----\n",
+  "client_email": "signserviceacc@intelligentparkingfb.iam.gserviceaccount.com",
+  "client_id": "101754723303556906598",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/signserviceacc%40intelligentparkingfb.iam.gserviceaccount.com"
+}
