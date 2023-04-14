@@ -71,6 +71,7 @@ Results
 Link to Demonstration Video: [https://youtu.be/sfKp2QIJkJU](https://youtu.be/sfKp2QIJkJU)
 
 | Iteration | Passed Numbers | Failed Numbers | Comments |
+| ----------| -------------- | -------------- | -------- |
 | 1 | 00 to 99 | NA | None |
 | 2 | 00 to 99 | NA | None |
 
@@ -150,15 +151,16 @@ Results and Interpretation of Results
 
 ### Constraint 8 - Sign shall reflect number of available parking spots stored in remote database during system operational hours
 
-Link to Video: [https://youtu.be/c0jrcfhQ37Y](https://youtu.be/c0jrcfhQ37Y)
-
 Experimental Design
   * The objective of this experiment is to determine if the sign reflects the number of available parking spots in the remote database and determine any causes of error or lag. The sign should output the number of available parking spots in an accurate and timely fashion.
   * This experiment will be performed by monitoring the number of open spots displayed on the sign, the number of open spots displayed on the mobile application, and the number of open spots displayed on the database between the hours of 7:30 a.m. and 4:30 p.m. at 30 minute intervals on a single day. This experiment is performed simultaneously as the experiments for Constraints 13 and 14 since the outputs from these experiments will be sent to the remote database to determine a simulated number of cars in the Bell Hall parking lot. The difference between the sign and the remote database will be calculated as the number on the sign minus the number in the database at that exact time.
 
 Results
 
+Link to Demonstration Video: [https://youtu.be/c0jrcfhQ37Y](https://youtu.be/c0jrcfhQ37Y)
+
 | Time | Number in Database | Number on Sign | Difference |
+| -----| ------------------ | -------------- | ---------- |
 | 8:12 am | 67 | 67 | 0 |
 | 8:30 am | 67 | 67 | 0 |
 | 9:00 am | 68 | 67 | -1 |
@@ -188,6 +190,7 @@ Experimental Design
   * In order for the AI algorithm to clearly identify a vehicle, the feed must capture a minimum of 10 pixels per foot of whatever its viewing. The cameras were designed to have a resolution of 10 pixels per foot for a car that is roughly 70 feet away from the camera. In order to validate this, the camera has to have a high enough resolution (which can be found on the datasheet) and be divided by the length of the physical area being monitored.
 
 Results
+
 ![Image of ](../Documentation/Images/Static_Camera.png)
 <div align="center">
 <div align="left">
@@ -244,14 +247,16 @@ Results and Interpretation of Results
 
 ### Constraint 14 - Static AI Model Performance
 
-Link to Video: [https://youtu.be/7SjZyATa4jc](https://youtu.be/7SjZyATa4jc)
-
 Experimental Design
   * The objective of this experiment is to measure the accuracy of the static AI model and determine if it meets the constraint in which the system must have accurate vehicle counts within ±1 car of the actual number of cars in the parking lot. Since this iteration of the parking lot monitoring system is implemented as a proof of concept, this experiment will determine the accuracy of the model and its validity of its use to detect the number of cars in a parking lot.
   * A camera will be set up next to a window in the Capstone lab on the fourth floor of Brown Hall to view up to 14 parking spots in the parking lot in the center of the Engineering Quad, the parking spots that are immediately next to Bruner Hall. The camera would be located roughly 30 feet up and 60 feet south from the car immediately north of the capstone lab. The AI model and camera will be running from 8:00 a.m. to 4:30 p.m., and data on the number of cars recorded by the AI algorithm and the actual number of cars (or range if the number changes during the frame) in the lot will be recorded roughly every 30 minutes. The difference will be calculated as AI Count minus the actual count.
 
 Results
+
+Link to Demonstration Video: [https://youtu.be/7SjZyATa4jc](https://youtu.be/7SjZyATa4jc)
+
 | Time | Actual Count | AI Count | Difference |
+| ---- | ------------ | -------- | ---------- |
 | 8:12 am | 13  | 9-11 | -4 to -2 |
 | 8:30 am | 13  | 9-10 | -4 to -3 |
 | 9:00 am | 13  | 9-11 | -4 to -2 |
@@ -289,6 +294,7 @@ Experimental Design
 Results
 
 | Time | Detected | Speed | Direction | Color, Make, and Model |
+| -----| -------- | ----- | --------- | ---------------------- |
 | 8:20 am | Yes | 3 mph | Into | Black Dodge Charger |
 | 8:21 am | Yes | 3 mph | Out | Black Dodge Charger |
 | 9:00 am | No | 5 mph | Into | Black Dodge Charger |
@@ -322,6 +328,7 @@ Results
 ![Open CV](../Documentation/Images/CV2_Snip1.png)
 <div align="center"> OpenCV import line in yolo_video.py
 <div align="left">
+
   * The above line in the yolo_video.py file that runs the YOLOv3 algorithm in both the static and dynamic models imports and uses the OpenCV library named cv.
 
 Interpretation of Results
@@ -338,6 +345,7 @@ Results
 ![Ubuntu](../Documentation/Images/Ubuntu_Snip.png)
 <div align="center"> Linux Ubuntu on Server
 <div align="left">
+
   * The image above shows the Linux Ubuntu OS running on the server.
 
 Interpretation of Results
@@ -372,6 +380,7 @@ Results
 ![Wall Wart 2](../Documentation/Images/Wall_Wart_Snip_2.jpg)
 <div align="center"> Image of Power Supply that Connects to Server
 <div align="left">
+
   * The server is powered via being plugged into a wall socket, as shown in the above two images. In addition, the server has been used frequently at various times throughout the day across numerous days this past month, in which it has received from directly from the wall.
 
 Interpretation of Results
@@ -398,6 +407,7 @@ Results
 ![NVIDIA](../Documentation/Images/Nvidia.png)
 <div align="center"> NVIDIA Commands
 <div align="left">
+
   * Running NVIDIA commands produce no responses to any avail. Also, running the lspci command in Terminal showed that the server provided by ITS had an integrated Intel graphics card.
 
 Interpretation of Results
