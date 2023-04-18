@@ -388,8 +388,6 @@ The measures of success for the server hardware were met except for the GPU, whi
 
 The measures of success for the cameras were met since they provide the hardware capabilities that were needed in our original detailed designs. It is primarily the AI algorithms and how the images from the cameras are processed that need to be improved.
 
-## Conclusion
-
 | ID | Constraint Description | Constraint Met? |
 | -- | ---------------------- | --------------- |
 | 1 | Sign Displays Numbers 00 to 99 | Yes |
