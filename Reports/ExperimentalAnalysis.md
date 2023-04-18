@@ -76,7 +76,7 @@ Link to Demonstration Video: [https://youtu.be/sfKp2QIJkJU](https://youtu.be/sfK
 | 2 | 00 to 99 | NA | None |
 
 Interpretation of Results
-  * All numbers from 00 to 99 were properly displayed in both iterations, indicating that the sign demonstrates proper pin mapping to each segment of the LED strips and all hardware works as intended. Therefore, the experiment is considered a success as it met what was specified in the constraint.
+  * All numbers from 00 to 99 were properly displayed in both iterations, indicating that the sign demonstrates proper pin mapping to each segment of the LED strips and all hardware works as intended. Therefore, the experiment is considered a success and the constraint was met.
 
 ### Constraint 2 - Sign Uses Microcontroller with 14 Digital Pins
 
@@ -159,25 +159,9 @@ Results
 
 Link to Demonstration Video: [https://youtu.be/c0jrcfhQ37Y](https://youtu.be/c0jrcfhQ37Y)
 
-| Time | Number in Database | Number on Sign | Difference |
-| -----| ------------------ | -------------- | ---------- |
-| 8:12 am | 67 | 67 | 0 |
-| 8:30 am | 67 | 67 | 0 |
-| 9:00 am | 68 | 67 | -1 |
-| 9:25 am | 66 | 67 | 1 |
-| 10:40 am | 66 | 65 | -1 |
-| 11:00 am | 67 | 68 | 1 |
-| 11:30 am | 68 | 67 | -1 |
-| 12:00 pm | 68 | 68 | 0 |
-| 12:34 pm | 69 | 66 | -3 |
-| 1:15 pm | 66 | 69 | -3 |
-| 1:26 pm | 71 | 71 | 0 |
-| 2:00 pm | 71 | 71 | 0 |
-| 2:30 pm | 71 | 71 | 0 |
-| 3:00 pm | 71 | 71 | 0 |
-| 3:30 pm | 71 | 71 | 0 |
-| 4:00 pm | 71 | 71 | 0 |
-| 4:30 pm | 71 | 71 | 0 |
+![Number of Available Parking Spots vs. Time of Day](../Documentation/Images/Constraint8_Graph.png)
+<div align="center"> Experiment Results: Number of Available Parking Spots vs. Time of Day - Comparing Numbers on Sign and Database
+<div align="left">
 
 Interpretation of Results
   * For most test cases, the sign was off within 1 car of the actual count of the number on the database. This can actually be attributed to the delay in the programming in which the sign updates less frequently than the database values. More specifically, the sign updates every 15 seconds while the database updates every 5 seconds. This difference in delay was designed to prevent an excessive number of reads and writes on the remote database since Firebase has a limit on the number of reads and writes per day when using the free version.
@@ -255,30 +239,13 @@ Results
 
 Link to Demonstration Video: [https://youtu.be/7SjZyATa4jc](https://youtu.be/7SjZyATa4jc)
 
-| Time | Actual Count | AI Count | Difference |
-| ---- | ------------ | -------- | ---------- |
-| 8:12 am | 13  | 9-11 | -4 to -2 |
-| 8:30 am | 13  | 9-10 | -4 to -3 |
-| 9:00 am | 13  | 9-11 | -4 to -2 |
-| 9:30 am | 13  | 9-11 | -4 to -2 |
-| 10:00 am | 13  | 10 | -3 |
-| 10:30 am | 13  | 10 | -3 |
-| 11:00 am | 13  | 9-11 | -4 to -2 |
-| 11:30 am | 13  | 9-10 | -4 to -3 |
-| 12:00 pm | 13  | 9-12  | -4 to -1 |
-| 12:30 pm | 11  | 10-11 | -1 to 0 |
-| 1:15 pm | 13  | 7-9  | -6 to -4 |
-| 1:30 pm | 13  | 5-7  | -8 to -6 |
-| 2:00 pm | 12  | 8  | -4 |
-| 2:55 pm | 12  | 11-12 | -1 to 0 |
-| 3:14 pm | 13  | 12-13  | -1 to 0 |
-| 3:30 pm | 13  | 11-13  | -2 to 0 |
-| 4:00 pm | 11  | 9-11  | -2 to 0 |
-| 4:30 pm | 10  | 8-9 | -2 to -1|
+![Number of Cars vs. Time of Day](../Documentation/Images/Constraint14_Graph.png)
+<div align="center"> Experiment Results: Number of Cars vs. Time of Day
+<div align="left">
 
 Interpretation of Results
   * Out of the 18 samples collected throughout the day, only three of them were within the acceptable range of within ±1 car. It is also important to note that the performance of the model varied throughout the day. The static was the most accurate in the afternoon, the second best in the morning, and the worst performing in midday. In the morning, the cars that tended not to be detected were toward the edges of the frame (which are a bit cut off, but the model typically can account for that), whereas in midday, the cars that tended not to be detected were in the middle of the frame. The cars in the parking lot were facing north-to-south and were surrounded by buildings roughly 40 to 70 feet high; however, the cars were not covered by shadows. The parking lot was typically full throughout the day with minimal changes in the cars parked, and changes in the cars that were parked occurred slightly more frequently after lunch time.
-  * Most likely, the reason for the difference in model performance is due to how the light reflects off the cars and into the camera (which is pointed diagonally towards the cars).  The images during morning and midday seemed somewhat brighter than the images during the afternoon, and the pixels and edges of some of the cars may have not looked very distinct to the model. It could be that very bright conditions project too much bright light into the cameras, and it could be that more overcast conditions (not as bright but still bright enough) have better performance (similar to an afternoon on a sunny day).
+  * Most likely, the reason for the difference in model performance is due to how the light reflects off the cars and into the camera (which is pointed diagonally towards the cars).  The images during morning and midday seemed somewhat brighter than the images during the afternoon, and the pixels and edges of some of the cars may have not looked very distinct to the model. It could be that very bright conditions project too much bright light into the cameras, and it could be that more overcast conditions (not as bright but still bright enough) have better performance (similar to an afternoon on a sunny day). It is also possible that since the YOLOv3 algorithm was developed at the University of Washington, the model was trained using images of cars in a Pacific Northwest climate in which conditions are typically overcast, so the model could be biased toward cars in more overcast conditions versus cars in bright and sunny weather.
   * The difference in model performance could also be how zoomed out the cars were, especially since the goal of the experiment was to test the accuracy of the model with the maximum number of cars that would have been tracked in an original sector in the Bell Hall lot. If the camera was zoomed in more to view only a smaller number of cars, then there would be more pixels representing each car, which would increase the chances that the model would detect the car as a camera.
   * More so, the camera is actually placed further away from the furthest car than originally designed for. When selecting the cameras and placing them in the Bell Hall lot, the furthest car that a camera would need to track was 70 ft. Taking that the furthest car is 80 feet north and 63 feet west of the camera, the furthest car is roughly 102 ft away from the camera. More so, the camera is situated on the fourth floor of Brown Hall, which is about 30 feet in the air, which is higher than the original 22 ft on a lamppost. The cars that are next to Brown Hall cannot be seen by the camera due to the roof of Brown Hall. Therefore, the distance of the cameras from the cars is causing the cars to have less pixels per ft, which could be another reason why the model is not tracking the cars.
   * In addition, consistently, the AI model only underestimated the number of cars in the parking lot and never overestimated. More so, many of the frames showed the model detecting people but not counting them as vehicles. Thus, the model very rarely detected a non-vehicle object as a vehicle. Thus, we should not be as concerned about the model mistaking other objects as vehicles, but more of the model not picking up vehicles.
@@ -293,24 +260,9 @@ Experimental Design
 
 Results
 
-| Time | Detected | Speed | Direction | Color, Make, and Model |
-| -----| -------- | ----- | --------- | ---------------------- |
-| 8:20 am | Yes | 3 mph | Into | Black Dodge Charger |
-| 8:21 am | Yes | 3 mph | Out | Black Dodge Charger |
-| 9:00 am | No | 5 mph | Into | Black Dodge Charger |
-| 9:00 am | No | 5 mph | Out | Black Dodge Charger |
-| 11:03 am | Yes | 3 mph | Into | Black Dodge Charger |
-| 11:03 am | Yes | 3 mph | Out | Black Dodge Charger |
-| 12:00 pm | No | 4 mph | Into | Black Dodge Charger |
-| 12:00 pm | No | 4 mph | Out | Black Dodge Charger |
-| 1:00 pm | Yes | 4 mph | Into | Black Dodge Charger |
-| 1:00 pm | Yes | 4 mph | Out | Black Dodge Charger |
-| 3:00 pm | No | 5 mph | Into | Gray Toyota RAV4 |
-| 3:00 pm | No | 5 mph | Out | Gray Toyota RAV4 |
-| 3:02 pm | Yes | 1 mph | Into | Gray Toyota RAV4 |
-| 3:02 pm | Yes | 1 mph | Out | Gray Toyota RAV4 |
-| 4:05 pm | Yes | 5 mph | Into | Blue Honda Civic |
-| 4:05 pm | No | 6 mph | Out | Blue Honda Civic |
+![Speed of Cars vs. Time of Day](../Documentation/Images/Constraint15_Graph.png)
+<div align="center"> Experiment Results: Speed of Cars vs. Time of Day
+<div align="left">
 
 Interpretation of Results
   * It is first important to note that in all test cases, the cars were detected by the algorithm, and the car did possess an ID and bounding box indicating that it is being detected by the algorithm. However, the dynamic model works by determining if a car’s center point crosses a virtual line drawn on the screen, but the car must possess the same ID in the frame in which it is about to cross the line and in the frame in which it has crossed the line. If the car moves too far between subsequent processed frames, then the car will possess a different ID. In other words, although we humans know it is the same car, the algorithm thinks it is a completely different car (YOLOv3 is meant for object detection, in which the number of distinct object IDs that are present is tallied to determine the number of objects).
@@ -435,6 +387,32 @@ The measures of success for the sign have been met as per the above experiments,
 The measures of success for the server hardware were met except for the GPU, which negatively affected the performance of the dynamic AI models. The static and dynamic AI models did not meet the measures of success so that the static model outputs a number that is within 1 car of the actual number of cars present in the frame and that the dynamic model tracks the movement of every car that crosses a line. Numerous factors come into play that have affected the performance of these models, particularly the processing power of the server provided by ITS and the lighting and glare coming into the cameras. These issues should be addressed to improve the performance of these models. However, the AI models do provide a solid foundation for a potential wide-scale AI-based parking lot monitoring system.
 
 The measures of success for the cameras were met since they provide the hardware capabilities that were needed in our original detailed designs. It is primarily the AI algorithms and how the images from the cameras are processed that need to be improved.
+
+## Conclusion
+
+| ID | Constraint Description | Constraint Met? |
+| -- | ---------------------- | --------------- |
+| 1 | Sign Displays Numbers 00 to 99 | Yes |
+| 2 | Sign Uses Microcontroller with 14 Digital Pins | Yes |
+| 3 | Sign Has Circuit Connecting LED Strips, Microcontroller, and Power Supply Together to Ensure Sign Output is Correct | Yes |
+| 4 | Sign is Large Enough to Hold LED Strips | Yes |
+| 5 | Sign Uses Microcontroller with Serial Communication | Yes |
+| 6 | Sign LED Strips are Powered On by External Power Supply | Yes |
+| 7 | System Functionally Operational During 7:30 a.m. to 4:30 p.m. | Yes |
+| 8 | Sign shall reflect number of available parking spots stored in remote database during system operational hours | No |
+| 9 | Minimum of 10 Pixels per Foot at Furthest Spot of Camera Feed | Yes |
+| 10 | Camera Runs at Minimum of 5 FPS for Dynamic Tracking | Yes |
+| 11 | Camera Must Have a Field of View of 98 Degrees | Yes |
+| 12 | Need to Have Two Cameras Simultaneously Monitoring Lot | Yes |
+| 13 | Camera Must Be Able to Supply Video Feed via Ethernet | Yes |
+| 14 | Static AI Model Detects Number of Cars within ± 1 Cars of Truth | No |
+| 15 | Dynamic AI Model Tracks Cars Moving Across Virtual Line | No |
+| 16 | YOLO algorithm with running OpenCV | Yes |
+| 17 | Server Must be able to Run on Linux | Yes |
+| 18 | No Storing of Images or Video | Yes |
+| 19 | Power Supplied by Wall Socket 24/7 | Yes |
+| 20 | Server components are compatible | Yes |
+| 21 | GPU-enabling/CUDA-enabling allowed to run AI algorithms | No |
 
 ## References
 
