@@ -29,37 +29,31 @@ Videos of specific subsystem tests can be viewed in the [Experimental Analysis](
 The following images are components of the project:
 
 ![Sign](Documentation/Images/Cameras_Testing.png)
-<div align="center"> Cameras
 <div align="left">
 
 The cameras were tested by being connected via Ethernet to the server and looking out a window of the Capstone lab from the fourth floor of Brown Hall.
 
 ![Sign](Documentation/Images/Sign.png)
-<div align="center"> Sign
 <div align="left">
 
 The goal of the sign is to allow students to see the number of available parking spots as they enter a lot on campus.
 
 ![Mobile Application](Documentation/Images/MobileApp.png)
-<div align="center"> Sign
 <div align="left">
 
 The mobile application allows students to see the number of available parking spots on their phones before they leave for campus.
 
 ![Server](Documentation/Images/Server.jpg)
-<div align="center"> Server
 <div align="left">
 
 This server was given to the project by ITS.
 
 ![Static Tracking](Documentation/Images/Static_Tracking_Example.png)
-<div align="center"> Static Tracking
 <div align="left">
 
 The static tracking model counts the number of cars in the frame, as seen in the overlay above.
 
 ![Dynamic Tracking](Documentation/Images/Dynamic_Tracking_Example.png)
-<div align="center"> Dynamic Tracking
 <div align="left">
 
 The dynamic tracking model detects if a car has crossed a virtually drawn line, as seen in the overlay above.
