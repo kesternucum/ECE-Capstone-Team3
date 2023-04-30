@@ -188,7 +188,7 @@ ln = [ln[i - 1] for i in net.getUnconnectedOutLayers()]
 # initialize the video stream, pointer to output video file, and
 # frame dimensions
 #videoStream = cv2.VideoCapture(inputVideoPath)  # for videos
-videoStream = cv2.VideoCapture('http://admin:admin@169.254.233.98/media/cam0/still.jpg?res=max')
+videoStream = cv2.VideoCapture('http://admin:admin@169.254.233.98/media/cam0/still.jpg?res=max') # for IP cameras
 video_width = int(videoStream.get(cv2.CAP_PROP_FRAME_WIDTH))
 video_height = int(videoStream.get(cv2.CAP_PROP_FRAME_HEIGHT))
 

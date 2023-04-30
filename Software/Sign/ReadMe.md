@@ -1,30 +1,26 @@
-Software
+# Sign Software
+
+## Functionality
 
 The folder has two different scripts:
 
-Sign_Code_Final connects to the Firebase database with the give JSON file containing credentials. It then pulls parking availability for the "Bell Hall" lot in the database, and serially sends it over a specified port.
+Sign_Code_Final.py connects to the Firebase database with the give JSON file containing credentials. It then pulls parking availability for the "Bell Hall" lot in the database, and serially sends it over a specified port.
 
-Arduino_Code_Final is meant to be ran on an Arduino connected to the computer running the Sign_Code_Final code. It gets a number from the connected comptuer, and displays that number by enabling and disabling digital pins connected to LED strips.
+Arduino_Code_Final.ino (inside Arduino_Code_Final folder) is meant to be ran on an Arduino connected to the computer running the Sign_Code_Final code. It gets a number from the connected comptuer, and displays that number by enabling and disabling digital pins connected to LED strips.
 
-
-
-Dependencies
+## Dependencies
 
 The python code requires the JSON file to be in the same directory. The computer running the script must also be connected to internet.
 
 The Arduino code requires the Arduino IDE to be installed to the code can be uploaded to the connected arduino board. The Arduino board needs to be an Arduino Mega 2560 Rev3.
 
-
-
-Installation
+## Installation
 
 The python code only requires that python be installed on the computer being used.
 
 The Arduino code requires the Arduino IDE to be installed.
 
-
-
-Running the program
+## Running the program
 
 The Arduino code must be ran first. This can be done by opening the Arduino_Code_Final file in the Arduino IDE, then pushing the code to the board. Once that is complete, the python code can be ran.
 
