@@ -2,23 +2,67 @@
 
 ## Executive Summary
 
-Commuter students at Tennessee Technological University in Cookeville, TN, frequently face difficulties to find open parking spots in lots during peak hours of the school day, which causes tardiness to class to be a common occurrence. Commuters typically have a lack of foreknowledge of the availability of parking spots across lots prior to entering campus. Due to current products on the market either being very expensive or not fully feasible or effective for Tennessee Tech’s parking lots, an in-house parking lot monitoring system designed by students in Tennessee Tech’s College of Engineering was proposed to provide a more cost-effective solution. A parking lot monitoring system has been designed to utilize sensor technology to track and frequently update the number of available parking spots so that students can know the occupancy of a parking lot in real-time. The data from the sensor technology would be displayed on a mobile application that students can download to view real-time statistics and previous history of parking lot occupancy, as well as on a ground-level display board. This project involves interdisciplinary collaboration between teams from the Department of Electrical and Computer Engineering and the Department of Computer Science while under the direction of the Naval Sea Systems Command (NAVSEA) in Dahlgren, VA.
+Students commuting to Tennessee Tech have difficulty finding open parking spots during busy hours of the school day, which causes tar- diness to class. To solve this problem, our team’s goal was to design a proof of concept for a parking lot monitoring system that uses visual sensors that determine the amount of open spots to be displayed in real-time on a downloadable mobile application and an outdoor sign.
+
+This project involves interdisciplinary collaboration between teams from the Departments of Electrical and Computer Engineering, Computer Science, and Mechanical Engineering while under the direction of the Naval Sea Systems Command (NAVSEA) in Dahlgren, VA.
 
 ## Capabilities
 
-As a proof of concept, this project is focused on implementing a Parking Lot Monitoring System to track the number of available parking spots in the Red lot behind Bell Hall. The goals for the capabilities of this system are:
-  * Utilize computer vision AI to determine the number of available parking spots from images that are sent from cameras installed around the Bell Hall lot
-  * Track the number of cars inside the Bell Hall lot using pneumatic road tubes for validation of the measurements from the cameras and computer vision
-  * Display the number of available parking spots on a mobile application that students can use
-  * Display the number of available parking spots on a sign (similar to those at airport parking lots)
+As a proof of concept, the primary goals of the project are to:
+  * Successfully identify and count vehicles parked in spots
+  * Successfully identify and count vehicles moving in and out of a lot
+  * Display the correct parking availability count on the sign
+  * Send and receive the correct data from the database
+By being able to meet these goals, we believe that we can prove a system capable of monitor parking lot availability on Tech’s campus using only cameras should be feasible to fully implement.
 
 ## Salient Outcomes
 
-The most important outcomes of this project will be added here once the Parking Lot Monitoring System project has been implemented and tested.
+1. AI algorithms can be used to process images from video cameras to monitor the number of available parking spots, though the accuracy of these algorithms will need to be improved through both software and hardware improvements.
+2. The first iterations for a mobile application and a sign have been built as user interfaces for students to see the number of available parking spots in a given lot.
 
 ## Project Demonstration & Images
 
-A demonstration video and images of the project will be added here once the system has been implemented and tested.
+A demonstration of the project can be viewed here: [https://youtu.be/3_bB4dtKVq0](https://youtu.be/3_bB4dtKVq0).
+
+Videos of specific subsystem tests can be viewed in the [Experimental Analysis](Reports/ExperimentalAnalysis.md) markdown file.
+
+The following images are components of the project:
+
+![Sign](Documentation/Images/Cameras_Testing.png)
+<div align="center"> Cameras
+<div align="left">
+
+The cameras were tested by being connected via Ethernet to the server and looking out a window of the Capstone lab from the fourth floor of Brown Hall.
+
+![Sign](Documentation/Images/Sign.png)
+<div align="center"> Sign
+<div align="left">
+
+The goal of the sign is to allow students to see the number of available parking spots as they enter a lot on campus.
+
+![Mobile Application](Documentation/Images/MobileApp.png)
+<div align="center"> Sign
+<div align="left">
+
+The mobile application allows students to see the number of available parking spots on their phones before they leave for campus.
+
+![Server](Documentation/Images/Server.png)
+<div align="center"> Server
+<div align="left">
+
+This server was given to the project by ITS.
+
+![Static Tracking](Documentation/Images/Static_Tracking.png)
+<div align="center"> Static Tracking
+<div align="left">
+
+The static tracking model counts the number of cars in the frame, as seen in the overlay above.
+
+![Dynamic Tracking](Documentation/Images/Dynamic_Tracking.png)
+<div align="center"> Dynamic Tracking
+<div align="left">
+
+The dynamic tracking model detects if a car has crossed a virtually drawn line, as seen in the overlay above.
 
 ## About Us
 
@@ -50,7 +94,9 @@ Another major stakeholder is **Tennessee Tech** itself because the data collecte
 
 We first would like to thank Kristen Voyles and Rob Sexton at NSWC Dahlgren for their mentorship about the engineering design process throughout the entire capstone process. Their feedback and advice were invaluable, not just for the project but for us as future engineers as well.
 
-We would like to thank the Office of Parking and Transportation, University Police, and Facilities at Tennessee Tech for allowing to implement this project on campus. More recognitions to come!
+Thank you to our advisor Jesse Roberts for all of his guidance throughout all of Capstone!
+
+We would like to thank the Office of Parking and Transportation, University Police, and Facilities at Tennessee Tech for allowing to implement this project on campus.
 
 Also, thank you to WUCT - News Talk 94.1/AM 1600 for featuring our project on your station! We are excited that the community is excited about our project. Go check out the news article here: ["TTU Capstone Students Working To Develop Program To Better Parking"](https://newstalk941.com/ttu-capstone-students-working-to-develop-program-to-better-parking/).
 
@@ -60,11 +106,14 @@ Also, thank you to WUCT - News Talk 94.1/AM 1600 for featuring our project on yo
 
 All reports about the project holistically can be found in the [Reports](/Reports) folder. The major files in the Reports section are as follows:
 
-1. [Project Proposal](/Reports/ProjectProposal.pdf)
-2. [Conceptual Design and Planning](/Reports/Conceptual&#32;Design&#32;and&#32;Planning.pdf)
-3. Final Report (to be added later)
-4. Lessons Learned (to be added later)
-5. Experimentation (to be added later)
+1. [Project Proposal, version 1](/Reports/ProjectProposal_v1.pdf)
+2. [Project Proposal, version 2](/Reports/ProjectProposal_v2.pdf)
+3. [Conceptual Design and Planning](/Reports/ConceptualDesign.pdf)
+4. [Poster](/Reports/Poster.pdf)
+5. [Final Presentation](/Reports/FinalPresentation.pptx)
+6. [Lessons Learned](/Reports/LessonsLearned.pdf)
+7. [Individual Technical Presentations](/Reports/IndividualPresentations.pdf)
+
 
 ### Documentation
 
@@ -78,13 +127,14 @@ All signoffs, electrical schematics, 3D models, and bill of materials (BOM) and 
   * Images for the project, such as images of the project when built, images used for signoffs, etc.
 4. [3D Models](/Documentation/3D&#32;Models)
   * Buildable 3D model schematics for each constructed system of the project.
-5. Final Bill of Materials (to be added later)
+5. [Final Bill of Materials](/Documentation/BOM)
   * All components ordered compiled to generate the total cost for building this project.
-6. Datasheet (to be added later)
-  * The datasheet includes all information necessary for other systems to interface with your project in the intended manner, such as the power expectations, interfacing, and compliance. The datasheet will also include results from all experimentation and the interpretation of the results.
-7. Poster (to be added later)
-  * Poster that is presented at the finale of Capstone II.
+6. [Prototype](/Documentation/Protoype)
+  * Negotiated prototype requirements and substitutions made.
 
 ### Software
 
-All software that has been programmed for this project will be stored in the [Software](/Software) folder.
+There are two major groups of software programs that have been written for this project, and both of these are stored in the [Software](/Software) folder.
+
+1. [Static and Dynamic Tracking AI Models](/Software/AI_Models)
+2. [Sign](/Software/Sign)
