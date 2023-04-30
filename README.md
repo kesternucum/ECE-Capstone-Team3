@@ -46,19 +46,19 @@ The goal of the sign is to allow students to see the number of available parking
 
 The mobile application allows students to see the number of available parking spots on their phones before they leave for campus.
 
-![Server](Documentation/Images/Server.png)
+![Server](Documentation/Images/Server.jpg)
 <div align="center"> Server
 <div align="left">
 
 This server was given to the project by ITS.
 
-![Static Tracking](Documentation/Images/Static_Tracking.png)
+![Static Tracking](Documentation/Images/Static_Tracking_Example.png)
 <div align="center"> Static Tracking
 <div align="left">
 
 The static tracking model counts the number of cars in the frame, as seen in the overlay above.
 
-![Dynamic Tracking](Documentation/Images/Dynamic_Tracking.png)
+![Dynamic Tracking](Documentation/Images/Dynamic_Tracking_Example.png)
 <div align="center"> Dynamic Tracking
 <div align="left">
 
@@ -68,15 +68,15 @@ The dynamic tracking model detects if a car has crossed a virtually drawn line, 
 
 ### Team
 
-**Kester Nucum** is a senior Computer Engineering major at Tennessee Technological University with double minors in Music Performance and Honors. Kester's interests in Electrical and Computer Engineering include artificial intelligence, digital signal processing, and applications in radar and RF technology. He has spent two summers as an intern at Dynetics in Huntsville, AL, where he worked in modeling and simulation of foreign weapons threat systems, and he plans to obtain a Master's Degree in ECE prior to starting a career in the defense industry. For the Parking Lot Monitoring System project, Kester will be primarily focusing on the cameras in the primary data acquisition system, the hardware for the server, and the computer vision AI software. Outside of classes, Kester serves as the President of the Tennessee Gamma chapter of Tau Beta Pi, plays violin in the University Orchestra, and is active in University Catholic.
+**Kester Nucum** is a senior Computer Engineering major at Tennessee Technological University with double minors in Music Performance and Honors. Kester's interests in Electrical and Computer Engineering include artificial intelligence, digital signal processing, and applications in radar and RF technology. He has spent two summers as an intern at Dynetics in Huntsville, AL, where he worked in modeling and simulation of foreign weapons threat systems, and he plans to obtain a Master's Degree in ECE prior to starting a career in the defense industry. For the Parking Lot Monitoring System project, Kester primarily focused on the design regarding the cameras in the primary data acquisition system and the hardware for the server, and he was in charge of programming the static and dynamic tracking AI models. Outside of classes, Kester serves as the President of the Tennessee Gamma chapter of Tau Beta Pi, plays violin in the University Orchestra, and is active in University Catholic.
 
-**Aaron Wilhite** is a senior Electrical Engineering major at Tennessee Technological University with a minor in Math. He spent the previous year at a co-op with EOSYS in Smyrna, TN doing custom system integration. During this co-op he gained experience in HMI design and PLC (Programmable Logic Controller) programming. For the Parking Lot Monitoring System project, Aaron will be primarily focusing on the sign subsystem. Outside of classes, Aaron spends most of his time rock climbing and camping.
+**Aaron Wilhite** is a senior Electrical Engineering major at Tennessee Technological University with a minor in Math. He spent the previous year at a co-op with EOSYS in Smyrna, TN doing custom system integration. During this co-op he gained experience in HMI design and PLC (Programmable Logic Controller) programming. For the Parking Lot Monitoring System project, Aaron designed, built, and programmed the sign. Outside of classes, Aaron spends most of his time rock climbing and camping.
 
-**Gabriel Laboy** is a senior Computer Engineering major with a minor in Computer Science at Tennessee Technological University. His interests include digital systems, virtual reality (VR), and cyber security. He spent a whole year as a co-op at EOSYS located in Smyrna, TN, and later plans to pursue a Master's Degree in Computer Science in hopes of being a professor of university. Gabriel's role in the project will be working on the power for the primary data acquisition system and collaboration with the Computer Science (CSC) team to ensure successful operation of the mobile application with the server. He is also currently serving as the Vice Chair of the student chapter of the Institute of Electrical and Electronics Engineers (IEEE), and will serve as the Recording Secretary of the Tennessee Gamma chapter of Tau Beta Pi in the spring.
+**Gabriel Laboy** is a senior Computer Engineering major with a minor in Computer Science at Tennessee Technological University. His interests include digital systems, virtual reality (VR), and cyber security. He spent a whole year as a co-op at EOSYS located in Smyrna, TN, and later plans to pursue a Master's Degree in Computer Science in hopes of being a professor of university. Gabriel's role consisted of assisting with technical and programming support, leading experimental analysis, and promoting collaboration with the Computer Science (CSC) team to ensure successful operation of the mobile application with the server. He is also currently serving as the Vice Chair of the student chapter of the Institute of Electrical and Electronics Engineers (IEEE), and will serve as the Recording Secretary of the Tennessee Gamma chapter of Tau Beta Pi in the spring.
 
-**Genevieve Schreiber** is a senior Computer Engineering major at Tennessee Technological University with a minor in Mathematics. Her interests involve FPGAs, embedded systems, and space. She has spent 1 year interning at ALTEN as a software intern working in embedded systems. She plans to work in space-adjacent fields post-graduation. For this Parking Lot Monitoring System, Genevieve will be primarily focused on the networks involved between the many devices used. She is also part of the Omega Phi Alpha national service sorority.
+**Genevieve Schreiber** is a senior Computer Engineering major at Tennessee Technological University with a minor in Mathematics. Her interests involve FPGAs, embedded systems, and space. She has spent 1 year interning at ALTEN as a software intern working in embedded systems. She plans to work in space-adjacent fields post-graduation. For this Parking Lot Monitoring System, Genevieve focused on the networks involved between the many devices used. She is also part of the Omega Phi Alpha national service sorority.
 
-**Reggie Garza** is a senior electrical engineering major at Tennessee Tech University. Reggie's interest include robotics and automation. He has spent the last two years interning at ATC Automation in Cookeville,TN. There he has been part of a team of engineers and has contributed with the electrical design and programming of several machines. Reggie will be helping design the primary acquisition system and the secondary acquisition system.
+**Reggie Garza** is a senior electrical engineering major at Tennessee Tech University. Reggie's interest include robotics and automation. He has spent the last two years interning at ATC Automation in Cookeville,TN. There he has been part of a team of engineers and has contributed with the electrical design and programming of several machines. Reggie helped design the data acquisition systems, provide technical support, and test the AI models.
 
 ### Faculty Supervisor
 
